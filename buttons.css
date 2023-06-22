@@ -1,0 +1,131 @@
+* {
+  --cor-1: #650505d6;
+  --cor-2: #300202d6;
+  --shadow-apretada: -5px 0 5px  rgb(0 0 0 / 95%);
+  --shadow-blue: 0 0 10px blue;
+  --borda-simples: 1pt solid black;
+}
+
+
+/* ------------------RADIOS (CANTO INFERIOR DIREITO) ----------------- */
+
+input[type='radio'] {
+  display: none;
+}
+
+.radio-label {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.radio-label::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1pt solid var(--cor-1);
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+.radio-label::after {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  left: 3.4%;
+  top: 20%;
+}
+
+input[type='radio']:checked + .radio-label::before {
+  background-color: white; /* Fundo do círculo interno quando marcado */
+}
+
+input[type='radio']:checked + .radio-label::after {
+  background-color: var(--cor-1); /* Fundo do círculo interno quando marcado */
+}
+
+input[type='radio']:checked + .radio-label {
+  color: #000; /* Cor do texto quando marcado */
+}
+
+/* ------------------BOTÃO IMPRIMIR (CANTO INFERIOR DIREITO) ----------------- */
+
+#botao-imprimir {
+  position: absolute;
+  border: none;
+  border-radius: 10px;
+  background: none;
+  transform: scale(0.8);
+  bottom: 1%;
+  right: 3.5%;
+
+}
+
+#botao-imprimir:hover {
+  cursor: pointer;
+  box-shadow: var( --shadow-blue);
+  transform: scale(1.01);
+}
+
+/* ------------------SWITCH IDIOMA (CANTO SUPERIOR ESQUERDO) ----------------- */
+
+#checkbox-switch {
+  display: none;
+}
+
+#switch-texto {
+  color: white;
+  font: normal 8pt;
+  position: inherit;
+  top: 22%;
+  margin-left: 1px;
+  margin-right: 5px;
+  z-index: 2;
+}
+
+.switch-label {
+  display: inline-block;
+  cursor: pointer;
+  width: 50px;
+  height: 20px;
+  background-color: var(--cor-1);
+  border-radius: 15px;
+  position: absolute;
+  top: 45px;
+  right: 2%;
+  box-shadow: var(--shadow-apretada)
+}
+
+.switch-label::after {
+  content: '';
+  display: block;
+  width: 19px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 2px;
+  transition: transform 0.2s ease-in-out;
+}
+
+#checkbox-switch:checked + .switch-label::after {
+  transform: translateX(30px);
+}
+
+.switch-label:hover {
+  box-shadow: blue;
+  font: 12pt;
+  font-weight: bold;
+}
+
+

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Calcule e apresente o método de lavra mais adequado para o depósito mineral em estudo, utilizando a versão UBC do procedimento seleção de métodos de lavra de Nicholas (1981), criado pela University of British Columbia. Tome decisões informadas sobre a melhor abordagem para a extração de minerais com base em análises e critérios específicos.">
+    <meta name="keywords" content="nicholas, 1992, mining, method, selection, procedure, calculation, software">
+    <meta name="author" content="Higor José Silva Campos">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Escolha de Acessos</title>
+
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="buttons.css">
+    <script src="eventos.js"></script>
+    <script src="calculos.js"></script>
+    <script src="design.js"></script>
+    <script src="languages.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+
+</head>
+
+<body>
+
+    <header class="head">
+        <img class='img-simbolo-mineracao' id='img-simbolo-mineracao-direita' src="Imagens\mining1.png"
+            alt="Simbolo_mineração">
+        <img class='img-simbolo-mineracao' id='img-simbolo-mineracao-esquerda' src="Imagens\mining1.png"
+            alt="Simbolo_mineração">
+        <div id="div-header">
+            <h1 id="titulo-pagina"></h1>
+        </div>
+    </header>
+
+    <main class="wrapper" id="wrapper">
+
+        <section id="section-0">
+            <ul id="menu-metodos">
+                <li id="li-titulo">SELECIONE O MÉTODO</li>
+                <li class='options' id="option-ubc">
+                    <a>CARDOZO (2023)&ensp;&ensp;&darr;</a>
+                    <ul>
+                        <li class='options' id="option-nicholas-1981"><a href="nicholas_81.html">MOSER (1996)</a></li>
+                        <li class='options' id="option-nicholas-1992"><a href="nicholas_92.html">LA VERGNE (2003)</a>
+                        </li>
+                        <li class='options' id="option-shb"><a href="shb.html">Sh&B</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <p id="paragrafo-explicacao"> </p>
+        </section>
+
+
+
+        <section id="section-1">
+            <!-- --------------BOTÃO SWITCH IDIOMAS-------------------------- -->
+            <input type="checkbox" id="checkbox-switch" />
+            <label for="checkbox-switch" class="switch-label" id="switch-label">
+                <span id="switch-texto"> </span>
+            </label>
+
+
+            <h2>Parâmetros de escolha</h2>
+            <div class="div-metodo" id="div-cardozo">
+                <!-- SURFACE MATERIAL CARDOZO-->
+
+                <div class='div-parametros-cardozo' id="div-sm">
+                    <h3 class="h3-parametros" id="h3-sm">Material de Superfície</h3><br>
+                    <span class="span-parametros">Espesura da camada: &ensp;</span>
+                    <div class='container-label' id="container-label-sm">
+                        <label>
+                            <input type="radio" class="radio-sm" name="radio-sm" value="menor_70" id="radio-sm-menor">
+                            <span class="radio-label">< 70 m</span>
+                        </label>
+                        <label>
+                            <input type="radio" class="radio-sm" name="radio-sm" value="maior_70" id="radio-sm-maior">
+                            <span class="radio-label">> 70 m</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- ROCK MASS CARDOZO-->
+                <div class='div-parametros-cardozo' id="div-rmr">
+                    <h3 class="h3-parametros" id="h3-rmr">Condições do Maciço</h3><br>
+                    <span class="span-parametros">Classe RMR: &ensp;</span>
+                    <div class='container-label' id="container-label-rmr">
+                        <label>
+                            <input type="radio" class="radio-rmr" name="radio-rmr" value="<V" id="radio-rmr-1-4">
+                            <span class="radio-label">I-IV</span>
+                        </label>
+                        <label>
+                            <input type="radio" class="radio-rmr" name="radio-rmr" value="V" id="radio-rmr-5-7">
+                            <span class="radio-label">V</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- PROFUNDIDADE CARDOZO-->
+                <div class='div-parametros-cardozo' id="div-profundidade">
+                    <h3 class="h3-profundidade" id="h3-profundidade">Profundidade</h3><br>
+                    <span class="span-parametros">Corpo de minério: &ensp;</span>
+                    
+                    <select id="select-profundidade">
+                        <option value=""></option>
+                        <option value="menor_700">< 700 m</option>
+                        <option value="700_1700"> 700-1700 m</option>
+                        <option value="maior_1700"> > 1700 m</option>
+                    </select>
+                        
+                    <!-- <div class='container-label' id="container-label-profundidade">
+                        <label>
+                            <input type="radio" name="radio-profundidade" class="radio-profundidade" value="menor_700"
+                                id="radio-profundidade-14">
+                            <span class="radio-label">
+                                < 700 m</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio-profundidade" class="radio-profundidade" value="700_1700"
+                                id="radio-profundidade-57">
+                            <span class="radio-label"> 700-1700 m </span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio-profundidade" class="radio-profundidade" value="maior_1700"
+                                id="radio-profundidade-57">
+                            <span class="radio-label"> > 1700 m </span>
+                        </label>
+                    </div> -->
+                </div>
+
+                <!-- PRODUÇÃO CARDOZO-->
+                <div class='div-parametros-cardozo' id="div-production">
+                    <h3 class="h3-parametros" id="h3-production">Produção</h3><br>
+                    <span class="span-parametros">Produção diária em kt: &ensp;</span>
+
+                    <select id="select-production">
+                        <option value=""></option>
+                        <option value="menor_1.5">< 1.5 ktPD m</option>
+                        <option value="1.5_7.5"> 1.5-7.5 ktPD</option>
+                        <option value="maior_7.5"> > 7.5 ktPD</option>
+                    </select>
+
+                    <!-- <div class='container-label' id="container-label-production">
+                        <label>
+                            <input type="radio" name="radio-production" class="radio-production" value="maior_7.5"
+                                id="radio-production-14">
+                            <span class="radio-label">
+                                > 7.5 kTPD</span>
+                        </label><label>
+                            <input type="radio" name="radio-production" class="radio-production" value="1.5_7.5"
+                                id="radio-production-14">
+                            <span class="radio-label">
+                                1.5-7.5 kTPD</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio-production" class="radio-production" value="menor_1.5"
+                                id="radio-production-57">
+                            <span class="radio-label">
+                                < 1.5 kTPD </span>
+                        </label>
+                    </div> -->
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <section id="section-2">
+            <h2>FLUXOGRAMA</h2>
+            <img class='img-fluxograma' id='fluxograma-cardozo' src="Imagens\cardozo.jpg"
+                alt="fluxograma de escolha de acessos Cardozo (2023)">
+
+            <div class="div-fluxograma" id="div-start"></div>
+            <div class="div-fluxograma" id="div-surface-material"></div>
+            <div class="div-fluxograma" id="div-rock-mass"></div>
+            <div class="div-fluxograma" id="div-profundidade-menor-1700"></div>
+            <div class="div-fluxograma" id="div-production-75"></div>
+            <div class="div-fluxograma" id="div-inclined-belt"></div>
+            <div class="div-fluxograma" id="div-profundidade-menor-700"></div>
+            <div class="div-fluxograma" id="div-ramp-truck"></div>
+            <div class="div-fluxograma" id="div-production-15"></div>
+            <div class="div-fluxograma" id="div-shaft"></div>
+
+        </section>
+
+        <section id="section-3">
+            <h2>Simulação</h2>
+            UM DESENHO ESQUEMÁTICO DE UMA MINA SUBTERRANEA SENDO ACESSADA SERÁ MONTADO CONFORME O USUÁRIO INSERI DADOS
+            <span id='span-resultado-final'></span>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+
+        <div class="div-footer">
+            <div class="div-span-footer" id="div-span-footer-1">
+                <span class='span-footer' id="universidade"></span>
+                <span class='span-footer' id="laboratorio"></span>
+                <span class='span-footer' id="localizacao"></span>
+                <span class='span-footer' id="contato"></span>
+            </div>
+
+            <img id="img-laprom" src="Imagens\laprom.png" alt="logo_laprom_png">
+
+            <img id="img-ufrgs" src="Imagens\ufrgs.png" alt="logo_ufrgs_img">
+
+            <div class="div-span-footer" id="div-span-footer-2">
+                <span class='span-footer' id="desenvolvedor"></span>
+                <span class='span-footer' id="contato-desenvolvedor"></span>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <span class=balao id='balao'> </span> <!-- Balão de ajuda -->
+
+
+
+
+</body>
+
+<script>
+    Eventos()
+</script>
+
+
+</html>
