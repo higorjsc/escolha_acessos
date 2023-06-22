@@ -66,65 +66,69 @@
             </label>
 
 
-            <h2>Parâmetros de escolha</h2>
+            <h2>PARÂMETROS DE ESCOLHA</h2>
             <div class="div-metodo" id="div-cardozo">
                 <!-- SURFACE MATERIAL CARDOZO-->
 
-                <div class='div-parametros-cardozo' id="div-sm">
+                <div class='div-parametros-cardozo ' id="div-sm">
                     <h3 class="h3-parametros" id="h3-sm">Material de Superfície</h3><br>
                     <span class="span-parametros">Espesura da camada: &ensp;</span>
+
                     <div class='container-label' id="container-label-sm">
-                        <label>
-                            <input type="radio" class="radio-sm" name="radio-sm" value="menor_70" id="radio-sm-menor">
-                            <span class="radio-label">< 70 m</span>
-                        </label>
-                        <br>
-                        <label>
-                            <input type="radio" class="radio-sm" name="radio-sm" value="maior_70" id="radio-sm-maior">
-                            <span class="radio-label">> 70 m</span>
-                        </label>
+
+                        <input type="radio" class='input-sm' name="radio-sm" value="menor_70" id="radio-sm-menor">
+                        <label for="radio-sm-menor" class="radio-label radio-1"></label>
+                        <span class="radio-span radio-span-1">< 70 m</span>
+                
+                        <input type="radio" class='input-sm' name="radio-sm" value="maior_70" id="radio-sm-maior">
+                        <label for="radio-sm-maior" class="radio-label radio-2"></label>
+                        <span class="radio-span radio-span-2" >> 70 m</span>
+
                     </div>
+
                 </div>
 
                 <!-- ROCK MASS CARDOZO-->
                 <div class='div-parametros-cardozo' id="div-rmr">
                     <h3 class="h3-parametros" id="h3-rmr">Condições do Maciço</h3><br>
                     <span class="span-parametros">Classe RMR: &ensp;</span>
+
                     <div class='container-label' id="container-label-rmr">
-                        <label>
-                            <input type="radio" class="radio-rmr" name="radio-rmr" value="<V" id="radio-rmr-1-4">
-                            <span class="radio-label">I-IV</span>
-                        </label>
-                        <br>
-                        <label>
-                            <input type="radio" class="radio-rmr" name="radio-rmr" value="V" id="radio-rmr-5-7">
-                            <span class="radio-label">V</span>
-                        </label>
+                        <input type="radio" class='input-rmr' name="radio-rmr" value="<V" id="radio-rmr-1-4">
+                        <label for="radio-rmr-1-4" class="radio-label radio-1"></label>
+                        <span class="radio-span radio-span-1">I-IV</span>
+
+                        <input type="radio" class='input-rmr' class="radio-2" name="radio-rmr" value="V" id="radio-rmr-5-7">
+                        <label for="radio-rmr-5-7" class="radio-label radio-2"></label>
+                        <span class="radio-span radio-span-2">V</span>
                     </div>
+
                 </div>
 
                 <!-- PROFUNDIDADE CARDOZO-->
-                <div class='div-parametros-cardozo' id="div-profundidade">
+                <div class='div-parametros-cardozo ' id="div-profundidade">
                     <h3 class="h3-profundidade" id="h3-profundidade">Profundidade</h3><br>
                     <span class="span-parametros">Corpo de minério: &ensp;</span>
-                    
-                    <select id="select-profundidade">
+
+                    <select class='input-profundidade' id="select-profundidade">
                         <option value=""></option>
-                        <option value="menor_700">< 700 m</option>
+                        <option value="menor_700">
+                            < 700 m</option>
                         <option value="700_1700"> 700-1700 m</option>
                         <option value="maior_1700"> > 1700 m</option>
                     </select>
-                
+
                 </div>
 
                 <!-- PRODUÇÃO CARDOZO-->
-                <div class='div-parametros-cardozo' id="div-production">
+                <div class='div-parametros-cardozo ' id="div-production">
                     <h3 class="h3-parametros" id="h3-production">Produção</h3><br>
                     <span class="span-parametros">Produção diária em kt: &ensp;</span>
 
-                    <select id="select-production">
+                    <select class='input-production' id="select-production">
                         <option value=""></option>
-                        <option value="menor_1.5">< 1.5 ktPD m</option>
+                        <option value="menor_1.5">
+                            < 1.5 ktPD m</option>
                         <option value="1.5_7.5"> 1.5-7.5 ktPD</option>
                         <option value="maior_7.5"> > 7.5 ktPD</option>
                     </select>
@@ -155,8 +159,16 @@
         </section>
 
         <section id="section-3">
-            <h2>Simulação</h2>
-            UM DESENHO ESQUEMÁTICO DE UMA MINA SUBTERRANEA SENDO ACESSADA SERÁ MONTADO CONFORME O USUÁRIO INSERI DADOS
+            <h2>ILUSTRAÇÃO</h2>
+
+            <img class= 'img-usina' id='usina' src="Imagens\usina_1.png" alt="Ilustração de usina">
+            <img class= 'img-superficie' id='superficie' src="Imagens\superficie.png" alt="Ilustração da superfície">
+            <img class= 'img-acesso' id='rampa' src="Imagens\rampa.png" alt="Ilustração da rampa">
+            <img class= 'img-acesso' id='shaft' src="Imagens\shaft.png" alt="Ilustração da shaft">
+            
+            <img id="orebody" src="Imagens\orebody.png" alt="Ilustração do corpo de minério">
+
+            
             <span id='span-resultado-final'></span>
         </section>
 

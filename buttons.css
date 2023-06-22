@@ -7,56 +7,80 @@
 }
 
 
+
+
 /* ------------------RADIOS (CANTO INFERIOR DIREITO) ----------------- */
 
 input[type='radio'] {
   display: none;
 }
 
-.radio-label {
-  display: inline;
+.container-label {
   position: relative;
-  padding-left: 25px;
-  margin-right: 10px;
-  cursor: pointer;
+  grid-column: 2/3;
+  display: grid;
+  align-content: center;
+  grid-template-columns: 0.3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  line-height: 50px;
+  height: 100%;
 }
 
-.radio-label::before {
-  content: '';
-  display: inline;
+.radio-1 {
+  grid-row: 1/2;
+}
+
+.radio-2 {
+  grid-row: 2/3;
+}
+
+.radio-label {
+  grid-column: 1/2;
+  position: absolute;
+  justify-self: center;
+  top: 1px;
   width: 16px;
   height: 16px;
   border-radius: 50%;
   border: 1pt solid var(--cor-1);
-  background-color: transparent;
-  position: absolute;
-  left: 0;
-  top: 2px;
 }
 
-.radio-label::after {
+.radio-label::before {
   content: '';
-  display: inline;
+  grid-column: 1/2;
+  position: absolute;
+  justify-self: center;
+  top: 1px;
   width: 14px;
   height: 14px;
   border-radius: 50%;
   background-color: transparent;
+  transform: translate(1.25px, 0.5px);
+}
+
+.radio-span {
+  grid-column: 2/3;
   position: absolute;
-  left: 3.4%;
-  top: 20%;
+  display: block;
 }
 
-input[type='radio']:checked + .radio-label::before {
-  background-color: white; /* Fundo do círculo interno quando marcado */
+.radio-span-1 {
+  grid-row: 1/2;
 }
 
-input[type='radio']:checked + .radio-label::after {
-  background-color: var(--cor-1); /* Fundo do círculo interno quando marcado */
+.radio-span-2 {
+  grid-row: 2/3;
 }
 
 input[type='radio']:checked + .radio-label {
-  color: #000; /* Cor do texto quando marcado */
+  background-color: white; 
 }
+
+input[type='radio']:checked + .radio-label::before {
+  background-color: var(--cor-1); 
+}
+
+
 
 /* ------------------BOTÃO IMPRIMIR (CANTO INFERIOR DIREITO) ----------------- */
 

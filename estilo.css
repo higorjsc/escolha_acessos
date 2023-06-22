@@ -228,7 +228,7 @@ a {
 #section-1 h3 {
   font-weight: bold;
   margin-bottom: 10px;
-  margin-top: 30px;
+  margin-top: 10px;
   text-align: left;
 }
 
@@ -240,15 +240,21 @@ a {
   align-items: center;
 }
 
+#div-sm {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#div-rmr {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
 .span-parametros {
   grid-column: 1/2;
   left: 0%;
-}
-
-.container-label {
-  position: relative;
-  grid-column: 2/3;
-  display: block;
 }
 
 #section-1 select {
@@ -407,6 +413,44 @@ a {
   padding-top: 5%;
   box-sizing: border-box;
 }
+
+.img-superficie {
+  position: absolute;
+  top: 10%;
+  left: 2%;
+}
+
+.img-acesso {
+  position: absolute;
+  display: none;
+  z-index: 2;
+}
+
+#rampa {
+  top: 15.8%;
+  left: 25%
+}
+
+#shaft {
+  top: 13%;
+  left: 15%;
+}
+
+#orebody {
+  position: absolute;
+  top: 47%;
+  left: 19%;
+  z-index: 3;
+}
+
+#usina {
+  position: absolute;
+  top: 5%;
+  left: 44%;
+  z-index: 2;
+  transform: rotate(-3deg);
+}
+
 
 /* -----------------------FOOTER----------------------------- */
 .rodape {
