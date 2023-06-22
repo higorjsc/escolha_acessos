@@ -164,8 +164,8 @@ function Calculo(metodo) {
     // console.log(resultado)
     // console.log(input_sm)
     // console.log(input_rmr)
-    console.log(input_profundidade)
-    console.log(input_producao)
+    // console.log(input_profundidade)
+    // console.log(input_producao)
 
 
 }

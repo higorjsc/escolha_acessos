@@ -14,7 +14,7 @@ input[type='radio'] {
 }
 
 .radio-label {
-  display: inline-block;
+  display: inline;
   position: relative;
   padding-left: 25px;
   margin-right: 10px;
@@ -23,7 +23,7 @@ input[type='radio'] {
 
 .radio-label::before {
   content: '';
-  display: inline-block;
+  display: inline;
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -36,7 +36,7 @@ input[type='radio'] {
 
 .radio-label::after {
   content: '';
-  display: inline-block;
+  display: inline;
   width: 14px;
   height: 14px;
   border-radius: 50%;

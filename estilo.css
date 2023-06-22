@@ -246,11 +246,12 @@ a {
 }
 
 .container-label {
+  position: relative;
   grid-column: 2/3;
   display: block;
 }
 
-#section-1 select{
+#section-1 select {
   width: 90%;
   text-align: center;
   border-radius: 20px;
