@@ -19,9 +19,12 @@
   width: 100%;
   max-width: 1570px;
   display: grid;
-  grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr);
+
+  /* grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr); */
+  grid-template-columns: 5fr 5fr 9fr 7fr;
   align-items: center;
   position: relative;
+  margin: auto;
   height: 58.31px;
 }
 
@@ -87,9 +90,13 @@ main {
   display: grid;
   width: 100%;
   max-width: 1570px;
-  grid-template-columns: minmax(260px, 5fr) minmax(300px, 5fr) minmax(300px, 9fr) minmax(300px, 7fr);
+
+  /* grid-template-columns: minmax(260px, 5fr) minmax(300px, 5fr) minmax(300px, 9fr) minmax(300px, 7fr); */
+  grid-template-columns: minmax(300px, 5fr) minmax(300px, 5fr) minmax(543.5px, 9fr) minmax(420px, 7fr);
+
   height: 660px;
   position: relative;
+  margin: auto;
   padding-bottom: 0.2%;
   padding-top: 0.25%;
 }
@@ -335,16 +342,21 @@ select:hover {
   display: grid;
   width: 100%;
   max-width: 1570px;
-  grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr);
+
+  /* grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr); */
+  grid-template-columns: 5fr 5fr 9fr 7fr;
   height: auto;
   position: relative;
+  margin: auto;
 }
 
 .rodape .div-footer {
   background-color: var(--cor-1);
   border: var(--borda-simples);
   display: grid;
-  grid-template-columns: minmax(150px, 1fr) minmax(400px, 4fr) minmax(150px, 1fr) minmax(200px, 3fr);
+
+  /* grid-template-columns: minmax(150px, 1fr) minmax(400px, 4fr) minmax(150px, 1fr) minmax(200px, 3fr); */
+  grid-template-columns: 5fr 5fr 9fr 7fr;
   position: absolute;
   grid-column: 1/5;
   width: 100%;
