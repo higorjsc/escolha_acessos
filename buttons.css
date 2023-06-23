@@ -45,6 +45,11 @@ input[type='radio'] {
   border: 1pt solid var(--cor-1);
 }
 
+.radio-label:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--cor-1);
+}
+
 .radio-label::before {
   content: '';
   grid-column: 1/2;
@@ -130,6 +135,12 @@ input[type='radio']:checked + .radio-label::before {
   box-shadow: var(--shadow-apretada)
 }
 
+.switch-label:hover {
+  box-shadow: 0 0 20px var(--cor-1);
+  font: 12pt;
+  font-weight: bold;
+}
+
 .switch-label::after {
   content: '';
   display: block;
@@ -146,10 +157,5 @@ input[type='radio']:checked + .radio-label::before {
   transform: translateX(30px);
 }
 
-.switch-label:hover {
-  box-shadow: blue;
-  font: 12pt;
-  font-weight: bold;
-}
 
 

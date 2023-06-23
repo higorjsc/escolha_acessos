@@ -32,13 +32,6 @@ function Mostra_green(id) {
     elemento.style.borderColor = "rgb(0 128 0 / 19.5%)"
 }
 
-function Mostra_red(id) {
-    const elemento = document.getElementById(id)
-    elemento.style.display = "block"
-    elemento.style.backgroundColor = "rgb(249 3 3 / 30.2%)"
-    elemento.style.borderColor = "rgb(249 3 3 / 30.2%)"
-}
-
 function Mostra_classe_red() {
     const elementos = document.querySelectorAll(".div-fluxograma")
     elementos.forEach(element => {
@@ -61,19 +54,28 @@ function Oculta_div(id) {
 
 function Imagem(resultado) {
     const rampa = document.getElementById("rampa")
-    const shaft = document.getElementById("shaft")
+    const shaft = document.getElementById("shaft-1")
+    const truck = document.getElementById("truck")
+    const vent = document.getElementById("vent")
+    const correia = document.getElementById("correia")
+    // const shaft = document.getElementById("shaft-2")
 
     rampa.style.display = "none"
     rampa.style.display = "none"
     shaft.style.display = "none"
+    truck.style.display = "none"
+    vent.style.display = "none"
+    correia.style.display = "none"
 
     if (resultado.includes("POÇO")) {
         shaft.style.display = "block"
     } else if (resultado.includes("RAMPA")) {
         rampa.style.display = "block"
+        truck.style.display = "block"
     } else if (resultado.includes("CORREIA")) {
-        rampa.style.display = "block"
-    } 
+        vent.style.display = "block"
+        correia.style.display = "block"
+    }
 }
 
 function Calculo() {
