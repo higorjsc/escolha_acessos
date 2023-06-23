@@ -12,7 +12,7 @@ function Balao_entra(metodo, entry) {
     }
 
     const positions = {
-        "switch-language": { x: 30, y: -40 }
+        "switch-language": { x: 50, y: -40 }
     }
 
     //Mostra o balão de texto

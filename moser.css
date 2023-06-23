@@ -1,0 +1,94 @@
+/* --------------------------------------------FLUXOGRAMA ---------------------------------------- */
+.div-fluxograma {
+  background-color: rgb(249 3 3 / 30.2%);
+  border: 1pt solid; 
+  border-color: rgb(249 3 3 / 30.2%);
+  display: none;
+  z-index: 5;
+  position: absolute;
+  border-radius: 5px;
+}
+  
+.div-fluxograma:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--cor-1);
+}
+  
+#div-main-fluxograma {
+  position: relative;
+  height: 460px;
+  width: 90%;
+  margin: auto;
+  background-color: blue;
+}
+  
+#fluxograma-trucks {
+  right: 74.8%;
+  top: 3.8%;
+  height: 34.5px;
+  width: 80px;
+}
+
+#fluxograma-rock-mass {
+  right: 74.85%;
+  top: 21.5%;
+  height: 18px;
+  width: 81px;
+}
+
+#fluxograma-surface-material {
+  right: 74.85%;
+  top: 33.5%;
+  height: 35px;
+  width: 80px;
+}
+
+#fluxograma-open-pit {
+  right: 74.85%;
+  top: 51.5%;
+  height: 38.5px;
+  width: 80px;
+}
+
+#fluxograma-profundidade-1 {
+  right: 41%;
+  top: 52.5%;
+  height: 28.5px;
+  width: 81.5px;
+}
+
+#fluxograma-production-1 {
+  right: 41%;
+  top: 67.2%;
+  height: 17.5px;
+  width: 82px;
+}
+
+
+#fluxograma-profundidade-2 {
+  right: 74.85%;
+  top: 67.3%;
+  height: 26px;
+  width: 80px;
+}
+
+#fluxograma-production-2 {
+  right: 74.82%;
+  top: 81.1%;
+  height: 18px;
+  width: 80px;
+}
+
+#fluxograma-rampa {
+  right: 41%;
+  top: 89.2%;
+  height: 34px;
+  width: 81px;
+}
+
+#fluxograma-shaft {
+  right: 3.2%;
+  top: 52%;
+  height: 33.5px;
+  width: 81.5px;
+}

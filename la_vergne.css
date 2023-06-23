@@ -1,0 +1,112 @@
+.div-fluxograma {
+  background-color: rgb(249 3 3 / 30.2%);
+  border: 1pt solid; 
+  border-color: rgb(249 3 3 / 30.2%);
+  display: none;
+  z-index: 5;
+}
+  
+.div-fluxograma:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--cor-1);
+}
+  
+#div-main-fluxograma {
+  position: relative;
+  height: 460px;
+  width: 90%;
+  margin: auto;
+  background-color: blue;
+}
+  
+#div-start {
+  position: absolute;
+  right: 38.1%;
+  top: 4%;
+  height: 24px;
+  width: 94px;
+  border-radius: 5px;
+}
+  
+#div-surface-material {
+  position: absolute;
+  right: 28.5%;
+  top: 15%;
+  height: 24px;
+  width: 189px;
+  border-radius: 5px;
+}
+  
+#div-rock-mass {
+  position: absolute;
+  right: 33.2%;
+  top: 28.5%;
+  height: 24px;
+  width: 141px;
+  border-radius: 5px;
+}
+  
+#div-profundidade-1 {
+  position: absolute;
+  right: 32%;
+  top: 42.2%;
+  height: 24px;
+  width: 154px;
+  border-radius: 5px;
+}
+  
+#div-production-1 {
+  position: absolute;
+  right: 32%;
+  top: 56.3%;
+  height: 23px;
+  width: 153px;
+  border-radius: 5px;
+}
+  
+#div-inclined-belt {
+  position: absolute;
+  right: -3%;
+  top: 53.5%;
+  height: 22px;
+  width: 211px;
+  border-radius: 5px;
+  transform: rotate(-63deg);
+}
+  
+#div-profundidade-2 {
+  position: absolute;
+  right: 32%;
+  top: 69.9%;
+  height: 23px;
+  width: 154px;
+  border-radius: 5px;
+}
+  
+#div-ramp-truck {
+  position: absolute;
+  right: 43%;
+  top: 86.2%;
+  height: 24px;
+  width: 190px;
+  border-radius: 5px;
+  transform: rotate(-15deg);
+}
+  
+#div-production-2 {
+  position: absolute;
+  right: 72.5%;
+  top: 56.2%;
+  height: 99px;
+  width: 35px;
+  border-radius: 5px;
+}
+  
+#div-shaft {
+  position: absolute;
+  right: 87%;
+  top: 14.5%;
+  height: 228px;
+  width: 24px;
+  border-radius: 5px;
+}

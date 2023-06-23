@@ -88,6 +88,7 @@ main {
   width: 100%;
   max-width: 1570px;
   grid-template-columns: 300px 300px 543px 423px;
+  height: 680px;
 
   /* grid-template-columns: minmax(260px, 5fr) minmax(250px, 5fr) minmax(245.45px, 9fr) minmax(300px, 7fr); */
   position: relative;
@@ -104,7 +105,7 @@ section {
   box-sizing: border-box;
 }
 
-.div-metodo {
+.container-div-parametros {
   position: absolute;
   left: 0;
   width: 100%;
@@ -221,22 +222,25 @@ a {
   height: 100%;
 }
 
+
 /* Subtitulos da seção 1 */
 #section-1 h3 {
   font-weight: bold;
   margin-bottom: 10px;
-  margin-top: 30px;
   text-align: left;
 }
 
-.div-parametros-cardozo {
+#titulo-section-1 {
+  margin-bottom: 30px;
+}
+
+.div-parametros {
   width: 100%;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   padding-left: 3%;
   text-align: left;
   align-items: center;
-  /* margin-bottom: 30px; */
 }
 
 #div-sm {
@@ -245,7 +249,7 @@ a {
   grid-template-rows: 1fr 1fr;
 }
 
-#div-rmr {
+#div-rock {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -284,120 +288,6 @@ select:hover {
   top: 0;
   left: 0;
 }
-
-.div-fluxograma {
-  background-color: rgb(249 3 3 / 30.2%);
-  border: 1pt solid; 
-  border-color: rgb(249 3 3 / 30.2%);
-  display: none;
-  z-index: 5;
-}
-
-.div-fluxograma:hover {
-  cursor: pointer;
-  box-shadow: 0 0 10px var(--cor-1);
-}
-
-#div-main-fluxograma {
-  position: relative;
-  height: 460px;
-  width: 90%;
-  margin: auto;
-  background-color: blue;
-}
-
-#div-start {
-  position: absolute;
-  right: 35.5%;
-  top: 2.6%;
-  height: 25px;
-  width: 103px;
-  border-radius: 5px;
-}
-
-#div-surface-material {
-  position: absolute;
-  right: 24.8%;
-  top: 14%;
-  height: 25px;
-  width: 208px;
-  border-radius: 5px;
-}
-
-#div-rock-mass {
-  position: absolute;
-  right: 30.2%;
-  top: 28%;
-  height: 25px;
-  width: 155px;
-  border-radius: 5px;
-}
-
-#div-profundidade-menor-1700 {
-  position: absolute;
-  right: 29%;
-  top: 42.3%;
-  height: 25px;
-  width: 168px;
-  border-radius: 5px;
-}
-
-#div-production-75 {
-  position: absolute;
-  right: 29%;
-  top: 56.5%;
-  height: 25px;
-  width: 168px;
-  border-radius: 5px;
-}
-
-#div-inclined-belt {
-  position: absolute;
-  right: -8%;
-  top: 53.5%;
-  height: 25px;
-  width: 219px;
-  border-radius: 5px;
-  transform: rotate(-62deg);
-}
-
-#div-profundidade-menor-700 {
-  position: absolute;
-  right: 29%;
-  top: 70.5%;
-  height: 25px;
-  width: 168px;
-  border-radius: 5px;
-}
-
-#div-ramp-truck {
-  position: absolute;
-  right: 41%;
-  top: 87%;
-  height: 25px;
-  width: 206px;
-  border-radius: 5px;
-  transform: rotate(-14.5deg);
-}
-
-#div-production-15 {
-  position: absolute;
-  right: 73%;
-  top: 56.5%;
-  height: 102px;
-  width: 37.5px;
-  border-radius: 5px;
-}
-
-#div-shaft {
-  position: absolute;
-  right: 89%;
-  top: 13.9%;
-  height: 231px;
-  width: 25px;
-  border-radius: 5px;
-}
-
 
 /* -------------------SEÇÃO 3 LATERAL DIREITA---------------------------- */
 
@@ -457,7 +347,7 @@ select:hover {
 
 #shaft-2 {
   top: 20.5%;
-  left: 15%;
+  left: 25%;
 }
 
 #vent {
@@ -466,15 +356,43 @@ select:hover {
   left: 68%;
 }
 
-#correia {
+.div-img-correia {
   position: absolute;
   display: none;
-  width: 5px;
-  height: 280px;
   background-color: black;
-  transform: rotate(30deg);
-  top: 16%;
+
+}
+
+#correia-1 {
+  width: 5px;
+  height: 160px;
+  transform: rotate(-70deg);
+  top: 35.5%;
+  left: 33%;
+}
+
+#correia-2 {
+  width: 5px;
+  height: 100px;
+  transform: rotate(70deg);
+  top: 54%;
   left: 40%;
+}
+
+#correia-3 {
+  width: 5px;
+  height: 185px;
+  transform: rotate(70deg);
+  top: 17.5%;
+  left: 36%;
+}
+
+#correia-4 {
+  width: 5px;
+  height: 105px;
+  transform: rotate(-70deg);
+  top: 14.8%;
+  left: 44.5%;
 }
 
 #truck {

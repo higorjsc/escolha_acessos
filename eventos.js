@@ -19,11 +19,11 @@ function Switch_language(metodo) {
 
 function Obter_idioma() {
     let idioma = document.getElementById("titulo-section-1").innerText
-    idioma = idioma.includes("CHARACTERISTICS") ? "en" : "pt"
+    idioma = idioma.includes("PARÂMETROS") ? "pt" : "en"
     return idioma
 }
 
-function Eventos(metodo = "Cardozo") {
+function Eventos(metodo) {
 
     //POSICIONA O BALÃO DE AJUDA NA POSIÇÃO DO CURSOR
     var balao = document.getElementById("balao")
@@ -48,6 +48,8 @@ function Eventos(metodo = "Cardozo") {
         Balao_entra(metodo, "switch-language")
     })
     switch_label.addEventListener("mouseleave", Balao_sai)
+
+    
 
 
     // RADIO BUTTONS

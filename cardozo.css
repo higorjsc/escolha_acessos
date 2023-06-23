@@ -1,0 +1,114 @@
+
+/* --------------------------------------------FLUXOGRAMA ---------------------------------------- */
+.div-fluxograma {
+  background-color: rgb(249 3 3 / 30.2%);
+  border: 1pt solid; 
+  border-color: rgb(249 3 3 / 30.2%);
+  display: none;
+  z-index: 5;
+}
+  
+.div-fluxograma:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--cor-1);
+}
+  
+#div-main-fluxograma {
+  position: relative;
+  height: 460px;
+  width: 90%;
+  margin: auto;
+  background-color: blue;
+}
+  
+#div-start {
+  position: absolute;
+  right: 35.5%;
+  top: 2.6%;
+  height: 25px;
+  width: 103px;
+  border-radius: 5px;
+}
+  
+#div-surface-material {
+  position: absolute;
+  right: 24.8%;
+  top: 14%;
+  height: 25px;
+  width: 208px;
+  border-radius: 5px;
+}
+  
+#div-rock-mass {
+  position: absolute;
+  right: 30.2%;
+  top: 28%;
+  height: 25px;
+  width: 155px;
+  border-radius: 5px;
+}
+  
+#div-profundidade-1 {
+  position: absolute;
+  right: 29%;
+  top: 42.3%;
+  height: 25px;
+  width: 168px;
+  border-radius: 5px;
+}
+  
+#div-production-1 {
+  position: absolute;
+  right: 29%;
+  top: 56.5%;
+  height: 25px;
+  width: 168px;
+  border-radius: 5px;
+}
+  
+#div-inclined-belt {
+  position: absolute;
+  right: -8%;
+  top: 53.5%;
+  height: 25px;
+  width: 219px;
+  border-radius: 5px;
+  transform: rotate(-62deg);
+}
+  
+#div-profundidade-2 {
+  position: absolute;
+  right: 29%;
+  top: 70.5%;
+  height: 25px;
+  width: 168px;
+  border-radius: 5px;
+}
+  
+#div-ramp-truck {
+  position: absolute;
+  right: 41%;
+  top: 87%;
+  height: 25px;
+  width: 206px;
+  border-radius: 5px;
+  transform: rotate(-14.5deg);
+}
+  
+#div-production-2 {
+  position: absolute;
+  right: 73%;
+  top: 56.5%;
+  height: 102px;
+  width: 37.5px;
+  border-radius: 5px;
+}
+  
+#div-shaft {
+  position: absolute;
+  right: 89%;
+  top: 13.9%;
+  height: 231px;
+  width: 25px;
+  border-radius: 5px;
+}

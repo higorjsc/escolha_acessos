@@ -153,6 +153,14 @@ input[type='radio']:checked + .radio-label::before {
   transition: transform 0.2s ease-in-out;
 }
 
+.switch-label:hover::after {
+  box-shadow: 0 0 20px var(--cor-1);
+  font: 12pt;
+  font-weight: bold;
+}
+
+
+
 #checkbox-switch:checked + .switch-label::after {
   transform: translateX(30px);
 }
