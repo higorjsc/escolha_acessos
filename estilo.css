@@ -19,7 +19,7 @@
   width: 100%;
   max-width: 1570px;
   display: grid;
-  grid-template-columns: 300px 300px 543px 423px;  
+  grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr);
   align-items: center;
   position: relative;
   height: 58.31px;
@@ -87,14 +87,11 @@ main {
   display: grid;
   width: 100%;
   max-width: 1570px;
-  grid-template-columns: 300px 300px 543px 423px;
-  height: 680px;
-
-  /* grid-template-columns: minmax(260px, 5fr) minmax(250px, 5fr) minmax(245.45px, 9fr) minmax(300px, 7fr); */
+  grid-template-columns: minmax(260px, 5fr) minmax(300px, 5fr) minmax(300px, 9fr) minmax(300px, 7fr);
+  height: 660px;
   position: relative;
   padding-bottom: 0.2%;
   padding-top: 0.25%;
-  overflow: hidden;
 }
 
 section {
@@ -338,7 +335,7 @@ select:hover {
   display: grid;
   width: 100%;
   max-width: 1570px;
-  grid-template-columns: 300px 300px 543px 423px;
+  grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr);
   height: auto;
   position: relative;
 }
@@ -347,7 +344,7 @@ select:hover {
   background-color: var(--cor-1);
   border: var(--borda-simples);
   display: grid;
-  grid-template-columns: 200px 700px 243px 423px;
+  grid-template-columns: minmax(150px, 1fr) minmax(400px, 4fr) minmax(150px, 1fr) minmax(200px, 3fr);
   position: absolute;
   grid-column: 1/5;
   width: 100%;
