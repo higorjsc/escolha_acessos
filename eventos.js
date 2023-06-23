@@ -43,14 +43,15 @@ function Eventos(metodo) {
     })
 
     //label do switch
-    const switch_label = document.querySelector(".switch-label") //mouseover no label, não na checkbox invisível
+    const switch_label = document.querySelector(".switch-label") 
+    //mouseover no label, não na checkbox invisível
     switch_label.addEventListener("mouseover", () => {
         Baloes("switch-language")
     })
-    switch_label.addEventListener("mouseleave",  () => Balao_sai())
+    switch_label.addEventListener("mouseleave", () => Balao_sai())
 
     // DIVS DO FLUXOGRAMA
-    const divs_fluxograma = document.querySelectorAll('.div-fluxograma')
+    const divs_fluxograma = document.querySelectorAll(".div-fluxograma")
     divs_fluxograma.forEach((elemento) => {
         elemento.addEventListener("mouseover", () => Baloes(elemento.id, metodo))
         elemento.addEventListener("mouseout", () => Balao_sai())
