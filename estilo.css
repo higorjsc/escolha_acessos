@@ -19,9 +19,7 @@
   width: 100%;
   max-width: 1570px;
   display: grid;
-
-  /* grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr); */
-  grid-template-columns: 5fr 5fr 9fr 7fr;
+  grid-template-columns: minmax(300px, 5fr) minmax(300px, 5fr) minmax(543.5px, 9fr) minmax(420px, 7fr);
   align-items: center;
   position: relative;
   margin: auto;
@@ -90,10 +88,7 @@ main {
   display: grid;
   width: 100%;
   max-width: 1570px;
-
-  /* grid-template-columns: minmax(260px, 5fr) minmax(300px, 5fr) minmax(300px, 9fr) minmax(300px, 7fr); */
   grid-template-columns: minmax(300px, 5fr) minmax(300px, 5fr) minmax(543.5px, 9fr) minmax(420px, 7fr);
-
   height: 660px;
   position: relative;
   margin: auto;
@@ -343,8 +338,8 @@ select:hover {
   width: 100%;
   max-width: 1570px;
 
-  /* grid-template-columns: minmax(260px, 5fr) minmax(300px, 7fr) minmax(300px, 11fr) minmax(300px, 5fr); */
-  grid-template-columns: 5fr 5fr 9fr 7fr;
+  /* grid-template-columns: minmax(300px, 5fr) minmax(300px, 5fr) minmax(543.5px, 9fr) minmax(420px, 7fr); */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   height: auto;
   position: relative;
   margin: auto;
@@ -354,9 +349,7 @@ select:hover {
   background-color: var(--cor-1);
   border: var(--borda-simples);
   display: grid;
-
-  /* grid-template-columns: minmax(150px, 1fr) minmax(400px, 4fr) minmax(150px, 1fr) minmax(200px, 3fr); */
-  grid-template-columns: 5fr 5fr 9fr 7fr;
+  grid-template-columns: minmax(150px, 1fr) minmax(400px, 4fr) minmax(150px, 1fr) minmax(200px, 3fr);
   position: absolute;
   grid-column: 1/5;
   width: 100%;
