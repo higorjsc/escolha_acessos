@@ -47,8 +47,8 @@
                 <li class='options'>
                     <a>LA VERGNE (2003)&ensp;&ensp;&darr;</a>
                     <ul>
-                        <li class='options'><a href="index.html">CARDOZO (2003)</a></li>
                         <li class='options'><a href="moser.html">MOSER (1996)</a></li>
+                        <li class='options'><a href="index.html">CARDOZO (2023)</a></li>
                     </ul>
                 </li>
             </ul>
@@ -58,82 +58,78 @@
 
 
         <section id="section-1">
-
+            
             <!-- --------------BOTÃO SWITCH IDIOMAS-------------------------- -->
-            <input type="checkbox" id="checkbox-switch"/>
+            <input type="checkbox" id="checkbox-switch" />
             <label for="checkbox-switch" class="switch-label" id="switch-label">
-              <span id="switch-texto"></span>
+                <span id="switch-texto"> </span>
             </label>
 
 
-            <h2 id="titulo-section-1">PARÂMETROS DE ESCOLHA</h2>
+            <h2>PARÂMETROS DE ESCOLHA</h2>
+            <div class="div-metodo" id="div-cardozo">
+                <!-- SURFACE MATERIAL CARDOZO-->
 
-            <div class="container-div-parametros">
-                 
-                <!-- COBERTURA SUPERFÍCIAL LA VERGNE -->
-                <div class='div-parametros' id="div-sm">
-
+                <div class='div-parametros-cardozo ' id="div-sm">
                     <h3 class="h3-parametros" id="h3-sm">Cobertura superfícial</h3><br>
-                    <span class="span-parametros">Há uma camada espessa de material inconsolidado? &ensp;</span>
+                    <span class="span-parametros">Espesura da camada de material inconsolidado: &ensp;</span>
 
                     <div class='container-label' id="container-label-sm">
-                        <!-- Radio button surface material < 70 m -->
-                        <input type="radio" class='input-sm' name="radio-sm" value="maior" id="radio-sm-sim">
-                        <label for="radio-sm-sim" class="radio-label radio-1"></label>
-                        <span class="radio-span radio-span-1">Sim</span>
-                        <!-- Radio button surface material > 70 m -->
-                        <input type="radio" class='input-sm' name="radio-sm" value="menor" id="radio-sm-nao">
-                        <label for="radio-sm-nao" class="radio-label radio-2"></label>
-                        <span class="radio-span radio-span-2">Não</span>
+
+                        <input type="radio" class='input-sm' name="radio-sm" value="menor_70" id="radio-sm-menor">
+                        <label for="radio-sm-menor" class="radio-label radio-1"></label>
+                        <span class="radio-span radio-span-1">< 70 m</span>
+                
+                        <input type="radio" class='input-sm' name="radio-sm" value="maior_70" id="radio-sm-maior">
+                        <label for="radio-sm-maior" class="radio-label radio-2"></label>
+                        <span class="radio-span radio-span-2" >> 70 m</span>
+
                     </div>
 
                 </div>
 
-                <!-- ROCK MASS LA VERGNE-->
-                <div class='div-parametros' id="div-rock">
+                <!-- ROCK MASS CARDOZO-->
+                <div class='div-parametros-cardozo' id="div-rmr">
+                    <h3 class="h3-parametros" id="h3-rmr">Condições do Maciço</h3><br>
+                    <span class="span-parametros">Classe do sistma RMR: &ensp;</span>
 
-                    <h3 class="h3-parametros" id="h3-rock">Condições do Maciço</h3><br>
-                    <span class="span-parametros">A rocha está integra/solida e possui boa resistencia? &ensp;</span>
+                    <div class='container-label' id="container-label-rmr">
+                        <input type="radio" class='input-rmr' name="radio-rmr" value="<V" id="radio-rmr-1-4">
+                        <label for="radio-rmr-1-4" class="radio-label radio-1"></label>
+                        <span class="radio-span radio-span-1">I-IV</span>
 
-                    <div class='container-label' id="container-label-rock">
-                        <!-- Radio button rock 1 a 4 -->
-                        <input type="radio" class='input-rock' name="radio-rock" value="maior" id="radio-rock-sim">
-                        <label for="radio-rock-sim" class="radio-label radio-1"></label>
-                        <span class="radio-span radio-span-1">Sim</span>
-                        <!-- Radio button rock 5 -->
-                        <input type="radio" class='input-rock' class="radio-2" name="radio-rock" value="menor" id="radio-rock-nao">
-                        <label for="radio-rock-nao" class="radio-label radio-2"></label>
-                        <span class="radio-span radio-span-2">Não</span>
+                        <input type="radio" class='input-rmr' class="radio-2" name="radio-rmr" value="V" id="radio-rmr-5-7">
+                        <label for="radio-rmr-5-7" class="radio-label radio-2"></label>
+                        <span class="radio-span radio-span-2">V</span>
                     </div>
 
                 </div>
-                            
-                <!-- PROFUNDIDADE LA VERGNE-->
-                <div class='div-parametros' id="div-depth">
 
-                    <h3 class="h3-depth" id="h3-depth">Profundidade</h3><br>
+                <!-- PROFUNDIDADE CARDOZO-->
+                <div class='div-parametros-cardozo ' id="div-profundidade">
+                    <h3 class="h3-profundidade" id="h3-profundidade">Profundidade</h3><br>
                     <span class="span-parametros">Ponto mais profundo do corpo de minério: &ensp;</span>
 
-                    <!-- Select depth -->
-                    <select class='input-depth' id="select-depth">
+                    <select class='input-profundidade' id="select-profundidade">
                         <option value=""></option>
-                        <option value="menor">< 300 m</option>
-                        <option value="entre">300-500 m</option>
-                        <option value="maior">> 500 m</option>
+                        <option value="menor_700">
+                            < 700 m</option>
+                        <option value="700_1700"> 700-1700 m</option>
+                        <option value="maior_1700"> > 1700 m</option>
                     </select>
 
                 </div>
 
-                <!-- PRODUÇÃO LA VERGNE-->
-                <div class='div-parametros' id="div-prod">
-                    <h3 class="h3-parametros" id="h3-prod">Produção</h3><br>
+                <!-- PRODUÇÃO CARDOZO-->
+                <div class='div-parametros-cardozo ' id="div-production">
+                    <h3 class="h3-parametros" id="h3-production">Produção</h3><br>
                     <span class="span-parametros">Produção diária em kt por dia: &ensp;</span>
 
-                    <select class='input-prod' id="select-prod">
+                    <select class='input-production' id="select-production">
                         <option value=""></option>
-                        <option value="maior">> 5 kt/d</option>
-                        <option value="entre">2.5-5 kt/d</option>
-                        <option value="menor">< 2.5 kt/d</option>
+                        <option value="menor_1.5">< 1.5 kt/d</option>
+                        <option value="1.5_7.5"> 1.5-7.5 kt/d</option>
+                        <option value="maior_7.5"> > 7.5 kt/d</option>
                     </select>
 
                 </div>
@@ -146,19 +142,19 @@
         <section id="section-2">
             <h2>FLUXOGRAMA</h2>
             <div id="div-main-fluxograma">
+                <img class='img-fluxograma' id='fluxograma-cardozo' src="Imagens\laVergne.jpg"
+                alt="fluxograma de escolha de acessos La Vergne (2003)">
 
-                <img class='img-fluxograma' id='fluxograma' src="Imagens\la_vergne.jpg" alt="fluxograma de escolha de acessos Cardozo (2023)">
-
-                <div class="div-fluxograma" id="fluxograma-start"></div>
-                <div class="div-fluxograma" id="fluxograma-sm"></div>
-                <div class="div-fluxograma" id="fluxograma-rock"></div>
-                <div class="div-fluxograma" id="fluxograma-depth-1"></div>
-                <div class="div-fluxograma" id="fluxograma-prod-1"></div>
-                <div class="div-fluxograma" id="fluxograma-inclined-belt"></div>
-                <div class="div-fluxograma" id="fluxograma-depth-2"></div>
-                <div class="div-fluxograma" id="fluxograma-rampa"></div>
-                <div class="div-fluxograma" id="fluxograma-prod-2"></div>
-                <div class="div-fluxograma" id="fluxograma-shaft"></div>
+                <div class="div-fluxograma" id="div-start"></div>
+                <div class="div-fluxograma" id="div-surface-material"></div>
+                <div class="div-fluxograma" id="div-rock-mass"></div>
+                <div class="div-fluxograma" id="div-profundidade-menor-1700"></div>
+                <div class="div-fluxograma" id="div-production-75"></div>
+                <div class="div-fluxograma" id="div-inclined-belt"></div>
+                <div class="div-fluxograma" id="div-profundidade-menor-700"></div>
+                <div class="div-fluxograma" id="div-ramp-truck"></div>
+                <div class="div-fluxograma" id="div-production-15"></div>
+                <div class="div-fluxograma" id="div-shaft"></div>
 
             </div>
             
@@ -174,10 +170,7 @@
                 <img class= 'img-acesso' id='rampa' src="Imagens\rampa.png" alt="Ilustração da rampa">
                 <img class= 'img-vent' id='vent' src="Imagens\vent.png" alt="Ilustração poço ventilação">
                 <img class= 'img-truck' id='truck' src="Imagens\truck2.png" alt="Ilustração do caminhão">
-                <div class= 'div-img-correia' id="correia-1"></div>
-                <div class= 'div-img-correia' id="correia-2"></div>
-                <div class= 'div-img-correia' id="correia-3"></div>
-                <div class= 'div-img-correia' id="correia-4"></div>
+                <div class= 'div-img-correia' id="correia"></div>
                 <img class= 'img-acesso' id='shaft-1' src="Imagens\shaft1.png" alt="Ilustração da shaft">
                 <img class= 'img-acesso' id='shaft-2' src="Imagens\shaft2.png" alt="Ilustração da shaft">
                 
@@ -222,7 +215,7 @@
 </body>
 
 <script>
-    Eventos('la_vergne')
+    Eventos()
 </script>
 
 

@@ -136,7 +136,6 @@ function Balao_sai() {
 
 // DECIDE QUAL CONFIGURAÇÃO DE BALÕES SERÁ CHAMADA
 function Baloes(entry, metodo = 'undefined') {
-    console.log(entry, metodo)
     if (metodo == "cardozo") {
         Balao_cardozo(entry)
     } else if (metodo == 'la_vergne') {

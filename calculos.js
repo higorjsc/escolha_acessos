@@ -1,7 +1,7 @@
 // OBTÉM O VALOR DOS RADIO BUTTONS
 function Get_input_value(nome) {
     let radio = document.querySelector(`input[name='${nome}']:checked`)
-    return radio ? radio.value : null
+    return radio ? radio.value : ''
 }
 
 // AUMENTA A OPACIDADE DAS DIVS DE INPUTS E DESABILITA OS RADIO BUTTONS
@@ -64,7 +64,7 @@ function Display_img(ids = [], visibilidade) {
 }
 
 // ALTERA A ILUSTRAÇÃO DO MÉTODO CARDOZO CONFORME O RESULTADO DO FLUXOGRAMA
-function Imagem_cardozo_la_vergne(resultado) {
+function Imagem_cardozo_la_vergne(resultado, valor) {
 
     // OCULTA OU MOSTRA AS CORREIAS
     let correia = (visibilidade) => {
@@ -77,7 +77,6 @@ function Imagem_cardozo_la_vergne(resultado) {
     // OCULTA OU MOSTRA CADA IMAGEM
     let Display_img = (ids = [], visibilidade) => {
         ids.forEach(id => {
-            console.log(id)
             document.getElementById(id).style.display = visibilidade
         })
     }
@@ -98,7 +97,7 @@ function Imagem_cardozo_la_vergne(resultado) {
 }
 
 // ALTERA A ILUSTRAÇÃO DO MÉTODO CARDOZO CONFORME O RESULTADO DO FLUXOGRAMA
-function Imagem_moser(resultado) {
+function Imagem_moser(resultado, valor) {
 
     // OCULTA OU MOSTRA AS CORREIAS
     let correia = (visibilidade) => {
@@ -111,25 +110,42 @@ function Imagem_moser(resultado) {
     // OCULTA OU MOSTRA CADA IMAGEM
     let Display_img = (ids = [], visibilidade) => {
         ids.forEach(id => {
-            console.log(id)
             document.getElementById(id).style.display = visibilidade
         })
     }
-
+    let pit
+    if (valor['logistica'] == 'sim' && valor['rock'] == 'menor' && valor['sm'] == 'menor' && valor['op'] == 'sim') {
+        pit = true
+    } else {
+        pit = false
+    }
+    console.log(pit)
     // Oculta as imagens com cada change dos inputs
-    Display_img(['rampa', 'truck', 'vent', 'shaft-2', 'shaft-1'], 'none')
+    Display_img(['rampa','rampa-pit', 'truck', 'vent', 'vent-pit', 'shaft', 'shaft-pit'], 'none')
     correia("none")
 
-    // Mostra imagens com base no resultado
-    if (resultado.includes("POÇO")) {
-        Display_img(['shaft-2', 'vent'], 'block')
-    } else if (resultado.includes("RAMPA")) {
-        Display_img(['rampa', 'truck'], 'block')
-    } else if (resultado.includes("CORREIA")) {
-        Display_img(['vent'], 'block')
-        correia("block")
+    if (pit) {
+        Display_img(['superficie', 'usina'], 'none')
+        Display_img(['superficie-pit', 'usina-pit'], 'block')
+        // Mostra imagens com base no resultado
+        if (resultado.includes("POÇO")) {
+            Display_img(['shaft-pit', 'vent-pit'], 'block')
+        } else if (resultado.includes("RAMPA")) {
+            Display_img(['rampa-pit', 'vent-pit', 'truck'], 'block')
+        } 
+    } else {
+        Display_img(['superficie', 'usina'], 'block')
+        Display_img(['superficie-pit', 'usina-pit'], 'none')
+
+         if (resultado.includes("POÇO")) {
+            Display_img(['shaft', 'vent'], 'block')
+        } else if (resultado.includes("RAMPA")) {
+            Display_img(['rampa', 'truck'], 'block')
+        } 
     }
 }
+
+
 
 
 // LOGICA DO FLUXOGRAMA, ILUSTRAÇÕES E INPUTS DO MÉTODO CARDOZO E LA VERGNE
@@ -308,15 +324,16 @@ function Calculo(metodo) {
         'depth': document.getElementById("select-depth").value,
         'prod': document.getElementById("select-prod").value
     }
+    console.log(valor)
 
     let resultado = ""
     if (metodo == "cardozo" || metodo == 'la_vergne') {
         resultado = Cardozo_La_vergne(valor)
-        Imagem_cardozo_la_vergne(resultado)
+        Imagem_cardozo_la_vergne(resultado, valor)
 
     } else if (metodo == "moser") {
         resultado = Moser(valor)
-        // Imagem_moser(resultado)
+        Imagem_moser(resultado, valor)
 
     }
     const span_resultado_final = document.getElementById("span-resultado-final")
