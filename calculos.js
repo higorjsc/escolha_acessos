@@ -324,7 +324,6 @@ function Calculo(metodo) {
         'depth': document.getElementById("select-depth").value,
         'prod': document.getElementById("select-prod").value
     }
-    console.log(valor)
 
     let resultado = ""
     if (metodo == "cardozo" || metodo == 'la_vergne') {

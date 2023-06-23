@@ -322,11 +322,13 @@ select:hover {
   width: 90%;
   background-color: var(--cor-1);
   font-size: 24pt;
-  height: 10%;
+  min-height: 10%;
+  max-height: 15%;
   border-radius: 20px;
   color: white;
   text-align: center;
   padding-top: 4%;
+  padding-bottom: 4%;
   box-sizing: content-box;
 }
 
