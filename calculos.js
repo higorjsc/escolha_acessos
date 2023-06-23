@@ -5,35 +5,36 @@ function Get_input_value(nome) {
 }
 
 // AUMENTA A OPACIDADE DAS DIVS DE INPUTS E DESABILITA OS RADIO BUTTONS
-function Disable(div, classe) {
+function Disable(id) {
+    const container = "#" + "div-" + id
+    document.querySelector(container).style.opacity = "0.5"
 
-    const container = document.querySelector(`#${div}`)
-    container.style.opacity = "0.5"
-
-    const elementos = document.querySelectorAll(`.${classe}`)
+    const classe = "." + "input-" + id
+    const elementos = document.querySelectorAll(classe)
     elementos.forEach(element => {
         element.disabled = true
     })
 }
 
 // REMOVE A OPACIDADE DAS DIVS DE INPUTS E HABILITA OS RADIO BUTTONS
-function Enable(div, classe) {
+function Enable(id) {
+    const container = "#" + "div-" + id
+    document.querySelector(container).style.opacity = "1"
 
-    const container = document.querySelector(`#${div}`)
-    container.style.opacity = "1"
-
-    const elementos = document.querySelectorAll(`.${classe}`)
+    const classe = "." + "input-" + id
+    const elementos = document.querySelectorAll(classe)
     elementos.forEach(element => {
         element.disabled = false
     })
 }
 
-// MOSTRA UMA DIV SOBRE O FLUXOGRAMA NA COR VERDE
-function Mostra_green(id) {
-    const elemento = document.getElementById(id)
-    elemento.style.display = "block"
-    elemento.style.backgroundColor = "rgb(0 128 0 / 19.5%)"
-    elemento.style.borderColor = "rgb(0 128 0 / 19.5%)"
+function Mostra_green(ids = []) {
+    let id = ""
+    ids.forEach(element => {
+        id = ("fluxograma-" + element)
+        document.getElementById(id).style.backgroundColor = "rgb(0 128 0 / 19.5%)"
+        document.getElementById(id).style.borderColor = "rgb(0 128 0 / 19.5%)"
+    })
 }
 
 // MOSTRA TODAS AS DIVS COLORIDAS SOBRE OS FLUXOGRAMAS NA COR VERMELHA
@@ -49,18 +50,23 @@ function Mostra_classe_red() {
 function Oculta_classe(classe) {
     const elementos = document.querySelectorAll(`.${classe}`)
     elementos.forEach(element => {
-        element.style.display = "none"
+        element.style.backgroundColor = "transparent"
     })
+}
+
+
+function Display_img(ids = [], visibilidade) {
+
+    ids.forEach(element => {
+        element.style.display = visibilidade
+    })
+
 }
 
 // ALTERA A ILUSTRAÇÃO DO MÉTODO CARDOZO CONFORME O RESULTADO DO FLUXOGRAMA
 function Imagem_cardozo_la_vergne(resultado) {
-    const rampa = document.getElementById("rampa")
-    // const shaft = document.getElementById("shaft-1")
-    const truck = document.getElementById("truck")
-    const vent = document.getElementById("vent")
-    const shaft = document.getElementById("shaft-2")
 
+    // OCULTA OU MOSTRA AS CORREIAS
     let correia = (visibilidade) => {
         classe = document.querySelectorAll(".div-img-correia")
         classe.forEach(element => {
@@ -68,287 +74,251 @@ function Imagem_cardozo_la_vergne(resultado) {
         })
     }
 
-    rampa.style.display = "none"
-    rampa.style.display = "none"
-    shaft.style.display = "none"
-    truck.style.display = "none"
-    vent.style.display = "none"
+    // OCULTA OU MOSTRA CADA IMAGEM
+    let Display_img = (ids = [], visibilidade) => {
+        ids.forEach(id => {
+            console.log(id)
+            document.getElementById(id).style.display = visibilidade
+        })
+    }
+
+    // Oculta as imagens com cada change dos inputs
+    Display_img(['rampa', 'truck', 'vent', 'shaft-2', 'shaft-1'], 'none')
     correia("none")
 
+    // Mostra imagens com base no resultado
     if (resultado.includes("POÇO")) {
-        shaft.style.display = "block"
-        vent.style.display = "block"
+        Display_img(['shaft-2', 'vent'], 'block')
     } else if (resultado.includes("RAMPA")) {
-        rampa.style.display = "block"
-        truck.style.display = "block"
+        Display_img(['rampa', 'truck'], 'block')
     } else if (resultado.includes("CORREIA")) {
-        vent.style.display = "block"
+        Display_img(['vent'], 'block')
+        correia("block")
+    }
+}
+
+// ALTERA A ILUSTRAÇÃO DO MÉTODO CARDOZO CONFORME O RESULTADO DO FLUXOGRAMA
+function Imagem_moser(resultado) {
+
+    // OCULTA OU MOSTRA AS CORREIAS
+    let correia = (visibilidade) => {
+        classe = document.querySelectorAll(".div-img-correia")
+        classe.forEach(element => {
+            element.style.display = visibilidade
+        })
+    }
+
+    // OCULTA OU MOSTRA CADA IMAGEM
+    let Display_img = (ids = [], visibilidade) => {
+        ids.forEach(id => {
+            console.log(id)
+            document.getElementById(id).style.display = visibilidade
+        })
+    }
+
+    // Oculta as imagens com cada change dos inputs
+    Display_img(['rampa', 'truck', 'vent', 'shaft-2', 'shaft-1'], 'none')
+    correia("none")
+
+    // Mostra imagens com base no resultado
+    if (resultado.includes("POÇO")) {
+        Display_img(['shaft-2', 'vent'], 'block')
+    } else if (resultado.includes("RAMPA")) {
+        Display_img(['rampa', 'truck'], 'block')
+    } else if (resultado.includes("CORREIA")) {
+        Display_img(['vent'], 'block')
         correia("block")
     }
 }
 
 
 // LOGICA DO FLUXOGRAMA, ILUSTRAÇÕES E INPUTS DO MÉTODO CARDOZO E LA VERGNE
-function Cardozo_La_vergne() {
-    const input_sm = Get_input_value("radio-sm")
-    const input_rmr = Get_input_value("radio-rock-mass")
-    const input_profundidade = document.getElementById("select-profundidade").value
-    const input_producao = document.getElementById("select-production").value
+function Cardozo_La_vergne(valor) {
 
     let resultado = ""
-    let brench
 
     // DESABILITA TODOS OS INPUTS ON CHANGE DOS SELECTS OU RADIOS
-    Disable("div-rock", "input-rock-mass")
-    Disable("div-profundidade", "input-profundidade")
-    Disable("div-production", "input-production")
+    Disable("rock")
+    Disable("depth")
+    Disable("prod")
 
     // OCULTA TODAS AS DIVS COLORIDAS DO FLUXOGRAMA
     Oculta_classe("div-fluxograma")
 
     // SURFACE MATERIAL
-    if (input_sm == "maior_70" || input_sm == "sim") {
+    if (valor['sm'] == "maior") {
         resultado = "POÇO"
         Mostra_classe_red()
-        Mostra_green("div-start")
-        Mostra_green("div-surface-material")
-        Mostra_green("div-shaft")
-    } else if (input_sm == "menor_70" || input_sm == "nao") {
-        Enable("div-rock", "input-rock-mass")
-        Mostra_green("div-start")
-        Mostra_green("div-surface-material")
-        brench = 1
+        Mostra_green(["start", "sm", "shaft"])
+    } else if (valor['sm'] == "menor") {
+        Enable("rock")
+        Mostra_green(["start", "sm"])
     }
 
     // ROCK MASS
-    if (brench == 1 && (input_rmr == "V" || input_rmr == "nao")) {
+    if (valor['sm'] == "menor" && valor['rock'] == "menor") {
         resultado = "POÇO"
         Mostra_classe_red()
-        Mostra_green("div-start")
-        Mostra_green("div-surface-material")
-        Mostra_green("div-rock-mass")
-        Mostra_green("div-shaft")
-    } else if (brench == 1 && (input_rmr == "<V" || input_rmr == "sim")) {
-        Enable("div-profundidade", "input-profundidade")
-        Mostra_green("div-rock-mass")
-        brench = 2
+        Mostra_green(["start", "sm", "rock", "shaft"])
+    } else if (valor['sm'] == "menor" && valor['rock'] == "maior") {
+        Enable("depth")
+        Mostra_green(["start", "sm", "rock"])
     }
 
     // PROFUNDIDADE
-    if (brench == 2 && input_profundidade == "maior") {
+    if (valor['sm'] == "menor" && valor['rock'] == "maior" && valor['depth'] == "maior") {
         resultado = "POÇO"
         Mostra_classe_red()
-        Mostra_green("div-start")
-        Mostra_green("div-surface-material")
-        Mostra_green("div-rock-mass")
-        Mostra_green("div-profundidade-1")
-        Mostra_green("div-shaft")
-    } else if (brench == 2 && (input_profundidade == "entre" || input_profundidade == "menor")) {
-        Enable("div-production", "input-production")
-        Mostra_green("div-profundidade-1")
-        brench = 3
+        Mostra_green(["start", "sm", "rock", "depth-1", "shaft"])
+
+    } else if (valor['sm'] == "menor" && valor['rock'] == "maior" && (valor['depth'] == "entre" || valor['depth'] == "menor")) {
+        Enable("prod")
+        Mostra_green(["start", "sm", "rock", "depth-1"])
     }
 
     // PRODUÇÃO
-    if (brench == 3 && input_producao == "maior") {
+    if (valor['sm'] == "menor" && valor['rock'] == "maior" && (valor['depth'] == "entre" || valor['depth'] == "menor") && valor['prod'] == "maior") {
         resultado = "CORREIA TRANSPORTADORA"
         Mostra_classe_red()
-        Mostra_green("div-start")
-        Mostra_green("div-surface-material")
-        Mostra_green("div-rock-mass")
-        Mostra_green("div-profundidade-1")
-        Mostra_green("div-production-1")
-        Mostra_green("div-inclined-belt")
-    } else if (brench == 3 && (input_producao == "menor" || input_producao == "entre") && input_profundidade == "menor") {
+        Mostra_green(["start", "sm", "rock", "depth-1", "prod-1", "inclined-belt"])
+
+    } else if (valor['sm'] == "menor" && valor['rock'] == "maior" && (valor['depth'] == "entre" || valor['depth'] == "menor") && (valor['prod'] == "menor" || valor['prod'] == "entre") && valor['depth'] == "menor") {
         resultado = "RAMPA E CAMINHÕES"
         Mostra_classe_red()
-        Mostra_green("div-start")
-        Mostra_green("div-surface-material")
-        Mostra_green("div-rock-mass")
-        Mostra_green("div-profundidade-1")
-        Mostra_green("div-production-1")
-        Mostra_green("div-profundidade-2")
-        Mostra_green("div-ramp-truck")
-    } else if (brench == 3 && input_producao == "menor" && input_profundidade == "entre") {
+        Mostra_green(["start", "sm", "rock", "depth-1", "prod-1", "depth-2", "rampa"])
+
+    } else if (valor['sm'] == "menor" && valor['rock'] == "maior" && (valor['depth'] == "entre" || valor['depth'] == "menor") && valor['prod'] == "menor" && valor['depth'] == "entre") {
         resultado = "RAMPA E CAMINHÕES"
         Mostra_classe_red()
-        Mostra_green("div-start")
-        Mostra_green("div-surface-material")
-        Mostra_green("div-rock-mass")
-        Mostra_green("div-profundidade-1")
-        Mostra_green("div-production-1")
-        Mostra_green("div-profundidade-2")
-        Mostra_green("div-production-2")
-        Mostra_green("div-ramp-truck")
-    } else if (brench == 3 && input_producao == "entre" && input_profundidade == "entre") {
+        Mostra_green(["start", "sm", "rock", "depth-1", "prod-1", "depth-2", "prod-2", "rampa"])
+
+    } else if (valor['sm'] == "menor" && valor['rock'] == "maior" && (valor['depth'] == "entre" || valor['depth'] == "menor") && valor['prod'] == "entre" && valor['depth'] == "entre") {
         resultado = "POÇO"
         Mostra_classe_red()
-        Mostra_green("div-start")
-        Mostra_green("div-surface-material")
-        Mostra_green("div-rock-mass")
-        Mostra_green("div-profundidade-1")
-        Mostra_green("div-production-1")
-        Mostra_green("div-profundidade-2")
-        Mostra_green("div-production-2")
-        Mostra_green("div-shaft")
+        Mostra_green(["start", "sm", "rock", "depth-1", "prod-1", "depth-2", "prod-2", "shaft"])
     }
 
-    Imagem_cardozo_la_vergne(resultado)
-
-    const span_resultado_final = document.getElementById("span-resultado-final")
-    span_resultado_final.innerText = resultado
-
-
+    return resultado
 
 }
 
 // LOGICA DO FLUXOGRAMA, ILUSTRAÇÕES E INPUTS DO MÉTODO MOSER
-function Moser() {
-    const input_sm = Get_input_value("radio-sm")
-    const input_rock = Get_input_value("radio-rock-mass")
-    const input_op = Get_input_value("radio-op")
-    const input_profundidade = document.getElementById("select-profundidade").value
-    const input_producao = document.getElementById("select-production").value
+function Moser(valor) {
 
-    console.log(input_profundidade)
     let resultado = ""
-    let brench = 0
 
     // DESABILITA TODOS OS INPUTS ON CHANGE DOS SELECTS OU RADIOS
-    Disable("div-sm", "input-sm")
-    Disable("div-profundidade", "input-profundidade")
-    Disable("div-production", "input-production")
-    Disable("div-op", "input-op")
+    Disable("rock")
+    Disable("sm")
+    Disable("depth")
+    Disable("prod")
+    Disable("open-pit")
 
     // OCULTA TODAS AS DIVS COLORIDAS DO FLUXOGRAMA
     Oculta_classe("div-fluxograma")
 
     // SURFACE MATERIAL
-    if (input_rock == "maior") {
+    if (valor['logistica'] == "nao") {
         resultado = "POÇO"
         Mostra_classe_red()
-        Mostra_green("fluxograma-trucks")
-        Mostra_green("fluxograma-rock-mass")
-        Mostra_green("fluxograma-shaft")
-    } else if (input_rock == "menor") {
-        Enable("div-sm", "input-sm")
-        Mostra_green("fluxograma-trucks")
-        Mostra_green("fluxograma-rock-mass")
+        Mostra_green(["logistica", "shaft"])
+    } else if (valor['logistica'] == "sim") {
+        Enable("rock")
+        Mostra_green(["logistica"])
+    }
+
+    // SURFACE MATERIAL
+    if (valor['logistica'] == "sim" && valor['rock'] == "maior") {
+        resultado = "POÇO"
+        Mostra_classe_red()
+        Mostra_green(["logistica", "rock", "shaft"])
+    } else if (valor['logistica'] == "sim" && valor['rock'] == "menor") {
+        Enable("sm")
+        Mostra_green(["logistica", "rock"])
     }
 
     // ROCK MASS
-    if (input_rock == "menor" && input_sm == "menor") {
-        Mostra_green("fluxograma-trucks")
-        Mostra_green("fluxograma-rock-mass")
-        Mostra_green("fluxograma-surface-material")
-        Enable("div-op", "input-op")
-    } else if (input_rock == "menor" && input_sm == "maior") {
+    if (valor['logistica'] == "sim" && valor['rock'] == "menor" && valor['sm'] == "menor") {
+        Mostra_green(["logistica", "rock", "sm"])
+        Enable("open-pit")
+    } else if (valor['logistica'] == "sim" && valor['rock'] == "menor" && valor['sm'] == "maior") {
         resultado = "POÇO"
         Mostra_classe_red()
-        Mostra_green("fluxograma-trucks")
-        Mostra_green("fluxograma-rock-mass")
-        Mostra_green("fluxograma-surface-material")
-        Mostra_green("fluxograma-shaft")
+        Mostra_green(["logistica", "rock", "sm", "shaft"])
     }
 
-    if (input_rock == "menor" && input_sm == "menor" && (input_op == "sim" || input_op == "nao")) {
-        Mostra_green("fluxograma-open-pit")
-        Enable("div-profundidade", "input-profundidade")
+    // OPEN PIT
+    if (valor['logistica'] == "sim" && valor['rock'] == "menor" && valor['sm'] == "menor" && (valor['op'] == "sim" || valor['op'] == "nao")) {
+        Mostra_green(["logistica", "rock", "sm", "open-pit"])
+        Enable("depth")
     }
 
     // PROFUNDIDADE OPEN PIT NÃO
-    if (input_rock == "menor" && input_sm == "menor" && input_op == "nao" && (input_profundidade == "entre" || input_profundidade == "maior")) {
+    if (valor['logistica'] == "sim" && valor['rock'] == "menor" && valor['sm'] == "menor" && valor['op'] == "nao" && (valor['depth'] == "entre" || valor['depth'] == "maior")) {
         resultado = "POÇO"
         Mostra_classe_red()
-        Mostra_green("fluxograma-trucks")
-        Mostra_green("fluxograma-surface-material")
-        Mostra_green("fluxograma-rock-mass")
-        Mostra_green("fluxograma-open-pit")
-        Mostra_green("fluxograma-profundidade-1")
-        Mostra_green("fluxograma-shaft")
-
-    } else if (input_rock == "menor" && input_sm == "menor" && input_op == "nao" && input_profundidade == "menor") {
-        Enable("div-production", "input-production")
-        Mostra_green("fluxograma-profundidade-1")
+        Mostra_green(["logistica", "sm", "rock", "open-pit", "depth-1", "shaft"])
+    } else if (valor['logistica'] == "sim" && valor['rock'] == "menor" && valor['sm'] == "menor" && valor['op'] == "nao" && valor['depth'] == "menor") {
+        Enable("prod")
+        Mostra_green(["logistica", "sm", "rock", "open-pit", "depth-1"])
     }
 
     // PRODUÇÃO OPEN PIT NÃO
-    if (input_rock == "menor" && input_sm == "menor" && input_profundidade == "menor" && input_producao == "menor") {
+    if (valor['logistica'] == "sim" && valor['rock'] == "menor" && valor['sm'] == "menor" && valor['depth'] == "menor" && valor['prod'] == "menor") {
         resultado = "RAMPA"
         Mostra_classe_red()
-        Mostra_green("fluxograma-trucks")
-        Mostra_green("fluxograma-surface-material")
-        Mostra_green("fluxograma-rock-mass")
-        Mostra_green("fluxograma-open-pit")
-        Mostra_green("fluxograma-profundidade-1")
-        Mostra_green("fluxograma-production-1")
-        Mostra_green("fluxograma-rampa")
-    } else if (input_rock == "menor" && input_sm == "menor" && input_profundidade == "menor" && (input_producao == "entre" || input_producao == "maior")) {
+        Mostra_green(["logistica", "sm", "rock", "open-pit", "depth-1", "prod-1", "rampa"])
+    } else if (valor['logistica'] == "sim" && valor['rock'] == "menor" && valor['sm'] == "menor" && valor['depth'] == "menor" && (valor['prod'] == "entre" || valor['prod'] == "maior")) {
         resultado = "POÇO"
         Mostra_classe_red()
-        Mostra_green("fluxograma-trucks")
-        Mostra_green("fluxograma-surface-material")
-        Mostra_green("fluxograma-rock-mass")
-        Mostra_green("fluxograma-open-pit")
-        Mostra_green("fluxograma-profundidade-1")
-        Mostra_green("fluxograma-production-1")
-        Mostra_green("fluxograma-shaft")
+        Mostra_green(["logistica", "sm", "rock", "open-pit", "depth-1", "prod-1", "shaft"])
     }
 
     // PROFUNDIDADE OPEN PIT NÃO
-    if (input_rock == "menor" && input_sm == "menor" && input_op == "sim" && input_profundidade == "maior") {
+    if (valor['logistica'] == "sim" && valor['rock'] == "menor" && valor['sm'] == "menor" && valor['op'] == "sim" && valor['depth'] == "maior") {
         resultado = "POÇO"
         Mostra_classe_red()
-        Mostra_green("fluxograma-trucks")
-        Mostra_green("fluxograma-surface-material")
-        Mostra_green("fluxograma-rock-mass")
-        Mostra_green("fluxograma-open-pit")
-        Mostra_green("fluxograma-profundidade-2")
-        Mostra_green("fluxograma-shaft")
-
-    } else if (input_rock == "menor" && input_sm == "menor" && input_op == "sim" && (input_profundidade == "menor" || input_profundidade == "entre")) {
-        Enable("div-production", "input-production")
-        Mostra_green("fluxograma-profundidade-2")
+        Mostra_green(["logistica", "sm", "rock", "open-pit", "depth-2", "shaft"])
+    } else if (valor['logistica'] == "sim" && valor['rock'] == "menor" && valor['sm'] == "menor" && valor['op'] == "sim" && (valor['depth'] == "menor" || valor['depth'] == "entre")) {
+        Enable("prod")
+        Mostra_green(["logistica", "sm", "rock", "open-pit", "depth-2"])
     }
 
     // PRODUÇÃO OPEN PIT SIM
-    if (input_rock == "menor" && input_sm == "menor" && input_op == "sim" && (input_profundidade == "menor" || input_profundidade == "entre") && (input_producao == "menor" || input_producao == "entre")) {
+    if (valor['logistica'] == "sim" && valor['rock'] == "menor" && valor['sm'] == "menor" && valor['op'] == "sim" && (valor['depth'] == "menor" || valor['depth'] == "entre") && (valor['prod'] == "menor" || valor['prod'] == "entre")) {
         resultado = "RAMPA"
         Mostra_classe_red()
-        Mostra_green("fluxograma-trucks")
-        Mostra_green("fluxograma-surface-material")
-        Mostra_green("fluxograma-rock-mass")
-        Mostra_green("fluxograma-open-pit")
-        Mostra_green("fluxograma-profundidade-2")
-        Mostra_green("fluxograma-production-2")
-        Mostra_green("fluxograma-rampa")
-    } else if (input_rock == "menor" && input_sm == "menor" && input_op == "sim" && (input_profundidade == "menor" || input_profundidade == "entre") && input_producao == "maior") {
+        Mostra_green(["logistica", "sm", "rock", "open-pit", "depth-2", "prod-2", "rampa"])
+    } else if (valor['logistica'] == "sim" && valor['rock'] == "menor" && valor['sm'] == "menor" && valor['op'] == "sim" && (valor['depth'] == "menor" || valor['depth'] == "entre") && valor['prod'] == "maior") {
         resultado = "POÇO"
         Mostra_classe_red()
-        Mostra_green("fluxograma-trucks")
-        Mostra_green("fluxograma-surface-material")
-        Mostra_green("fluxograma-rock-mass")
-        Mostra_green("fluxograma-open-pit")
-        Mostra_green("fluxograma-profundidade-2")
-        Mostra_green("fluxograma-production-2")
-        Mostra_green("fluxograma-shaft")
+        Mostra_green(["logistica", "sm", "rock", "open-pit", "depth-2", "prod-2", "shaft"])
     }
 
+    return resultado
 
-
-
-    Imagem_cardozo_la_vergne(resultado)
-
-    const span_resultado_final = document.getElementById("span-resultado-final")
-    span_resultado_final.innerText = resultado
 }
 
 function Calculo(metodo) {
-    if (metodo == "cardozo") {
-        Cardozo_La_vergne()
-    } else if (metodo == "la_vergne") {
-        Cardozo_La_vergne()
-    } else if (metodo == "moser") {
-        Moser()
+    let valor = {
+        'logistica': Get_input_value("radio-logistica"),
+        'sm': Get_input_value("radio-sm"),
+        'rock': Get_input_value("radio-rock"),
+        'op': Get_input_value("radio-open-pit"),
+        'depth': document.getElementById("select-depth").value,
+        'prod': document.getElementById("select-prod").value
     }
+
+    let resultado = ""
+    if (metodo == "cardozo" || metodo == 'la_vergne') {
+        resultado = Cardozo_La_vergne(valor)
+        Imagem_cardozo_la_vergne(resultado)
+
+    } else if (metodo == "moser") {
+        resultado = Moser(valor)
+        // Imagem_moser(resultado)
+
+    }
+    const span_resultado_final = document.getElementById("span-resultado-final")
+    span_resultado_final.innerText = resultado
 }

@@ -1,9 +1,83 @@
+
+/* --------------------------------------IMAGENS-------------------------------------------------- */
+
+#div-imgs {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 400px;
+}
+
+.img-superficie {
+  position: absolute;
+  top: 9.5%;
+  left: 2%;
+}
+
+.img-acesso {
+  position: absolute;
+  display: none;
+  z-index: 2;
+}
+
+#rampa {
+  top: 19%;
+  left: 25%
+}
+
+#shaft-1 {
+  top: 22%;
+  left: 15%;
+}
+
+#shaft-2 {
+  top: 20.5%;
+  left: 25%;
+}
+
+#vent {
+  position: absolute;
+  top: 19%;
+  left: 68%;
+}
+
+#truck {
+  position: absolute;
+  display: none;
+  top: 16%;
+  left: 13%;
+  z-index: 3;
+  transform: rotate(4deg);
+}
+
+#orebody {
+  position: absolute;
+  top: 64%;
+  left: 15%;
+  z-index: 3;
+}
+
+#usina {
+  position: absolute;
+  top: 2.5%;
+  left: 46%;
+  z-index: 2;
+  transform: rotate(-3deg);
+}
+
+#usina-2 {
+  position: absolute;
+  top: 2.5%;
+  left: 70%;
+  z-index: 2;
+  transform: rotate(-3deg);
+}
+
+/* --------------------------------------FLUXOGRAMAS-------------------------------------------------- */
+
 /* --------------------------------------------FLUXOGRAMA ---------------------------------------- */
 .div-fluxograma {
-  background-color: rgb(249 3 3 / 30.2%);
   border: 1pt solid; 
-  border-color: rgb(249 3 3 / 30.2%);
-  display: none;
   z-index: 5;
   position: absolute;
   border-radius: 5px;
@@ -22,21 +96,21 @@
   background-color: blue;
 }
   
-#fluxograma-trucks {
+#fluxograma-logistica {
   right: 74.8%;
   top: 3.8%;
   height: 34.5px;
   width: 80px;
 }
 
-#fluxograma-rock-mass {
+#fluxograma-rock {
   right: 74.85%;
   top: 21.5%;
   height: 18px;
   width: 81px;
 }
 
-#fluxograma-surface-material {
+#fluxograma-sm {
   right: 74.85%;
   top: 33.5%;
   height: 35px;
@@ -50,14 +124,14 @@
   width: 80px;
 }
 
-#fluxograma-profundidade-1 {
+#fluxograma-depth-1 {
   right: 41%;
   top: 52.5%;
   height: 28.5px;
   width: 81.5px;
 }
 
-#fluxograma-production-1 {
+#fluxograma-prod-1 {
   right: 41%;
   top: 67.2%;
   height: 17.5px;
@@ -65,14 +139,14 @@
 }
 
 
-#fluxograma-profundidade-2 {
+#fluxograma-depth-2 {
   right: 74.85%;
   top: 67.3%;
   height: 26px;
   width: 80px;
 }
 
-#fluxograma-production-2 {
+#fluxograma-prod-2 {
   right: 74.82%;
   top: 81.1%;
   height: 18px;

@@ -48,7 +48,7 @@
                     <a>LA VERGNE (2003)&ensp;&ensp;&darr;</a>
                     <ul>
                         <li class='options'><a href="index.html">CARDOZO (2003)</a></li>
-                        <li class='options'><a href="la_vergne.html">MOSER (1996)</a></li>
+                        <li class='options'><a href="moser.html">MOSER (1996)</a></li>
                     </ul>
                 </li>
             </ul>
@@ -78,11 +78,11 @@
 
                     <div class='container-label' id="container-label-sm">
                         <!-- Radio button surface material < 70 m -->
-                        <input type="radio" class='input-sm' name="radio-sm" value="sim" id="radio-sm-sim">
+                        <input type="radio" class='input-sm' name="radio-sm" value="maior" id="radio-sm-sim">
                         <label for="radio-sm-sim" class="radio-label radio-1"></label>
                         <span class="radio-span radio-span-1">Sim</span>
                         <!-- Radio button surface material > 70 m -->
-                        <input type="radio" class='input-sm' name="radio-sm" value="nao" id="radio-sm-nao">
+                        <input type="radio" class='input-sm' name="radio-sm" value="menor" id="radio-sm-nao">
                         <label for="radio-sm-nao" class="radio-label radio-2"></label>
                         <span class="radio-span radio-span-2">Não</span>
                     </div>
@@ -92,30 +92,30 @@
                 <!-- ROCK MASS LA VERGNE-->
                 <div class='div-parametros' id="div-rock">
 
-                    <h3 class="h3-parametros" id="h3-rock-mass">Condições do Maciço</h3><br>
+                    <h3 class="h3-parametros" id="h3-rock">Condições do Maciço</h3><br>
                     <span class="span-parametros">A rocha está integra/solida e possui boa resistencia? &ensp;</span>
 
-                    <div class='container-label' id="container-label-rock-mass">
-                        <!-- Radio button rock-mass 1 a 4 -->
-                        <input type="radio" class='input-rock-mass' name="radio-rock-mass" value="sim" id="radio-rock-mass-sim">
-                        <label for="radio-rock-mass-sim" class="radio-label radio-1"></label>
+                    <div class='container-label' id="container-label-rock">
+                        <!-- Radio button rock 1 a 4 -->
+                        <input type="radio" class='input-rock' name="radio-rock" value="maior" id="radio-rock-sim">
+                        <label for="radio-rock-sim" class="radio-label radio-1"></label>
                         <span class="radio-span radio-span-1">Sim</span>
-                        <!-- Radio button rock-mass 5 -->
-                        <input type="radio" class='input-rock-mass' class="radio-2" name="radio-rock-mass" value="nao" id="radio-rock-mass-nao">
-                        <label for="radio-rock-mass-nao" class="radio-label radio-2"></label>
+                        <!-- Radio button rock 5 -->
+                        <input type="radio" class='input-rock' class="radio-2" name="radio-rock" value="menor" id="radio-rock-nao">
+                        <label for="radio-rock-nao" class="radio-label radio-2"></label>
                         <span class="radio-span radio-span-2">Não</span>
                     </div>
 
                 </div>
                             
                 <!-- PROFUNDIDADE LA VERGNE-->
-                <div class='div-parametros' id="div-profundidade">
+                <div class='div-parametros' id="div-depth">
 
-                    <h3 class="h3-profundidade" id="h3-profundidade">Profundidade</h3><br>
+                    <h3 class="h3-depth" id="h3-depth">Profundidade</h3><br>
                     <span class="span-parametros">Ponto mais profundo do corpo de minério: &ensp;</span>
 
-                    <!-- Select profundidade -->
-                    <select class='input-profundidade' id="select-profundidade">
+                    <!-- Select depth -->
+                    <select class='input-depth' id="select-depth">
                         <option value=""></option>
                         <option value="menor">< 300 m</option>
                         <option value="entre">300-500 m</option>
@@ -125,11 +125,11 @@
                 </div>
 
                 <!-- PRODUÇÃO LA VERGNE-->
-                <div class='div-parametros' id="div-production">
-                    <h3 class="h3-parametros" id="h3-production">Produção</h3><br>
+                <div class='div-parametros' id="div-prod">
+                    <h3 class="h3-parametros" id="h3-prod">Produção</h3><br>
                     <span class="span-parametros">Produção diária em kt por dia: &ensp;</span>
 
-                    <select class='input-production' id="select-production">
+                    <select class='input-prod' id="select-prod">
                         <option value=""></option>
                         <option value="maior">> 5 kt/d</option>
                         <option value="entre">2.5-5 kt/d</option>
@@ -149,16 +149,16 @@
 
                 <img class='img-fluxograma' id='fluxograma' src="Imagens\la_vergne.jpg" alt="fluxograma de escolha de acessos Cardozo (2023)">
 
-                <div class="div-fluxograma" id="div-start"></div>
-                <div class="div-fluxograma" id="div-surface-material"></div>
-                <div class="div-fluxograma" id="div-rock-mass"></div>
-                <div class="div-fluxograma" id="div-profundidade-1"></div>
-                <div class="div-fluxograma" id="div-production-1"></div>
-                <div class="div-fluxograma" id="div-inclined-belt"></div>
-                <div class="div-fluxograma" id="div-profundidade-2"></div>
-                <div class="div-fluxograma" id="div-ramp-truck"></div>
-                <div class="div-fluxograma" id="div-production-2"></div>
-                <div class="div-fluxograma" id="div-shaft"></div>
+                <div class="div-fluxograma" id="fluxograma-start"></div>
+                <div class="div-fluxograma" id="fluxograma-sm"></div>
+                <div class="div-fluxograma" id="fluxograma-rock"></div>
+                <div class="div-fluxograma" id="fluxograma-depth-1"></div>
+                <div class="div-fluxograma" id="fluxograma-prod-1"></div>
+                <div class="div-fluxograma" id="fluxograma-inclined-belt"></div>
+                <div class="div-fluxograma" id="fluxograma-depth-2"></div>
+                <div class="div-fluxograma" id="fluxograma-rampa"></div>
+                <div class="div-fluxograma" id="fluxograma-prod-2"></div>
+                <div class="div-fluxograma" id="fluxograma-shaft"></div>
 
             </div>
             

@@ -65,7 +65,7 @@
 /* Balão de texto hover */ 
 .balao {
   position: fixed;
-  z-index: 2;
+  z-index: 999;
   font-weight: bold; 
   font-size: 9pt;
   align-items: center;
@@ -239,8 +239,15 @@ a {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   padding-left: 3%;
+  box-sizing: border-box;
   text-align: left;
   align-items: center;
+}
+
+#div-logistica {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 #div-sm {
@@ -250,6 +257,12 @@ a {
 }
 
 #div-rock {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#div-open-pit {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -304,127 +317,17 @@ select:hover {
 
 #span-resultado-final {
   position: absolute;
-  bottom: 20px;
-  width: 100%;
+  bottom: 10%;
+  left: 5%;
+  width: 90%;
   background-color: var(--cor-1);
-  height: 100px;
-  left: 0;
-  font-size: 20pt;
+  font-size: 24pt;
+  height: 10%;
+  border-radius: 20px;
   color: white;
   text-align: center;
-  padding-top: 5%;
-  box-sizing: border-box;
-}
-
-#div-imgs {
-  position: relative;
-  margin: auto;
-  width: 100%;
-  height: 400px;
-}
-
-.img-superficie {
-  position: absolute;
-  top: 10%;
-  left: 2%;
-}
-
-.img-acesso {
-  position: absolute;
-  display: none;
-  z-index: 2;
-}
-
-#rampa {
-  top: 19%;
-  left: 25%
-}
-
-#shaft-1 {
-  top: 22%;
-  left: 15%;
-}
-
-#shaft-2 {
-  top: 20.5%;
-  left: 25%;
-}
-
-#vent {
-  position: absolute;
-  top: 19%;
-  left: 68%;
-}
-
-.div-img-correia {
-  position: absolute;
-  display: none;
-  background-color: black;
-
-}
-
-#correia-1 {
-  width: 5px;
-  height: 160px;
-  transform: rotate(-70deg);
-  top: 35.5%;
-  left: 33%;
-}
-
-#correia-2 {
-  width: 5px;
-  height: 100px;
-  transform: rotate(70deg);
-  top: 54%;
-  left: 40%;
-}
-
-#correia-3 {
-  width: 5px;
-  height: 185px;
-  transform: rotate(70deg);
-  top: 17.5%;
-  left: 36%;
-}
-
-#correia-4 {
-  width: 5px;
-  height: 105px;
-  transform: rotate(-70deg);
-  top: 14.8%;
-  left: 44.5%;
-}
-
-#truck {
-  position: absolute;
-  display: none;
-  top: 16%;
-  left: 13%;
-  z-index: 3;
-  transform: rotate(4deg);
-}
-
-#orebody {
-  position: absolute;
-  top: 64%;
-  left: 15%;
-  z-index: 3;
-}
-
-#usina {
-  position: absolute;
-  top: 2.5%;
-  left: 44%;
-  z-index: 2;
-  transform: rotate(-3deg);
-}
-
-#usina-2 {
-  position: absolute;
-  top: 2.5%;
-  left: 70%;
-  z-index: 2;
-  transform: rotate(-3deg);
+  padding-top: 4%;
+  box-sizing: content-box;
 }
 
 

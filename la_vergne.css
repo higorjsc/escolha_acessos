@@ -1,9 +1,124 @@
-.div-fluxograma {
-  background-color: rgb(249 3 3 / 30.2%);
-  border: 1pt solid; 
-  border-color: rgb(249 3 3 / 30.2%);
+
+/* --------------------------------------IMAGENS-------------------------------------------------- */
+
+#div-imgs {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 400px;
+}
+
+.img-superficie {
+  position: absolute;
+  top: 10%;
+  left: 2%;
+}
+
+.img-acesso {
+  position: absolute;
   display: none;
+  z-index: 2;
+}
+
+#rampa {
+  top: 19%;
+  left: 25%
+}
+
+#shaft-1 {
+  top: 22%;
+  left: 15%;
+}
+
+#shaft-2 {
+  top: 20.5%;
+  left: 25%;
+}
+
+#vent {
+  position: absolute;
+  top: 19%;
+  left: 68%;
+}
+
+.div-img-correia {
+  position: absolute;
+  display: none;
+  background-color: black;
+
+}
+
+#correia-1 {
+  width: 5px;
+  height: 160px;
+  transform: rotate(-70deg);
+  top: 35.5%;
+  left: 33%;
+}
+
+#correia-2 {
+  width: 5px;
+  height: 100px;
+  transform: rotate(70deg);
+  top: 54%;
+  left: 40%;
+}
+
+#correia-3 {
+  width: 5px;
+  height: 185px;
+  transform: rotate(70deg);
+  top: 17.5%;
+  left: 36%;
+}
+
+#correia-4 {
+  width: 5px;
+  height: 105px;
+  transform: rotate(-70deg);
+  top: 14.8%;
+  left: 44.5%;
+}
+
+#truck {
+  position: absolute;
+  display: none;
+  top: 16%;
+  left: 13%;
+  z-index: 3;
+  transform: rotate(4deg);
+}
+
+#orebody {
+  position: absolute;
+  top: 64%;
+  left: 15%;
+  z-index: 3;
+}
+
+#usina {
+  position: absolute;
+  top: 2.5%;
+  left: 44%;
+  z-index: 2;
+  transform: rotate(-3deg);
+}
+
+#usina-2 {
+  position: absolute;
+  top: 2.5%;
+  left: 70%;
+  z-index: 2;
+  transform: rotate(-3deg);
+}
+
+/* --------------------------------------FLUXOGRAMAS-------------------------------------------------- */
+
+.div-fluxograma {
+  border: 1pt solid; 
   z-index: 5;
+  position: absolute;
+  border-radius: 5px;
 }
   
 .div-fluxograma:hover {
@@ -16,97 +131,76 @@
   height: 460px;
   width: 90%;
   margin: auto;
-  background-color: blue;
 }
   
-#div-start {
-  position: absolute;
+#fluxograma-start {
   right: 38.1%;
   top: 4%;
   height: 24px;
   width: 94px;
-  border-radius: 5px;
 }
   
-#div-surface-material {
-  position: absolute;
+#fluxograma-sm {
   right: 28.5%;
   top: 15%;
   height: 24px;
   width: 189px;
-  border-radius: 5px;
 }
   
-#div-rock-mass {
-  position: absolute;
+#fluxograma-rock {
   right: 33.2%;
   top: 28.5%;
   height: 24px;
   width: 141px;
-  border-radius: 5px;
 }
   
-#div-profundidade-1 {
-  position: absolute;
+#fluxograma-depth-1 {
   right: 32%;
   top: 42.2%;
   height: 24px;
   width: 154px;
-  border-radius: 5px;
 }
   
-#div-production-1 {
-  position: absolute;
+#fluxograma-prod-1 {
   right: 32%;
   top: 56.3%;
   height: 23px;
   width: 153px;
-  border-radius: 5px;
 }
   
-#div-inclined-belt {
-  position: absolute;
+#fluxograma-inclined-belt {
   right: -3%;
   top: 53.5%;
   height: 22px;
   width: 211px;
-  border-radius: 5px;
   transform: rotate(-63deg);
 }
   
-#div-profundidade-2 {
-  position: absolute;
+#fluxograma-depth-2 {
   right: 32%;
   top: 69.9%;
   height: 23px;
   width: 154px;
-  border-radius: 5px;
 }
   
-#div-ramp-truck {
-  position: absolute;
+#fluxograma-rampa {
   right: 43%;
   top: 86.2%;
   height: 24px;
   width: 190px;
-  border-radius: 5px;
   transform: rotate(-15deg);
 }
   
-#div-production-2 {
-  position: absolute;
+#fluxograma-prod-2 {
   right: 72.5%;
   top: 56.2%;
   height: 99px;
   width: 35px;
-  border-radius: 5px;
 }
   
-#div-shaft {
-  position: absolute;
+#fluxograma-shaft {
   right: 87%;
   top: 14.5%;
   height: 228px;
   width: 24px;
-  border-radius: 5px;
 }

@@ -71,20 +71,35 @@
             <div class="container-div-parametros">
 
 
+                <!-- ROCK LOGISTICA-->
+                <div class='div-parametros' id="div-logistica">
+                    <h3 class="h3-parametros" id="h3-logistica">Logistica</h3><br>
+                    <span class="span-parametros">A mina utilizará caminhões?&ensp;</span>
+
+                    <div class='container-label' id="container-label-logistica">
+                        <input type="radio" class='input-logistica' name="radio-logistica" value="sim" id="radio-logistica-sim">
+                        <label for="radio-logistica-sim" class="radio-label radio-1"></label>
+                        <span class="radio-span radio-span-1">Sim</span>
+
+                        <input type="radio" class='input-logistica' class="radio-2" name="radio-logistica" value="nao"  id="radio-logistica-nao">
+                        <label for="radio-logistica-nao" class="radio-label radio-2"></label>
+                        <span class="radio-span radio-span-2">Não</span>
+                    </div>
+
+                </div>
+                
                 <!-- ROCK MASS MOSER-->
                 <div class='div-parametros' id="div-rock">
-                    <h3 class="h3-parametros" id="h3-rock-mass">Condições do Maciço</h3><br>
+                    <h3 class="h3-parametros" id="h3-rock">Condições do Maciço</h3><br>
                     <span class="span-parametros">Classe do maciço no RMR: &ensp;</span>
 
-                    <div class='container-label' id="container-label-rock-mass">
-                        <input type="radio" class='input-rock-mass' name="radio-rock-mass" value="menor"
-                            id="radio-rock-mass-1-4">
-                        <label for="radio-rock-mass-1-4" class="radio-label radio-1"></label>
+                    <div class='container-label' id="container-label-rock">
+                        <input type="radio" class='input-rock' name="radio-rock" value="menor" id="radio-rock-menor">
+                        <label for="radio-rock-menor" class="radio-label radio-1"></label>
                         <span class="radio-span radio-span-1">I-V</span>
 
-                        <input type="radio" class='input-rock-mass' class="radio-2" name="radio-rock-mass" value="maior"
-                            id="radio-rock-mass-5-7">
-                        <label for="radio-rock-mass-5-7" class="radio-label radio-2"></label>
+                        <input type="radio" class='input-rock' class="radio-2" name="radio-rock" value="maior"  id="radio-rock-maior">
+                        <label for="radio-rock-maior" class="radio-label radio-2"></label>
                         <span class="radio-span radio-span-2">VI-VII</span>
                     </div>
 
@@ -110,32 +125,32 @@
                 </div>
 
                 <!-- ACESSO POR OPEN PIT MOSER -->
-                <div class='div-parametros' id="div-op">
+                <div class='div-parametros' id="div-open-pit">
 
-                    <h3 class="h3-parametros" id="h3-op">Acesso</h3><br>
+                    <h3 class="h3-parametros" id="h3-open-pit">Acesso</h3><br>
                     <span class="span-parametros">Acesso por open pit mining? &ensp;</span>
 
-                    <div class='container-label' id="container-label-op">
-                        <!-- Radio button surface material < 70 m -->
-                        <input type="radio" class='input-op' name="radio-op" value="sim" id="radio-op-sim">
-                        <label for="radio-op-sim" class="radio-label radio-1"></label>
+                    <div class='container-label' id="container-label-open-pit">
+                        <!-- Radio button open pit = sim -->
+                        <input type="radio" class='input-open-pit' name="radio-open-pit" value="sim" id="radio-open-pit-sim">
+                        <label for="radio-open-pit-sim" class="radio-label radio-1"></label>
                         <span class="radio-span radio-span-1">Sim</span>
-                        <!-- Radio button surface material > 70 m -->
-                        <input type="radio" class='input-op' name="radio-op" value="nao" id="radio-op-nao">
-                        <label for="radio-op-nao" class="radio-label radio-2"></label>
+                        <!-- Radio button open pit = nao -->
+                        <input type="radio" class='input-open-pit' name="radio-open-pit" value="nao" id="radio-open-pit-nao">
+                        <label for="radio-open-pit-nao" class="radio-label radio-2"></label>
                         <span class="radio-span radio-span-2">Não</span>
                     </div>
 
                 </div>
 
                 <!-- PROFUNDIDADE MOSER-->
-                <div class='div-parametros' id="div-profundidade">
+                <div class='div-parametros' id="div-depth">
 
-                    <h3 class="h3-profundidade" id="h3-profundidade">Profundidade</h3><br>
+                    <h3 class="h3-depth" id="h3-depth">Profundidade</h3><br>
                     <span class="span-parametros">Ponto mais profundo do corpo de minério: &ensp;</span>
 
-                    <!-- Select profundidade -->
-                    <select class='input-profundidade' id="select-profundidade">
+                    <!-- Select depth -->
+                    <select class='input-depth' id="select-depth">
                         <option value=""></option>
                         <option value="menor">< 500 m</option>
                         <option value="entre">500-600 m</option>
@@ -145,11 +160,11 @@
                 </div>
 
                 <!-- PRODUÇÃO MOSER-->
-                <div class='div-parametros' id="div-production">
-                    <h3 class="h3-parametros" id="h3-production">Produção</h3><br>
+                <div class='div-parametros' id="div-prod">
+                    <h3 class="h3-parametros" id="h3-prod">Produção</h3><br>
                     <span class="span-parametros">Produção da mina em kt por ano: &ensp;</span>
 
-                    <select class='input-production' id="select-production">
+                    <select class='input-prod' id="select-prod">
                         <option value=""></option>
                         <option value="menor">< 400 kt/y</option>
                         <option value="entre">400-600 kt/y</option>
@@ -170,14 +185,14 @@
                 <img class='img-fluxograma' id='fluxograma' src="Imagens\moser.jpg"
                     alt="fluxograma de escolha de acessos Cardozo (2023)">
 
-                <div class="div-fluxograma" id="fluxograma-trucks"></div>
-                <div class="div-fluxograma" id="fluxograma-rock-mass"></div>
-                <div class="div-fluxograma" id="fluxograma-surface-material"></div>
+                <div class="div-fluxograma" id="fluxograma-logistica"></div>
+                <div class="div-fluxograma" id="fluxograma-rock"></div>
+                <div class="div-fluxograma" id="fluxograma-sm"></div>
                 <div class="div-fluxograma" id="fluxograma-open-pit"></div>
-                <div class="div-fluxograma" id="fluxograma-profundidade-1"></div>
-                <div class="div-fluxograma" id="fluxograma-production-1"></div>
-                <div class="div-fluxograma" id="fluxograma-profundidade-2"></div>
-                <div class="div-fluxograma" id="fluxograma-production-2"></div>
+                <div class="div-fluxograma" id="fluxograma-depth-1"></div>
+                <div class="div-fluxograma" id="fluxograma-prod-1"></div>
+                <div class="div-fluxograma" id="fluxograma-depth-2"></div>
+                <div class="div-fluxograma" id="fluxograma-prod-2"></div>
                 <div class="div-fluxograma" id="fluxograma-rampa"></div>
                 <div class="div-fluxograma" id="fluxograma-shaft"></div>
 
@@ -191,7 +206,7 @@
 
                 <!-- <img class= 'img-usina' id='usina' src="Imagens\usina_1.png" alt="Ilustração de usina"> -->
                 <img class='img-usina' id='usina' src="Imagens\usina_1.png" alt="Ilustração de usina">
-                <img class='img-superficie' id='superficie' src="Imagens\superficie.png" alt="Ilustração da superfície">
+                <img class='img-superficie' id='superficie' src="Imagens\superficie2.png" alt="Ilustração da superfície">
                 <img class='img-acesso' id='rampa' src="Imagens\rampa.png" alt="Ilustração da rampa">
                 <img class='img-vent' id='vent' src="Imagens\vent.png" alt="Ilustração poço ventilação">
                 <img class='img-truck' id='truck' src="Imagens\truck2.png" alt="Ilustração do caminhão">
