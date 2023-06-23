@@ -55,7 +55,8 @@ input[type='radio'] {
   grid-column: 1/2;
   position: absolute;
   justify-self: center;
-  top: 1px;
+  top: 0.5px;
+  right: 2.2189px;
   width: 14px;
   height: 14px;
   border-radius: 50%;
