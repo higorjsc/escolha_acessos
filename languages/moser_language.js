@@ -11,10 +11,10 @@ function Escrever(id, texto, op) {
 function English() {
 
     //HEADER
-    Escrever("titulo-pagina", "SELEÇÃO DE MÉTODOS DE ACESSO A MINAS SUBTERRÂNEAS: Método Cardozo (2023)")
+    Escrever("titulo-pagina", "SELECTION OF ACESS FOR UNDERGROUND MINING: Moser Method (1996")
 
     // SEÇÃO 0
-    Escrever("li-titulo", "SELECIONE O MÉTODO")
+    Escrever("li-titulo", "SELECT METHOD")
 
     //SEÇÃO 1
     const paragrafo_explicacao = ""
@@ -22,41 +22,41 @@ function English() {
     Escrever("paragrafo-explicacao", paragrafo_explicacao)
 
     // Titulo
-    Escrever("titulo-section-1", "PARÂMETROS DE ESCOLHA")
+    Escrever("titulo-section-1", "SELECTION PARAMETERS")
 
     // LOGISTICA
-    Escrever("h3-logistica", "Cobertura superficial")
+    Escrever("h3-logistica", "Logistics")
     Escrever("span-logistica", "A mina utilizará caminhões?")
-    Escrever("span-logistica-nao", "Não")
-    Escrever("span-logistica-sim", "Sim")
+    Escrever("span-logistica-nao", "No")
+    Escrever("span-logistica-sim", "Yes")
 
     // SURFACE MATERIAL
-    Escrever("h3-sm", "Cobertura superficial")
-    Escrever("span-sm", "Espessura da camada de material inconsolidado:")
+    Escrever("h3-sm", "Surface material")
+    Escrever("span-sm", "Thickness of unconsolidated material:")
 
     // ROCK MASS
-    Escrever("h3-rock", "Condições do Maciço")
-    Escrever("span-rock", "Classe do maciço no sistema RMR:")
+    Escrever("h3-rock", "Rock mass conditions")
+    Escrever("span-rock", "RMR class of rock mass:")
 
     // OPEN-PIT
-    Escrever("h3-open-pit", "Acesso")
-    Escrever("span-open-pit", "Acesso por open pit mining?")
-    Escrever("span-open-pit-nao", "Não")
-    Escrever("span-open-pit-sim", "Sim")
+    Escrever("h3-open-pit", "Acess")
+    Escrever("span-open-pit", "Acess from open pit mining?")
+    Escrever("span-open-pit-nao", "No")
+    Escrever("span-open-pit-sim", "Yes")
 
     // PROFUNDIDADE
-    Escrever("h3-depth", "Profundidade")
-    Escrever("span-depth", "Ponto mais profundo do corpo de minério:")
+    Escrever("h3-depth", "Depth")
+    Escrever("span-depth", "Orebody deepest point:")
 
     // PROFUNDIDADE
-    Escrever("h3-prod", "Produção")
-    Escrever("span-prod", "Produção prevista para a mina em kt por ano:")
+    Escrever("h3-prod", "Production")
+    Escrever("span-prod", "Projected production for the mine in kt per year:")
 
     // SEÇÃO 2
-    Escrever("titulo-section-2", "FLUXOGRAMA")
+    Escrever("titulo-section-2", "FLOWCHART")
 
     // SEÇÃO 3
-    Escrever("titulo-section-3", "ILUSTRAÇÃO")
+    Escrever("titulo-section-3", "ILUSTRATION")
 
     //RODAPÉ
     Escrever("universidade", "UFRGS Universidade Federal do Rio Grande do Sul")
@@ -71,7 +71,7 @@ function English() {
 function Portuguese() {
 
     //HEADER
-    Escrever("titulo-pagina", "SELEÇÃO DE MÉTODOS DE ACESSO A MINAS SUBTERRÂNEAS: Método Cardozo (2023)")
+    Escrever("titulo-pagina", "SELEÇÃO DE ACESSOS PARA MINAS SUBTERRÂNEAS: Método Moser (1996)")
 
     // SEÇÃO 0
     Escrever("li-titulo", "SELECIONE O MÉTODO")
@@ -85,7 +85,7 @@ function Portuguese() {
     Escrever("titulo-section-1", "PARÂMETROS DE ESCOLHA")
 
     // LOGISTICA
-    Escrever("h3-logistica", "Cobertura superficial")
+    Escrever("h3-logistica", "Logística")
     Escrever("span-logistica", "A mina utilizará caminhões?")
     Escrever("span-logistica-nao", "Não")
     Escrever("span-logistica-sim", "Sim")

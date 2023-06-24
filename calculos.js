@@ -28,6 +28,7 @@ function Enable(id) {
     })
 }
 
+// MUUDA A COR DA DIV DO FLUXOGRAMA DE TRANSPARENTE PARA VERDE
 function Mostra_green(ids = []) {
     let id = ""
     ids.forEach(element => {
@@ -47,6 +48,7 @@ function Mostra_classe_red() {
     })
 }
 
+// OCULTA AS DIVS DO FLUXOGRAMA MUDANDO A COR DE FUNDO PARA TRANSPARENTE
 function Oculta_classe(classe) {
     const elementos = document.querySelectorAll(`.${classe}`)
     elementos.forEach(element => {
@@ -54,30 +56,21 @@ function Oculta_classe(classe) {
     })
 }
 
-
+// OCULTA OU MOSTRA CADA IMAGEM
 function Display_img(ids = [], visibilidade) {
-
-    ids.forEach(element => {
-        element.style.display = visibilidade
+    ids.forEach(id => {
+        document.getElementById(id).style.display = visibilidade
     })
-
 }
 
 // ALTERA A ILUSTRAÇÃO DO MÉTODO CARDOZO CONFORME O RESULTADO DO FLUXOGRAMA
 function Imagem_cardozo_la_vergne(resultado, valor) {
 
-    // OCULTA OU MOSTRA AS CORREIAS
+    // OCULTA OU MOSTRA AS CORREIAS TRANSPORTADORAS
     let correia = (visibilidade) => {
         classe = document.querySelectorAll(".div-img-correia")
         classe.forEach(element => {
             element.style.display = visibilidade
-        })
-    }
-
-    // OCULTA OU MOSTRA CADA IMAGEM
-    let Display_img = (ids = [], visibilidade) => {
-        ids.forEach(id => {
-            document.getElementById(id).style.display = visibilidade
         })
     }
 
@@ -86,11 +79,11 @@ function Imagem_cardozo_la_vergne(resultado, valor) {
     correia("none")
 
     // Mostra imagens com base no resultado
-    if (resultado.includes("POÇO")) {
+    if (resultado.includes("shaft")) {
         Display_img(["shaft-2", "vent"], "block")
-    } else if (resultado.includes("RAMPA")) {
+    } else if (resultado.includes("rampa")) {
         Display_img(["rampa", "truck"], "block")
-    } else if (resultado.includes("CORREIA")) {
+    } else if (resultado.includes("correia")) {
         Display_img(["vent"], "block")
         correia("block")
     }
@@ -99,48 +92,29 @@ function Imagem_cardozo_la_vergne(resultado, valor) {
 // ALTERA A ILUSTRAÇÃO DO MÉTODO CARDOZO CONFORME O RESULTADO DO FLUXOGRAMA
 function Imagem_moser(resultado, valor) {
 
-    // OCULTA OU MOSTRA AS CORREIAS
-    let correia = (visibilidade) => {
-        classe = document.querySelectorAll(".div-img-correia")
-        classe.forEach(element => {
-            element.style.display = visibilidade
-        })
-    }
-
-    // OCULTA OU MOSTRA CADA IMAGEM
-    let Display_img = (ids = [], visibilidade) => {
-        ids.forEach(id => {
-            document.getElementById(id).style.display = visibilidade
-        })
-    }
-   
     // Oculta as imagens com cada change dos inputs
     Display_img(["rampa", "rampa-pit", "truck", "vent", "vent-pit", "shaft", "shaft-pit"], "none")
-    correia("none")
 
+    // VERIFICA SE OPEN PIT ESTÁ MARCADO SIM OU NÃO
     if (valor["logistica"] == "sim" && valor["rock"] == "menor" && valor["sm"] == "menor" && valor["op"] == "sim") {
         Display_img(["superficie", "usina"], "none")
         Display_img(["superficie-pit", "usina-pit"], "block")
-        // Mostra imagens com base no resultado
-        if (resultado.includes("POÇO")) {
+        if (resultado.includes("shaft")) {
             Display_img(["shaft-pit", "vent-pit"], "block")
-        } else if (resultado.includes("RAMPA")) {
+        } else if (resultado.includes("rampa")) {
             Display_img(["rampa-pit", "vent-pit", "truck"], "block")
         }
     } else {
         Display_img(["superficie", "usina"], "block")
         Display_img(["superficie-pit", "usina-pit"], "none")
 
-        if (resultado.includes("POÇO")) {
+        if (resultado.includes("shaft")) {
             Display_img(["shaft", "vent"], "block")
-        } else if (resultado.includes("RAMPA")) {
+        } else if (resultado.includes("rampa")) {
             Display_img(["rampa", "truck"], "block")
         }
     }
 }
-
-
-
 
 // LOGICA DO FLUXOGRAMA, ILUSTRAÇÕES E INPUTS DO MÉTODO CARDOZO E LA VERGNE
 function Cardozo_La_vergne(valor) {
@@ -157,7 +131,7 @@ function Cardozo_La_vergne(valor) {
 
     // SURFACE MATERIAL
     if (valor["sm"] == "maior") {
-        resultado = "POÇO"
+        resultado = "shaft"
         Mostra_classe_red()
         Mostra_green(["start", "sm", "shaft"])
     } else if (valor["sm"] == "menor") {
@@ -167,7 +141,7 @@ function Cardozo_La_vergne(valor) {
 
     // ROCK MASS
     if (valor["sm"] == "menor" && valor["rock"] == "menor") {
-        resultado = "POÇO"
+        resultado = "shaft"
         Mostra_classe_red()
         Mostra_green(["start", "sm", "rock", "shaft"])
     } else if (valor["sm"] == "menor" && valor["rock"] == "maior") {
@@ -177,7 +151,7 @@ function Cardozo_La_vergne(valor) {
 
     // PROFUNDIDADE
     if (valor["sm"] == "menor" && valor["rock"] == "maior" && valor["depth"] == "maior") {
-        resultado = "POÇO"
+        resultado = "shaft"
         Mostra_classe_red()
         Mostra_green(["start", "sm", "rock", "depth-1", "shaft"])
 
@@ -188,26 +162,27 @@ function Cardozo_La_vergne(valor) {
 
     // PRODUÇÃO
     if (valor["sm"] == "menor" && valor["rock"] == "maior" && (valor["depth"] == "entre" || valor["depth"] == "menor") && valor["prod"] == "maior") {
-        resultado = "CORREIA TRANSPORTADORA"
+        resultado = "correia"
         Mostra_classe_red()
         Mostra_green(["start", "sm", "rock", "depth-1", "prod-1", "inclined-belt"])
 
     } else if (valor["sm"] == "menor" && valor["rock"] == "maior" && (valor["depth"] == "entre" || valor["depth"] == "menor") && (valor["prod"] == "menor" || valor["prod"] == "entre") && valor["depth"] == "menor") {
-        resultado = "RAMPA E CAMINHÕES"
+        resultado = "rampa"
         Mostra_classe_red()
         Mostra_green(["start", "sm", "rock", "depth-1", "prod-1", "depth-2", "rampa"])
 
     } else if (valor["sm"] == "menor" && valor["rock"] == "maior" && (valor["depth"] == "entre" || valor["depth"] == "menor") && valor["prod"] == "menor" && valor["depth"] == "entre") {
-        resultado = "RAMPA E CAMINHÕES"
+        resultado = "rampa"
         Mostra_classe_red()
         Mostra_green(["start", "sm", "rock", "depth-1", "prod-1", "depth-2", "prod-2", "rampa"])
 
     } else if (valor["sm"] == "menor" && valor["rock"] == "maior" && (valor["depth"] == "entre" || valor["depth"] == "menor") && valor["prod"] == "entre" && valor["depth"] == "entre") {
-        resultado = "POÇO"
+        resultado = "shaft"
         Mostra_classe_red()
         Mostra_green(["start", "sm", "rock", "depth-1", "prod-1", "depth-2", "prod-2", "shaft"])
     }
 
+    // RETORNA O RESULTADO PARA A FUNÇÃO CÁLCULO
     return resultado
 
 }
@@ -229,7 +204,7 @@ function Moser(valor) {
 
     // SURFACE MATERIAL
     if (valor["logistica"] == "nao") {
-        resultado = "POÇO"
+        resultado = "shaft"
         Mostra_classe_red()
         Mostra_green(["logistica", "shaft"])
     } else if (valor["logistica"] == "sim") {
@@ -239,7 +214,7 @@ function Moser(valor) {
 
     // SURFACE MATERIAL
     if (valor["logistica"] == "sim" && valor["rock"] == "maior") {
-        resultado = "POÇO"
+        resultado = "shaft"
         Mostra_classe_red()
         Mostra_green(["logistica", "rock", "shaft"])
     } else if (valor["logistica"] == "sim" && valor["rock"] == "menor") {
@@ -252,7 +227,7 @@ function Moser(valor) {
         Mostra_green(["logistica", "rock", "sm"])
         Enable("open-pit")
     } else if (valor["logistica"] == "sim" && valor["rock"] == "menor" && valor["sm"] == "maior") {
-        resultado = "POÇO"
+        resultado = "shaft"
         Mostra_classe_red()
         Mostra_green(["logistica", "rock", "sm", "shaft"])
     }
@@ -265,7 +240,7 @@ function Moser(valor) {
 
     // PROFUNDIDADE OPEN PIT NÃO
     if (valor["logistica"] == "sim" && valor["rock"] == "menor" && valor["sm"] == "menor" && valor["op"] == "nao" && (valor["depth"] == "entre" || valor["depth"] == "maior")) {
-        resultado = "POÇO"
+        resultado = "shaft"
         Mostra_classe_red()
         Mostra_green(["logistica", "sm", "rock", "open-pit", "depth-1", "shaft"])
     } else if (valor["logistica"] == "sim" && valor["rock"] == "menor" && valor["sm"] == "menor" && valor["op"] == "nao" && valor["depth"] == "menor") {
@@ -275,18 +250,18 @@ function Moser(valor) {
 
     // PRODUÇÃO OPEN PIT NÃO
     if (valor["logistica"] == "sim" && valor["rock"] == "menor" && valor["sm"] == "menor" && valor["depth"] == "menor" && valor["prod"] == "menor") {
-        resultado = "RAMPA"
+        resultado = "rampa"
         Mostra_classe_red()
         Mostra_green(["logistica", "sm", "rock", "open-pit", "depth-1", "prod-1", "rampa"])
     } else if (valor["logistica"] == "sim" && valor["rock"] == "menor" && valor["sm"] == "menor" && valor["depth"] == "menor" && (valor["prod"] == "entre" || valor["prod"] == "maior")) {
-        resultado = "POÇO"
+        resultado = "shaft"
         Mostra_classe_red()
         Mostra_green(["logistica", "sm", "rock", "open-pit", "depth-1", "prod-1", "shaft"])
     }
 
     // PROFUNDIDADE OPEN PIT NÃO
     if (valor["logistica"] == "sim" && valor["rock"] == "menor" && valor["sm"] == "menor" && valor["op"] == "sim" && valor["depth"] == "maior") {
-        resultado = "POÇO"
+        resultado = "shaft"
         Mostra_classe_red()
         Mostra_green(["logistica", "sm", "rock", "open-pit", "depth-2", "shaft"])
     } else if (valor["logistica"] == "sim" && valor["rock"] == "menor" && valor["sm"] == "menor" && valor["op"] == "sim" && (valor["depth"] == "menor" || valor["depth"] == "entre")) {
@@ -296,17 +271,18 @@ function Moser(valor) {
 
     // PRODUÇÃO OPEN PIT SIM
     if (valor["logistica"] == "sim" && valor["rock"] == "menor" && valor["sm"] == "menor" && valor["op"] == "sim" && (valor["depth"] == "menor" || valor["depth"] == "entre") && (valor["prod"] == "menor" || valor["prod"] == "entre")) {
-        resultado = "RAMPA"
+        resultado = "rampa"
         Mostra_classe_red()
         Mostra_green(["logistica", "sm", "rock", "open-pit", "depth-2", "prod-2", "rampa"])
     } else if (valor["logistica"] == "sim" && valor["rock"] == "menor" && valor["sm"] == "menor" && valor["op"] == "sim" && (valor["depth"] == "menor" || valor["depth"] == "entre") && valor["prod"] == "maior") {
-        resultado = "POÇO"
+        resultado = "shaft"
         Mostra_classe_red()
         Mostra_green(["logistica", "sm", "rock", "open-pit", "depth-2", "prod-2", "shaft"])
     }
 
-    return resultado
 
+    // RETORNA O RESULTADO PARA A FUNÇÃO CÁLCULO
+    return resultado
 }
 
 function Calculo(metodo) {
@@ -329,6 +305,21 @@ function Calculo(metodo) {
         Imagem_moser(resultado, valor)
 
     }
+
+    let resultados_en = {
+        "shaft": "VERTICAL SHAFT HOISTING",
+        "rampa": "RAMP HAULAGE BY TRUCK",
+        "correia": "INCLINED BELT CONVEYOR",
+    }
+    let resultados_pt = {
+        "shaft": "POÇO E ELEVADORES",
+        "rampa": "RAMPA E CAMINHÕES",
+        "correia": "CORREIA TRANSPORTADORA",
+    }
+
+    // Mostra o reusltado na tela conforme o idioma da janela
+    resultado = Obter_idioma() == "pt" ? resultados_pt[resultado] : resultados_en[resultado]
+    // Se resultado for "undefined", nada será exibido
     const span_resultado_final = document.getElementById("span-resultado-final")
-    span_resultado_final.innerText = resultado
+    resultado ? span_resultado_final.innerText = resultado : span_resultado_final.innerText = ""
 }

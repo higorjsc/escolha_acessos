@@ -5,44 +5,35 @@ function Balao_moser(entry) {
         messages = {
             "fluxograma-logistica": "A mina utilizará caminhões?",
             "fluxograma-rock": "A classe do maciço é menor do que 5 (I-V)?",
-            "fluxograma-sm": "A camada de materiais não consolidados\n (solos) sobre o deposótio mineral possui\n espessura menor que 70 m?",
+            "fluxograma-sm": "A camada de materiais não consolidados\n(solos) sobre o deposótio mineral possui\nespessura menor que 70 m?",
             "fluxograma-depth-1": "O ponto mais profundo do corpo de minério\nestá a menos de 500 m da superfície?",
-            "fluxograma-prod-1": "A produção da mina será menor ou maior\n que 400 mil toneladas por ano?",
-            "fluxograma-open-pit": "O depósito será acessado a partir da\n cava de uma mina a céu aberto?",
+            "fluxograma-prod-1": "A produção da mina será menor ou maior\nque 400 mil toneladas por ano?",
+            "fluxograma-open-pit": "O depósito será acessado a partir da\ncava de uma mina a céu aberto?",
             "fluxograma-depth-2": "O ponto mais profundo do corpo de minério\nestá a menos de 600 m da superfície?",
-            "fluxograma-prod-2": "A produção da mina será menor ou maior\n que 600 mil toneladas por ano?",
+            "fluxograma-prod-2": "A produção da mina será menor ou maior\nque 600 mil toneladas por ano?",
             "fluxograma-rampa": "Utilizar rampa e caminhões",
             "fluxograma-shaft": "Utiliiar poço e elevador",
-            "label-sm-menor": "oi",
-            "label-sm-maior": "oi",
-            "label-rock-menor": "oi",
-            "label-rock-maior": "oi",
-            "label-open-pit-sim": "oi",
-            "label-open-pit-nao": "oi",
-            "select-depth": "oi",
-            "select-prod": "oi"
-
+            "label-logistica-sim": "Se não utilizar caminhões,\ndeverá utilizar poço e elevadores.",
+            "label-logistica-nao": "Se não utilizar caminhões,\ndeverá utilizar poço e elevadores.",
+            "label-rock-menor": "- Classe I: rocha íntegra e resistente\n- Classe VII: material inconsolidado (solo).",
+            "label-rock-maior": "- Classe I: rocha íntegra e resistente\n- Classe VII: material inconsolidado (solo).",
         }
     } else {
         messages = {
-            "fluxograma-logistica": "oi",
-            "fluxograma-rock": "A classe do maciço é menor do que 5 (I-V)?",
-            "fluxograma-sm": "A camada de materiais não consolidados\n (solos) sobre o deposótio mineral possui\n espessura menor que 70 m?",
-            "fluxograma-depth-1": "O ponto mais profundo do corpo de minério\nestá a menos de 1700 m da superfície?",
-            "fluxograma-prod-1": "A produção da mina será menor\n que 400 mil toneladas por ano?",
-            "fluxograma-open-pit": "O depósito será acessado a partir da\n cava de uma mina a céu aberto?",
-            "fluxograma-depth-2": "O ponto mais profundo do corpo de minério\nestá a menos de 700 m da superfície?",
-            "fluxograma-prod-2": "A produção da mina será menor\n que 1,5 mil toneladas por dia?",
-            "fluxograma-rampa": "Utilizar rampa e caminhões",
-            "fluxograma-shaft": "Utilizar poço e elevador",
-            "label-sm-menor": "oi",
-            "label-sm-maior": "oi",
-            "label-rock-menor": "oi",
-            "label-rock-maior": "oi",
-            "label-open-pit-sim": "oi",
-            "label-open-pit-nao": "oi",
-            "select-depth": "oi",
-            "select-prod": "oi"
+            "fluxograma-logistica": "Is the mine going to utilize trucks?",
+            "fluxograma-rock": "Is the rock mass classification less than 5 (I-V)?",
+            "fluxograma-sm": "Is the layer of unconsolidated materials (soils)\nover the mineral deposit less than 70 m thick?",
+            "fluxograma-depth-1": "Is the deepest point of the orebody\nless than 500 m from the surface?\n",
+            "fluxograma-prod-1": "Will the mine production be less\nthan 400 thousand tons per year?",
+            "fluxograma-open-pit": "Will the deposit be accessed\nfrom an open pit mine?",
+            "fluxograma-depth-2": "Is the deepest point of the orebody\nless than 600 m from the surface?",
+            "fluxograma-prod-2": "Will the mine production be less\nthan 600 thousand tons per yer?",
+            "fluxograma-rampa": "Utilize ramps and trucks",
+            "fluxograma-shaft": "Utilize a shaft and elevators",
+            "label-logistica-sim": "If trucks are not used,\nshaft and elevators should be utilized",
+            "label-logistica-nao": "If trucks are not used,\nshaft and elevators should be utilized",
+            "label-rock-menor": "- Class I: intact and resistant rock\n- Class VII: unconsolidated material (soil).",
+            "label-rock-maior": "- Class I: intact and resistant rock\n- Class VII: unconsolidated material (soil).",
         }
     }
 
@@ -63,7 +54,7 @@ function Balao_moser(entry) {
         const { x, y } = positions[entry]
         balao.style.transform = `translate(${x}px, ${y}px)`
     } else {
-        balao.style.transform = "translate(100px,-20px)"
+        balao.style.transform = "translate(80px,-20px)"
     }
 }
 
@@ -72,41 +63,35 @@ function Balao_la_vergne(entry) {
     let messages
     if (idioma == "pt") {
         messages = {
-            "fluxograma-start": "",
             "fluxograma-sm": "Existe uma camada espessa de materiais\nnão consolidados (solos) sobre\no deposótio mineral?",
             "fluxograma-rock": "A rocha está integra (sem juntas/fraturas)\ne possui boa qualidade/resistencia?",
             "fluxograma-depth-1": "O ponto mais profundo do corpo de minério\nestá a menos de 500 m da superfície?",
-            "fluxograma-prod-1": "A produção da mina será menor\n que 5 mil toneladas por dia?",
+            "fluxograma-prod-1": "A produção da mina será menor\nque 5 mil toneladas por dia?",
             "fluxograma-inclined-belt": "Utilizar correia transportadora",
             "fluxograma-depth-2": "O ponto mais profundo do corpo de minério\nestá a menos de 300 m da superfície?",
-            "fluxograma-prod-2": "A produção da mina será menor\n que 2,5 mil toneladas por dia?",
+            "fluxograma-prod-2": "A produção da mina será menor\nque 2,5 mil toneladas por dia?",
             "fluxograma-rampa": "Utilizar rampa e caminhões",
             "fluxograma-shaft": "Utilizar poço e elevador",
-            "label-sm-menor": "oi",
-            "label-sm-maior": "oi",
-            "label-rock-menor": "oi",
-            "label-rock-maior": "oi",
-            "select-depth": "oi",
-            "select-prod": "oi"
+            "label-sm-menor": "Existe uma camada espessa de materiais\nnão consolidados (solos) sobre\no deposótio mineral?",
+            "label-sm-maior": "Existe uma camada espessa de materiais\nnão consolidados (solos) sobre\no deposótio mineral?",
+            "label-rock-menor": "A rocha está integra (sem juntas/fraturas)\ne possui boa qualidade/resistencia?",
+            "label-rock-maior": "A rocha está integra (sem juntas/fraturas)\ne possui boa qualidade/resistencia?",
         }
     } else {
         messages = {
-            "fluxograma-start": "oi",
-            "fluxograma-sm": "oi",
-            "fluxograma-rock": "oi",
-            "fluxograma-depth-1": "oi",
-            "fluxograma-prod-1": "oi",
-            "fluxograma-inclined-belt": "oi",
-            "fluxograma-depth-2": "oi",
-            "fluxograma-prod-2": "oi",
-            "fluxograma-ramp": "oi",
-            "fluxograma-shaft": "oi",
-            "label-sm-menor": "oi",
-            "label-sm-maior": "oi",
-            "label-rock-menor": "oi",
-            "label-rock-maior": "oi",
-            "select-depth": "oi",
-            "select-prod": "oi"
+            "fluxograma-sm": "Is there a thick layer of unconsolidated\nmaterials (soils) over the mineral deposit?",
+            "fluxograma-rock": "Is the rock intact (without joints/fractures)\n and of good quality/strength?",
+            "fluxograma-depth-1": "Is the deepest point of the orebody\nless than 500 m from the surface?\n",
+            "fluxograma-prod-1": "Will the mine production be less\nthan 5 thousand tons per day?",
+            "fluxograma-inclined-belt": "Utilize belt conveyor",
+            "fluxograma-depth-2": "Is the deepest point of the orebody\nless than 300 m from the surface?\n",
+            "fluxograma-prod-2": "Will the mine production be less\nthan 2.5 thousand tons per day?",
+            "fluxograma-ramp": "Utilize ramps and trucks",
+            "fluxograma-shaft": "Utilize a shaft and elevators",
+            "label-sm-menor": "Is there a thick layer of unconsolidated\nmaterials (soils) over the mineral deposit?",
+            "label-sm-maior": "Is there a thick layer of unconsolidated\nmaterials (soils) over the mineral deposit?",
+            "label-rock-menor": "Is the rock intact (without joints/fractures)\n and of good quality/strength?",
+            "label-rock-maior": "Is the rock intact (without joints/fractures)\n and of good quality/strength?"
         }
     }
 
@@ -126,7 +111,7 @@ function Balao_la_vergne(entry) {
         const { x, y } = positions[entry]
         balao.style.transform = `translate(${x}px, ${y}px)`
     } else {
-        balao.style.transform = "translate(100px,-20px)"
+        balao.style.transform = "translate(80px,-20px)"
     }
 }
 function Balao_cardozo(entry) {
@@ -134,41 +119,35 @@ function Balao_cardozo(entry) {
     let messages
     if (idioma == "pt") {
         messages = {
-            "fluxograma-start": "",
-            "fluxograma-sm": "A camada de materiais não consolidados\n (solos) sobre o deposótio mineral possui\n espessura menor que 70 m?",
-            "fluxograma-rock": "A classe do maciço, segundo a classificação RMR\n de Bienawski (1989), é menor do que 4 (IV)?",
+            "fluxograma-sm": "A camada de materiais não consolidados\n(solos) sobre o deposótio mineral possui\nespessura menor que 70 m?",
+            "fluxograma-rock": "A classe do maciço, segundo a classificação RMR\nde Bienawski (1989), é menor do que 4 (IV)?",
             "fluxograma-depth-1": "O ponto mais profundo do corpo de minério\nestá a menos de 1700 m da superfície?",
-            "fluxograma-prod-1": "A produção da mina será menor\n que 7.5 mil toneladas por dia?",
+            "fluxograma-prod-1": "A produção da mina será menor\nque 7.5 mil toneladas por dia?",
             "fluxograma-inclined-belt": "Utilizar correia transportadora",
             "fluxograma-depth-2": "O ponto mais profundo do corpo de minério\nestá a menos de 700 m da superfície?",
-            "fluxograma-prod-2": "A produção da mina será menor\n que 1,5 mil toneladas por dia?",
+            "fluxograma-prod-2": "A produção da mina será menor\nque 1,5 mil toneladas por dia?",
             "fluxograma-rampa": "Utilizar rampa e caminhões",
             "fluxograma-shaft": "Utilizar poço e elevador",
-            "label-sm-menor": "oi",
-            "label-sm-maior": "oi",
-            "label-rock-menor": "oi",
-            "label-rock-maior": "oi",
-            "select-depth": "oi",
-            "select-prod": "oi"
+            "label-sm-menor": "A camada de materiais não consolidados\n(solos) sobre o deposótio mineral possui\nespessura menor que 70 m?",
+            "label-sm-maior": "A camada de materiais não consolidados\n(solos) sobre o deposótio mineral possui\nespessura menor que 70 m?",
+            "label-rock-menor": "- Classe I-IV: rocha 'Muito boa' a 'pobre' (RMR 21-100)\n- Classe V: material inconsolidado (solo), classe 'muito pobre' (RMR 1-20)",
+            "label-rock-maior": "- Classe I-IV: rocha 'Muito boa' a 'pobre' (RMR 21-100)\n- Classe V: material inconsolidado (solo), classe 'muito pobre' (RMR 1-20)"
         }
     } else {
         messages = {
-            "fluxograma-start": "oi",
-            "fluxograma-sm": "oi",
-            "fluxograma-rock": "oi",
-            "fluxograma-depth-1": "oi",
-            "fluxograma-prod-1": "oi",
-            "fluxograma-inclined-belt": "oi",
-            "fluxograma-depth-2": "oi",
-            "fluxograma-prod-2": "oi",
-            "fluxograma-ramp": "oi",
-            "fluxograma-shaft": "oi",
-            "label-sm-menor": "oi",
-            "label-sm-maior": "oi",
-            "label-rock-menor": "oi",
-            "label-rock-maior": "oi",
-            "select-depth": "oi",
-            "select-prod": "oi"
+            "fluxograma-sm": "Is the thickness of unconsolidated materials (soils) over the mineral deposit greater than 70 m?",
+            "fluxograma-rock": "Is the rock intact (without joints/fractures)\n and of good quality/strength?",
+            "fluxograma-depth-1": "Is the deepest point of the orebody\nless than 1700 m from the surface?\n",
+            "fluxograma-prod-1": "Will the mine production be less\nthan 7.5 thousand tons per day?",
+            "fluxograma-inclined-belt": "Utilize belt conveyor",
+            "fluxograma-depth-2": "Is the deepest point of the orebody\nless than 700 m from the surface?\n",
+            "fluxograma-prod-2": "Will the mine production be less\nthan 1.5 thousand tons per day?",
+            "fluxograma-ramp": "Utilize ramps and trucks",
+            "fluxograma-shaft": "Utilize a shaft and elevators",
+            "label-sm-menor": "Is the thickness of unconsolidated materials (soils) over the mineral deposit greater than 70 m?",
+            "label-sm-maior": "Is the thickness of unconsolidated materials (soils) over the mineral deposit greater than 70 m?",
+            "label-rock-menor": "- Class I-IV: 'Very Good' to 'Poor Rock' rock (RMR 21-100)\n- Class V: 'Very Poor' unconsolidated material (RMR 1-20)",
+            "label-rock-maior": "- Class I-IV: 'Very Good' to 'Poor Rock' rock (RMR 21-100)\n- Class V: 'Very Poor' unconsolidated material (RMR 1-20)"
         }
     }
 
@@ -188,7 +167,7 @@ function Balao_cardozo(entry) {
         const { x, y } = positions[entry]
         balao.style.transform = `translate(${x}px, ${y}px)`
     } else {
-        balao.style.transform = "translate(100px,-20px)"
+        balao.style.transform = "translate(80px,-20px)"
     }
 }
 

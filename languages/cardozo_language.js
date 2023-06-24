@@ -10,10 +10,11 @@ function Escrever(id, texto, op) {
 
 function English() {
 
-    Escrever("titulo-pagina", "SELEÇÃO DE MÉTODOS DE ACESSO A MINAS SUBTERRÂNEAS: Método Cardozo (2023)")
+    //HEADER
+    Escrever("titulo-pagina", "SELECTION OF ACESS FOR UNDERGROUND MINING: Cardozo Method (2023)")
 
     // SEÇÃO 0
-    Escrever("li-titulo", "SELECIONE O MÉTODO")
+    Escrever("li-titulo", "SELECT METHOD")
 
     //SEÇÃO 1
     const paragrafo_explicacao = ""
@@ -21,30 +22,30 @@ function English() {
     Escrever("paragrafo-explicacao", paragrafo_explicacao)
 
     // Titulo
-    Escrever("titulo-section-1", "PARÂMETROS DE ESCOLHA")
+    Escrever("titulo-section-1", "SELECTION PARAMETERS")
 
     // SURFACE MATERIAL
-    Escrever("h3-sm", "Cobertura superficial")
-    Escrever("span-sm", "Espessura da camada de material inconsolidado:")
+    Escrever("h3-sm", "Surface material")
+    Escrever("span-sm", "Thickness of unconsolidated material:")
 
     // ROCK MASS
-    Escrever("h3-rock", "Condições do Maciço")
-    Escrever("span-rock", "Classe do maciço no sistema RMR:")
-    
-    // PROFUNDIDADE
-    Escrever("h3-depth", "Profundidade")
-    Escrever("span-depth", "Ponto mais profundo do corpo de minério:")
+    Escrever("h3-rock", "Rock mass conditions")
+    Escrever("span-rock", "RMR class of rock mass:")
 
     // PROFUNDIDADE
-    Escrever("h3-prod", "Produção")
-    Escrever("span-prod", "Produção prevista para a mina em kt por dia:")
+    Escrever("h3-depth", "Depth")
+    Escrever("span-depth", "Orebody deepest point:")
+
+    // PROFUNDIDADE
+    Escrever("h3-prod", "Production")
+    Escrever("span-prod", "Projected production for the mine in kt per year:")
 
     // SEÇÃO 2
-    Escrever("titulo-section-2", "FLUXOGRAMA")
+    Escrever("titulo-section-2", "FLOWCHART")
 
     // SEÇÃO 3
-    Escrever("titulo-section-3", "ILUSTRAÇÃO")
-    
+    Escrever("titulo-section-3", "ILUSTRATION")
+
     //RODAPÉ
     Escrever("universidade", "UFRGS Universidade Federal do Rio Grande do Sul")
     Escrever("laboratorio", "LAPROM Laboratório de Processamento Mineral")
@@ -54,6 +55,7 @@ function English() {
     Escrever("contato-desenvolvedor", " Contato: hhigor1217@gmail.com")
 
 }
+
 
 function Portuguese() {
 
