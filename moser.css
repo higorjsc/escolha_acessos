@@ -87,8 +87,6 @@
   transform: rotate(-5deg);
 }
 
-/* --------------------------------------FLUXOGRAMAS-------------------------------------------------- */
-
 /* --------------------------------------------FLUXOGRAMA ---------------------------------------- */
 .div-fluxograma {
   border: 1pt solid; 
@@ -102,14 +100,7 @@
   box-shadow: 0 0 10px var(--cor-1);
 }
   
-#div-main-fluxograma {
-  position: relative;
-  height: 460px;
-  width: 90%;
-  margin: auto;
-  background-color: blue;
-}
-  
+
 #fluxograma-logistica {
   right: 74.8%;
   top: 3.8%;
@@ -139,17 +130,17 @@
 }
 
 #fluxograma-depth-1 {
-  right: 41%;
-  top: 52.5%;
+  right: 41.5%;
+  top: 52.6%;
   height: 28.5px;
-  width: 81.5px;
+  width: 81px;
 }
 
 #fluxograma-prod-1 {
-  right: 41%;
+  right: 41.5%;
   top: 67.2%;
   height: 17.5px;
-  width: 82px;
+  width: 81px;
 }
 
 
@@ -168,14 +159,14 @@
 }
 
 #fluxograma-rampa {
-  right: 41%;
+  right: 41.5%;
   top: 89.2%;
   height: 34px;
   width: 81px;
 }
 
 #fluxograma-shaft {
-  right: 3.2%;
+  right: 3.7%;
   top: 52%;
   height: 33.5px;
   width: 81.5px;

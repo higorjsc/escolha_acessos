@@ -86,7 +86,7 @@ body {
 
 main {
   display: grid;
-  width: 100%;
+  width: 100vw;
   max-width: 1570px;
   grid-template-columns: minmax(300px, 5fr) minmax(300px, 5fr) minmax(543.5px, 9fr) minmax(420px, 7fr);
   height: 660px;
@@ -301,6 +301,13 @@ select:hover {
   left: 0;
 }
 
+#div-main-fluxograma {
+  position: relative;
+  height: 460px;
+  width: 490px;
+  margin: auto;
+}
+
 /* -------------------SEÇÃO 3 LATERAL DIREITA---------------------------- */
 
 #section-3 {
@@ -335,11 +342,9 @@ select:hover {
 /* -----------------------FOOTER----------------------------- */
 .rodape {
   display: grid;
-  width: 100%;
+  width: 100vw;
   max-width: 1570px;
-
-  /* grid-template-columns: minmax(300px, 5fr) minmax(300px, 5fr) minmax(543.5px, 9fr) minmax(420px, 7fr); */
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: minmax(150px, 1fr) minmax(400px, 4fr) minmax(150px, 1fr) minmax(200px, 3fr);
   height: auto;
   position: relative;
   margin: auto;
@@ -352,7 +357,8 @@ select:hover {
   grid-template-columns: minmax(150px, 1fr) minmax(400px, 4fr) minmax(150px, 1fr) minmax(200px, 3fr);
   position: absolute;
   grid-column: 1/5;
-  width: 100%;
+  width: 100vw;
+  max-width: 1570px;
   height: 100px;
   border-radius: 20px;
   align-items: center;
