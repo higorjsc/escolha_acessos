@@ -195,9 +195,9 @@ function Balao_cardozo(entry) {
 function Balao(entry) {
     let idioma = Obter_idioma()
     let messages
-    if (idioma == "en") {
+    if (idioma == "pt") {
         messages = {
-            "switch-language": "Change to portuguese"
+            "switch-language": "Mudar para inglês"
         }
     } else {
         messages = {
@@ -211,8 +211,10 @@ function Balao(entry) {
 
     //Mostra o balão de texto
     const balao = document.getElementById("balao")
-    balao.innerText = messages[entry]
-    balao.style.display = "block"
+    if (messages[entry]) {
+        balao.innerText = messages[entry]
+        balao.style.display = "block"
+    }
 
     //Posiciona o balão conforme o dicionário de posições
     if (positions[entry]) {
@@ -238,7 +240,7 @@ function Baloes(entry, metodo = "undefined") {
         Balao_la_vergne(entry)
     } else if (metodo == "moser") {
         Balao_moser(entry)
-    } else {
+    } else if (metodo == "undefined") {
         Balao(entry)
     }
 }

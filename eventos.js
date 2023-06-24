@@ -42,12 +42,9 @@ function Eventos(metodo) {
         Switch_language(metodo)
     })
 
-    //label do switch
+    //MOUSE OVER SWITCH
     const switch_label = document.querySelector(".switch-label") 
-    //mouseover no label, não na checkbox invisível
-    switch_label.addEventListener("mouseover", () => {
-        Baloes("switch-language")
-    })
+    switch_label.addEventListener("mouseover", () => Baloes("switch-language"))
     switch_label.addEventListener("mouseleave", () => Balao_sai())
 
     // DIVS DO FLUXOGRAMA
