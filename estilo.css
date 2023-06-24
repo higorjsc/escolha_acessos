@@ -342,9 +342,9 @@ select:hover {
 /* -----------------------FOOTER----------------------------- */
 .rodape {
   display: grid;
-  width: 100vw;
+  width: 100%;
   max-width: 1570px;
-  grid-template-columns: minmax(150px, 1fr) minmax(400px, 4fr) minmax(150px, 1fr) minmax(200px, 3fr);
+  grid-template-columns: minmax(300px, 5fr) minmax(300px, 5fr) minmax(543.5px, 9fr) minmax(420px, 7fr);
   height: auto;
   position: relative;
   margin: auto;
@@ -354,10 +354,10 @@ select:hover {
   background-color: var(--cor-1);
   border: var(--borda-simples);
   display: grid;
+  grid-column: 1/5;
   grid-template-columns: minmax(150px, 1fr) minmax(400px, 4fr) minmax(150px, 1fr) minmax(200px, 3fr);
   position: absolute;
-  grid-column: 1/5;
-  width: 100vw;
+  width: 100%;
   max-width: 1570px;
   height: 100px;
   border-radius: 20px;

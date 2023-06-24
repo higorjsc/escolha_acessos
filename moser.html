@@ -74,16 +74,16 @@
                 <!-- ROCK LOGISTICA-->
                 <div class='div-parametros' id="div-logistica">
                     <h3 class="h3-parametros" id="h3-logistica">Logistica</h3><br>
-                    <span class="span-parametros">A mina utilizará caminhões?&ensp;</span>
+                    <span class="span-parametros" id="span-logistica">A mina utilizará caminhões?&ensp;</span>
 
                     <div class='container-label' id="container-label-logistica">
                         <input type="radio" class='input-logistica' name="radio-logistica" value="sim" id="radio-logistica-sim">
                         <label for="radio-logistica-sim" id="label-logistica-sim" class="radio-label radio-1"></label>
-                        <span class="radio-span radio-span-1">Sim</span>
+                        <span class="radio-span radio-span-1" id="span-logistica-sim">Sim</span>
 
                         <input type="radio" class='input-logistica' class="radio-2" name="radio-logistica" value="nao"  id="radio-logistica-nao">
                         <label for="radio-logistica-nao" id="label-logistica-nao" class="radio-label radio-2"></label>
-                        <span class="radio-span radio-span-2">Não</span>
+                        <span class="radio-span radio-span-2"id="span-logistica-nao">Não</span>
                     </div>
 
                 </div>
@@ -91,16 +91,16 @@
                 <!-- ROCK MASS MOSER-->
                 <div class='div-parametros' id="div-rock">
                     <h3 class="h3-parametros" id="h3-rock">Condições do Maciço</h3><br>
-                    <span class="span-parametros">Classificação do maciço: &ensp;</span>
+                    <span class="span-parametros" id="span-rock">Classificação do maciço: &ensp;</span>
 
                     <div class='container-label' id="container-label-rock">
                         <input type="radio" class='input-rock' name="radio-rock" value="menor" id="radio-rock-menor">
                         <label for="radio-rock-menor" id="label-rock-menor" class="radio-label radio-1"></label>
-                        <span class="radio-span radio-span-1">I-V</span>
+                        <span class="radio-span radio-span-1"  id="span-rock-menor">I-V</span>
 
                         <input type="radio" class='input-rock' class="radio-2" name="radio-rock" value="maior"  id="radio-rock-maior">
                         <label for="radio-rock-maior" id="label-rock-maior" class="radio-label radio-2"></label>
-                        <span class="radio-span radio-span-2">VI-VII</span>
+                        <span class="radio-span radio-span-2"  id="span-rock-maior">VI-VII</span>
                     </div>
 
                 </div>
@@ -109,17 +109,17 @@
                 <div class='div-parametros' id="div-sm">
 
                     <h3 class="h3-parametros" id="h3-sm">Cobertura superfícial</h3><br>
-                    <span class="span-parametros">Espesura da camada de material inconsolidado: &ensp;</span>
+                    <span class="span-parametros" id="span-sm">Espesura da camada de material inconsolidado: &ensp;</span>
 
                     <div class='container-label' id="container-label-sm">
                         <!-- Radio button surface material < 70 m -->
                         <input type="radio" class='input-sm' name="radio-sm" value="menor" id="radio-sm-menor">
                         <label for="radio-sm-menor" id="label-sm-menor" class="radio-label radio-1"></label>
-                        <span class="radio-span radio-span-1">< 70 m</span>
+                        <span class="radio-span radio-span-1"  id="span-sm-menor">< 70 m</span>
                         <!-- Radio button surface material > 70 m -->
                         <input type="radio" class='input-sm' name="radio-sm" value="maior" id="radio-sm-maior">
                         <label for="radio-sm-maior" id="label-sm-maior" class="radio-label radio-2"></label>
-                        <span class="radio-span radio-span-2">> 70 m</span>
+                        <span class="radio-span radio-span-2"  id="span-sm-menor">> 70 m</span>
                     </div>
 
                 </div>
@@ -128,17 +128,17 @@
                 <div class='div-parametros' id="div-open-pit">
 
                     <h3 class="h3-parametros" id="h3-open-pit">Acesso</h3><br>
-                    <span class="span-parametros">Acesso por open pit mining? &ensp;</span>
+                    <span class="span-parametros" id="span-open-pit">Acesso por open pit mining? &ensp;</span>
 
                     <div class='container-label' id="container-label-open-pit">
                         <!-- Radio button open pit = sim -->
                         <input type="radio" class='input-open-pit' name="radio-open-pit" value="sim" id="radio-open-pit-sim">
                         <label for="radio-open-pit-sim" id="label-open-pit-sim" class="radio-label radio-1"></label>
-                        <span class="radio-span radio-span-1">Sim</span>
+                        <span class="radio-span radio-span-1" id="span-open-pit-sim">Sim</span>
                         <!-- Radio button open pit = nao -->
                         <input type="radio" class='input-open-pit' name="radio-open-pit" value="nao" id="radio-open-pit-nao">
                         <label for="radio-open-pit-nao" id="label-open-pit-nao" class="radio-label radio-2"></label>
-                        <span class="radio-span radio-span-2">Não</span>
+                        <span class="radio-span radio-span-2" id="span-open-pit-nao">Não</span>
                     </div>
 
                 </div>
@@ -147,7 +147,7 @@
                 <div class='div-parametros' id="div-depth">
 
                     <h3 class="h3-depth" id="h3-depth">Profundidade</h3><br>
-                    <span class="span-parametros">Ponto mais profundo do corpo de minério: &ensp;</span>
+                    <span class="span-parametros" id="span-depth">Ponto mais profundo do corpo de minério: &ensp;</span>
 
                     <!-- Select depth -->
                     <select class='input-depth' id="select-depth">
@@ -162,7 +162,7 @@
                 <!-- PRODUÇÃO MOSER-->
                 <div class='div-parametros' id="div-prod">
                     <h3 class="h3-parametros" id="h3-prod">Produção</h3><br>
-                    <span class="span-parametros">Produção prevista para a mina em kt por ano: &ensp;</span>
+                    <span class="span-parametros" id="span-prod">Produção prevista para a mina em kt por ano: &ensp;</span>
 
                     <select class='input-prod' id="select-prod">
                         <option value=""></option>
