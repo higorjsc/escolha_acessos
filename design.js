@@ -13,6 +13,15 @@ function Balao_moser(entry) {
             "fluxograma-prod-2": "A produção da mina será menor ou maior\n que 600 mil toneladas por ano?",
             "fluxograma-rampa": "Utilizar rampa e caminhões",
             "fluxograma-shaft": "Utiliiar poço e elevador",
+            "label-sm-menor": "oi",
+            "label-sm-maior": "oi",
+            "label-rock-menor": "oi",
+            "label-rock-maior": "oi",
+            "label-open-pit-sim": "oi",
+            "label-open-pit-nao": "oi",
+            "select-depth": "oi",
+            "select-prod": "oi"
+
         }
     } else {
         messages = {
@@ -26,6 +35,14 @@ function Balao_moser(entry) {
             "fluxograma-prod-2": "A produção da mina será menor\n que 1,5 mil toneladas por dia?",
             "fluxograma-rampa": "Utilizar rampa e caminhões",
             "fluxograma-shaft": "Utilizar poço e elevador",
+            "label-sm-menor": "oi",
+            "label-sm-maior": "oi",
+            "label-rock-menor": "oi",
+            "label-rock-maior": "oi",
+            "label-open-pit-sim": "oi",
+            "label-open-pit-nao": "oi",
+            "select-depth": "oi",
+            "select-prod": "oi"
         }
     }
 
@@ -35,8 +52,11 @@ function Balao_moser(entry) {
 
     //Mostra o balão de texto
     const balao = document.getElementById("balao")
-    balao.innerText = messages[entry]
-    balao.style.display = "block"
+    if (messages[entry]) {
+        balao.innerText = messages[entry]
+        balao.style.display = "block"
+    }
+
 
     //Posiciona o balão conforme o dicionário de posições
     if (positions[entry]) {
@@ -62,6 +82,12 @@ function Balao_la_vergne(entry) {
             "fluxograma-prod-2": "A produção da mina será menor\n que 2,5 mil toneladas por dia?",
             "fluxograma-rampa": "Utilizar rampa e caminhões",
             "fluxograma-shaft": "Utilizar poço e elevador",
+            "label-sm-menor": "oi",
+            "label-sm-maior": "oi",
+            "label-rock-menor": "oi",
+            "label-rock-maior": "oi",
+            "select-depth": "oi",
+            "select-prod": "oi"
         }
     } else {
         messages = {
@@ -75,6 +101,12 @@ function Balao_la_vergne(entry) {
             "fluxograma-prod-2": "oi",
             "fluxograma-ramp": "oi",
             "fluxograma-shaft": "oi",
+            "label-sm-menor": "oi",
+            "label-sm-maior": "oi",
+            "label-rock-menor": "oi",
+            "label-rock-maior": "oi",
+            "select-depth": "oi",
+            "select-prod": "oi"
         }
     }
 
@@ -84,8 +116,10 @@ function Balao_la_vergne(entry) {
 
     //Mostra o balão de texto
     const balao = document.getElementById("balao")
-    balao.innerText = messages[entry]
-    balao.style.display = "block"
+    if (messages[entry]) {
+        balao.innerText = messages[entry]
+        balao.style.display = "block"
+    }
 
     //Posiciona o balão conforme o dicionário de posições
     if (positions[entry]) {
@@ -110,6 +144,12 @@ function Balao_cardozo(entry) {
             "fluxograma-prod-2": "A produção da mina será menor\n que 1,5 mil toneladas por dia?",
             "fluxograma-rampa": "Utilizar rampa e caminhões",
             "fluxograma-shaft": "Utilizar poço e elevador",
+            "label-sm-menor": "oi",
+            "label-sm-maior": "oi",
+            "label-rock-menor": "oi",
+            "label-rock-maior": "oi",
+            "select-depth": "oi",
+            "select-prod": "oi"
         }
     } else {
         messages = {
@@ -123,6 +163,12 @@ function Balao_cardozo(entry) {
             "fluxograma-prod-2": "oi",
             "fluxograma-ramp": "oi",
             "fluxograma-shaft": "oi",
+            "label-sm-menor": "oi",
+            "label-sm-maior": "oi",
+            "label-rock-menor": "oi",
+            "label-rock-maior": "oi",
+            "select-depth": "oi",
+            "select-prod": "oi"
         }
     }
 
@@ -132,8 +178,10 @@ function Balao_cardozo(entry) {
 
     //Mostra o balão de texto
     const balao = document.getElementById("balao")
-    balao.innerText = messages[entry]
-    balao.style.display = "block"
+    if (messages[entry]) {
+        balao.innerText = messages[entry]
+        balao.style.display = "block"
+    }
 
     //Posiciona o balão conforme o dicionário de posições
     if (positions[entry]) {

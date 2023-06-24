@@ -61,12 +61,23 @@ function Eventos(metodo) {
     const input_parametros = document.querySelectorAll("input[type='radio']")
     input_parametros.forEach((elemento) => {
         elemento.addEventListener("change", () => Calculo(metodo))
+        elemento.addEventListener("mouseover", () => Baloes(elemento.id, metodo))
+        elemento.addEventListener("mouseout", () => Balao_sai())
+    })
+
+    // MOUSE OVER DOS RADIO BUTTONS
+    const label_radio_button = document.querySelectorAll("label")
+    label_radio_button.forEach((elemento) => {
+        elemento.addEventListener("mouseover", () => Baloes(elemento.id, metodo))
+        elemento.addEventListener("mouseout", () => Balao_sai())
     })
 
     // SELECT
     const select = document.querySelectorAll("select")
     select.forEach((elemento) => {
         elemento.addEventListener("change", () => Calculo(metodo))
+        elemento.addEventListener("mouseover", () => Baloes(elemento.id, metodo))
+        elemento.addEventListener("mouseout", () => Balao_sai())
     })
 
     Calculo(metodo)
