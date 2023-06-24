@@ -10,7 +10,7 @@ function Escrever(id, texto, op) {
 function English() {
 
     //HEADER
-    Escrever("titulo-pagina", "SELECTION OF ACESS FOR UNDERGROUND MINING: La Vergne Method (2023)")
+    Escrever("titulo-pagina", "SELECTION OF ACESS FOR UNDERGROUND MINING: La Vergne Method (2003)")
 
     // SEÇÃO 0
     Escrever("li-titulo", "SELECT METHOD")
@@ -58,7 +58,7 @@ function English() {
 function Portuguese() {
 
     //HEADER
-    Escrever("titulo-pagina", "SELEÇÃO DE MÉTODOS DE ACESSO A MINAS SUBTERRÂNEAS: Método La Vergne (2023)")
+    Escrever("titulo-pagina", "SELEÇÃO DE MÉTODOS DE ACESSO A MINAS SUBTERRÂNEAS: Método La Vergne (2003)")
 
     // SEÇÃO 0
     Escrever("li-titulo", "SELECIONE O MÉTODO")
