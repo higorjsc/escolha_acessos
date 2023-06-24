@@ -9,7 +9,7 @@
 
 .img-superficie {
   position: absolute;
-  top: 10%;
+  top: 16%;
   left: 2%;
 }
 
@@ -98,18 +98,11 @@
 #usina {
   position: absolute;
   top: 2.5%;
-  left: 44%;
+  left: 47%;
   z-index: 2;
-  transform: rotate(-3deg);
+  transform: rotate(-4deg);
 }
 
-#usina-2 {
-  position: absolute;
-  top: 2.5%;
-  left: 70%;
-  z-index: 2;
-  transform: rotate(-3deg);
-}
 
 /* --------------------------------------------FLUXOGRAMA ---------------------------------------- */
 .div-fluxograma {
