@@ -285,6 +285,29 @@ function Moser(valor) {
     return resultado
 }
 
+// ESCREVE O RESULTADO NA DIV DA SEÇÃO 3
+function Escrever_resultado(resultado) {
+
+    let resultados_en = {
+        "shaft": "VERTICAL SHAFT HOISTING",
+        "rampa": "RAMP HAULAGE BY TRUCK",
+        "correia": "INCLINED BELT CONVEYOR",
+    }
+    let resultados_pt = {
+        "shaft": "POÇO E ELEVADORES",
+        "rampa": "RAMPA E CAMINHÕES",
+        "correia": "CORREIA TRANSPORTADORA",
+    }
+
+    // Define o reusltado conforme o idioma da janela
+    resultado = Obter_idioma() == "pt" ? resultados_pt[resultado] : resultados_en[resultado]
+
+    // Se resultado for "undefined", nada será exibido
+    const span_resultado_final = document.getElementById("span-resultado-final")
+    resultado ? span_resultado_final.innerText = resultado : span_resultado_final.innerText = ""
+
+}
+
 function Calculo(metodo) {
     let valor = {
         "logistica": Get_input_value("radio-logistica"),
@@ -305,21 +328,6 @@ function Calculo(metodo) {
         Imagem_moser(resultado, valor)
 
     }
+    Escrever_resultado(resultado)
 
-    let resultados_en = {
-        "shaft": "VERTICAL SHAFT HOISTING",
-        "rampa": "RAMP HAULAGE BY TRUCK",
-        "correia": "INCLINED BELT CONVEYOR",
-    }
-    let resultados_pt = {
-        "shaft": "POÇO E ELEVADORES",
-        "rampa": "RAMPA E CAMINHÕES",
-        "correia": "CORREIA TRANSPORTADORA",
-    }
-
-    // Mostra o reusltado na tela conforme o idioma da janela
-    resultado = Obter_idioma() == "pt" ? resultados_pt[resultado] : resultados_en[resultado]
-    // Se resultado for "undefined", nada será exibido
-    const span_resultado_final = document.getElementById("span-resultado-final")
-    resultado ? span_resultado_final.innerText = resultado : span_resultado_final.innerText = ""
 }

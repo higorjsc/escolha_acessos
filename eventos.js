@@ -43,7 +43,7 @@ function Eventos(metodo) {
     })
 
     //MOUSE OVER SWITCH
-    const switch_label = document.querySelector(".switch-label") 
+    const switch_label = document.querySelector(".switch-label")
     switch_label.addEventListener("mouseover", () => Baloes("switch-language"))
     switch_label.addEventListener("mouseleave", () => Balao_sai())
 
