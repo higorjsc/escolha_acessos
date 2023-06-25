@@ -329,6 +329,7 @@ select:hover {
   border-bottom: var(--borda-simples);
   min-width: 200px;
   text-align: left;
+  overflow: hidden;
 }
 
 #span-resultado-final {

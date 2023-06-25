@@ -76,7 +76,7 @@ function Portuguese() {
     // SEÇÃO 0
     Escrever("li-titulo", "SELECIONE O MÉTODO")
 
-    //SEÇÃO 1
+    // SEÇÃO 1
     const paragrafo_explicacao = ""
 
     Escrever("paragrafo-explicacao", paragrafo_explicacao)
@@ -118,7 +118,7 @@ function Portuguese() {
     // SEÇÃO 3
     Escrever("titulo-section-3", "ILUSTRAÇÃO")
 
-    //RODAPÉ
+    // RODAPÉ
     Escrever("universidade", "UFRGS Universidade Federal do Rio Grande do Sul")
     Escrever("laboratorio", "LAPROM Laboratório de Processamento Mineral")
     Escrever("localizacao", "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970")
