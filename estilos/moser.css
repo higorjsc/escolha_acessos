@@ -51,7 +51,7 @@
 
 #vent-pit {
   position: absolute;
-  top: 19%;
+  top: 19.5%;
   left: 68%;
 }
 
@@ -81,10 +81,10 @@
 
 #usina-pit {
   position: absolute;
-  top: 1%;
-  left: 65%;
+  top: 1.5%;
+  left: 69%;
   z-index: 2;
-  transform: rotate(-5deg);
+  transform: rotate(-2deg);
 }
 
 /* --------------------------------------------FLUXOGRAMA ---------------------------------------- */
@@ -166,8 +166,8 @@
 }
 
 #fluxograma-shaft {
-  right: 3.7%;
+  right: 4%;
   top: 52%;
   height: 33.5px;
-  width: 81.5px;
+  width: 81px;
 }
