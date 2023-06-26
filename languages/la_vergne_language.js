@@ -25,11 +25,11 @@ function English() {
 
     // SURFACE MATERIAL
     Escrever("h3-sm", "Surface material")
-    Escrever("span-sm", "Thickness of unconsolidated material:")
+    Escrever("span-sm", "Is there a thick layer of unconsolidated materials?")
 
     // ROCK MASS
     Escrever("h3-rock", "Rock mass conditions")
-    Escrever("span-rock", "RMR class of rock mass:")
+    Escrever("span-rock", "Is the rock intact and of good quality/strength?")
 
     // PROFUNDIDADE
     Escrever("h3-depth", "Depth")
@@ -79,13 +79,13 @@ function Portuguese() {
 
     // SURFACE MATERIAL
     Escrever("h3-sm", "Cobertura superficial")
-    Escrever("span-sm", "Espessura da camada de material inconsolidado:")
+    Escrever("span-sm", "Espessa camada de materiais inconsolidados?")
     Escrever("span-sm-menor", "Não")
     Escrever("span-sm-maior", "Sim")
 
     // ROCK MASS
     Escrever("h3-rock", "Condições do Maciço")
-    Escrever("span-rock", "Classe do maciço no sistema RMR:")
+    Escrever("span-rock", "Rocha íntegra e de boa qualidade/resitencia?")
     Escrever("span-rock-menor", "Não")
     Escrever("span-rock-maior", "Sim")
 

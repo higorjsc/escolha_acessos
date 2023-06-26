@@ -36,7 +36,7 @@ function English() {
 
     // ROCK MASS
     Escrever("h3-rock", "Rock mass conditions")
-    Escrever("span-rock", "RMR class of rock mass:")
+    Escrever("span-rock", "Class of rock mass quality:")
 
     // OPEN-PIT
     Escrever("h3-open-pit", "Acess")
@@ -102,8 +102,8 @@ function Portuguese() {
     Escrever("span-sm", "Espessura da camada de material inconsolidado:")
 
     // ROCK MASS
-    Escrever("h3-rock", "Condições do Maciço")
-    Escrever("span-rock", "Classe do maciço no sistema RMR:")
+    Escrever("h3-rock", "Condições das rochas")
+    Escrever("span-rock", "Classificação da qualidade das rochas:")
 
     // OPEN-PIT
     Escrever("h3-open-pit", "Acesso")
