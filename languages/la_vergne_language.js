@@ -65,6 +65,11 @@ function Portuguese() {
 
     //SEÇÃO 1
     const paragrafo_explicacao = ""
+        + "<br><strong>Observações:</strong><br>"
+        + "- <br>"
+        + "- Os limites propostos para profundidade e produção foram superados devido aos avanços tecnológicos.<br>"
+        + "<br><strong>Referência:</strong><br>"
+        + "LA VERGNE, Jack. Hard rock miner's handbook. Tempe/North Bay: McIntosh engineering. ISBN 0-968006-1-6, 2003."
 
     Escrever("paragrafo-explicacao", paragrafo_explicacao)
 
@@ -75,14 +80,14 @@ function Portuguese() {
     Escrever("h3-sm", "Cobertura superficial")
     Escrever("span-sm", "Espessura da camada de material inconsolidado:")
     Escrever("span-sm-menor", "Não")
-    Escrever("span-sm-maior", "Sim")   
-    
+    Escrever("span-sm-maior", "Sim")
+
     // ROCK MASS
     Escrever("h3-rock", "Condições do Maciço")
     Escrever("span-rock", "Classe do maciço no sistema RMR:")
     Escrever("span-rock-menor", "Não")
     Escrever("span-rock-maior", "Sim")
-    
+
     // PROFUNDIDADE
     Escrever("h3-depth", "Profundidade")
     Escrever("span-depth", "Ponto mais profundo do corpo de minério:")
@@ -96,7 +101,7 @@ function Portuguese() {
 
     // SEÇÃO 3
     Escrever("titulo-section-3", "ILUSTRAÇÃO")
-    
+
     //RODAPÉ
     Escrever("universidade", "UFRGS Universidade Federal do Rio Grande do Sul")
     Escrever("laboratorio", "LAPROM Laboratório de Processamento Mineral")

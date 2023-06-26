@@ -77,7 +77,13 @@ function Portuguese() {
     Escrever("li-titulo", "SELECIONE O MÉTODO")
 
     // SEÇÃO 1
-    const paragrafo_explicacao = ""
+    const paragrafo_explicacao = "O método de Moser (1996) para a seleção de acesso a minas subterrâneas foi desenvolvido a partir da análise de dados de várias minas  &rdquo;hard rock&ldquo; em escala global."
+        + "&ensp;De acordo com o autor, todas as minas analisadas foram visitadas pessoalmente por uma única pessoa para garantir a consistência dos dados.<br>"
+        + "<br><strong>Observações:</strong><br>"
+        + "- O método de Moser não considera como opção o transporte de minérios por correias transportadoras.<br>"
+        + "- Os limites propostos para profundidade e produção foram superados devido aos avanços tecnológicos.<br>"
+        + "<br><strong>Referência:</strong><br>"
+        + "MOSER, P. Primary development of underground hard rock mines. In: SYMPOSIUM ON MINE PLANNING AND EQUIPMENT SELECTION. 1996. São Paulo. Proceedings […]. São Paulo, 1996. p. 31-3."
 
     Escrever("paragrafo-explicacao", paragrafo_explicacao)
 

@@ -67,6 +67,11 @@ function Portuguese() {
 
     //SEÇÃO 1
     const paragrafo_explicacao = ""
+    + "<br><strong>Observações:</strong><br>"
+    + "- <br>"
+    + "- <br>"
+    + "<br><strong>Referência:</strong><br>"
+    + ""
 
     Escrever("paragrafo-explicacao", paragrafo_explicacao)
 
