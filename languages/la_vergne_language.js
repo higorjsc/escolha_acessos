@@ -64,7 +64,7 @@ function Portuguese() {
     Escrever("li-titulo", "SELECIONE O MÉTODO")
 
     //SEÇÃO 1
-    const paragrafo_explicacao = "O método de La Vergne (2003) para a seleção de acesso a minas subterrâneas foi apresentado pelo autor como um &rdquo;guia grosseiro&ldquo; para uma análise preliminar dos possíveis acessos."
+    const paragrafo_explicacao = "O método de La Vergne (2003) para a seleção de acesso a minas subterrâneas foi apresentado pelo autor como um &rdquo;guia superfícial&ldquo; para uma análise preliminar dos possíveis acessos."
         + "&ensp;Dessa forma, o fluxograma não dispensa estudos detalhados de viabilidade, mas objetiva diminuir a quantidade de esforços nas etapas inicias do planejamento da mina.<br>"
         + "<br><strong>Observações:</strong><br>"
         + "- <br>"
