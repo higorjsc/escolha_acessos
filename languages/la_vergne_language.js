@@ -68,7 +68,7 @@ function Portuguese() {
         + "&ensp;Dessa forma, o fluxograma não dispensa estudos detalhados de viabilidade, mas objetiva diminuir a quantidade de esforços nas etapas inicias do planejamento da mina.<br>"
         + "<br><strong>Observações:</strong><br>"
         + "- <br>"
-        + "- Os limites propostos para profundidade e produção foram superados devido aos avanços tecnológicos.<br>"
+        + "- Os limites propostos para profundidade e produção foram superados por avanços tecnológicos.<br>"
         + "<br><strong>Referência:</strong><br>"
         + "LA VERGNE, Jack. Hard rock miner's handbook. Tempe/North Bay: McIntosh engineering. ISBN 0-968006-1-6, 2003."
 
