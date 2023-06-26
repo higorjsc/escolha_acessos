@@ -78,10 +78,11 @@ function Portuguese() {
 
     // SEÇÃO 1
     const paragrafo_explicacao = "O método de Moser (1996) para a seleção de acesso a minas subterrâneas foi desenvolvido a partir da análise de dados de várias minas  &rdquo;hard rock&ldquo; em escala global."
-        + "&ensp;De acordo com o autor, todas as minas analisadas foram visitadas pessoalmente por uma única pessoa para garantir a consistência dos dados.<br>"
+        + "&ensp;O método proposto não dispensa estudos detalhados de viabilidade, mas objetiva diminuir a quantidade de esforços nas etapas inicias do planejamento da mina.<br>"
         + "<br><strong>Observações:</strong><br>"
+        + "- Moser não analisou minas de &rdquo;soft rock&ldquo; para a elaboração de seu modelo.<br>"
         + "- O método de Moser não considera como opção o transporte de minérios por correias transportadoras.<br>"
-        + "- Os limites propostos para profundidade e produção foram superados devido aos avanços tecnológicos.<br>"
+        + "- Os limites propostos para profundidade e produção foram superados por avanços tecnológicos.<br>"
         + "<br><strong>Referência:</strong><br>"
         + "MOSER, P. Primary development of underground hard rock mines. In: SYMPOSIUM ON MINE PLANNING AND EQUIPMENT SELECTION. 1996. São Paulo. Proceedings […]. São Paulo, 1996. p. 31-3."
 
