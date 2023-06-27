@@ -75,14 +75,14 @@ function Imagem_cardozo_la_vergne(resultado, valor) {
     }
 
     // Oculta as imagens com cada change dos inputs
-    Display_img(["rampa", "truck", "vent", "shaft-2", "shaft-1"], "none")
+    Display_img(["rampa", "truck", "vent", "shaft-2"], "none")
     correia("none")
 
     // Mostra imagens com base no resultado
     if (resultado.includes("shaft")) {
         Display_img(["shaft-2", "vent"], "block")
     } else if (resultado.includes("rampa")) {
-        Display_img(["rampa", "truck"], "block")
+        Display_img(["rampa", "vent", "truck"], "block")
     } else if (resultado.includes("correia")) {
         Display_img(["vent"], "block")
         correia("block")
@@ -294,7 +294,7 @@ function Escrever_resultado(resultado) {
         "correia": "INCLINED BELT CONVEYOR",
     }
     let resultados_pt = {
-        "shaft": "POÇO E ELEVADORES",
+        "shaft": "POÇO",
         "rampa": "RAMPA E CAMINHÕES",
         "correia": "CORREIA TRANSPORTADORA",
     }

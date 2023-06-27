@@ -348,6 +348,12 @@ select:hover {
   box-sizing: content-box;
 }
 
+#div-imgs {
+  position: relative;
+  margin: auto;
+  width: 420px;
+  height: 400px;
+}
 
 /* -----------------------FOOTER----------------------------- */
 .rodape {

@@ -77,10 +77,10 @@ function Portuguese() {
     Escrever("li-titulo", "SELECIONE O MÉTODO")
 
     // SEÇÃO 1
-    const paragrafo_explicacao = "O método de Moser (1996) para a seleção de acesso a minas subterrâneas foi desenvolvido a partir da análise de dados de várias minas  &rdquo;hard rock&ldquo; em escala global."
+    const paragrafo_explicacao = "O método de Moser (1996) para a seleção de acesso a minas subterrâneas foi desenvolvido a partir da análise de dados de várias minas metalíferas (hard rock) em escala global."
         + "&ensp;O método proposto não dispensa estudos detalhados de viabilidade, mas objetiva diminuir a quantidade de esforços nas etapas inicias do planejamento da mina.<br>"
         + "<br><strong>Observações:</strong><br>"
-        + "- Moser não analisou minas de &rdquo;soft rock&ldquo; para a elaboração de seu modelo.<br>"
+        + "- Moser não analisou minas de rochas brandas (soft rock) para a elaboração de seu modelo.<br>"
         + "- O método de Moser não considera como opção o transporte de minérios por correias transportadoras.<br>"
         + "- Os limites propostos para profundidade e produção foram superados por avanços tecnológicos.<br>"
         + "<br><strong>Referência:</strong><br>"
@@ -107,7 +107,7 @@ function Portuguese() {
 
     // OPEN-PIT
     Escrever("h3-open-pit", "Acesso")
-    Escrever("span-open-pit", "Acesso por open pit mining?")
+    Escrever("span-open-pit", "O acesso se da a partir de uma mina a céu aberto?")
     Escrever("span-open-pit-nao", "Não")
     Escrever("span-open-pit-sim", "Sim")
 
