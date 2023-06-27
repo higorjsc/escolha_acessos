@@ -16,7 +16,7 @@ function English() {
     Escrever("li-titulo", "SELECT METHOD")
 
     //SEÇÃO 1
-    const paragrafo_explicacao = "The method developed by La Verne (2003) for selecting underground mine access was presented as a "roughly guide" to determine a  viable access in early stages of mining planning."
+    const paragrafo_explicacao = "The method developed by La Verne (2003) for selecting underground mine access was presented as a 'roughly guide' to determine a  viable access in early stages of mining planning."
 +" The metodogy proposed does not replace detailed feasibility studies, but aims to significantly reduce the amount of work in the early stages of mining planning."
 +"<strong>Notes:</strong><br>"
 +"-"
