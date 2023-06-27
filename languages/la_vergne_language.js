@@ -67,7 +67,7 @@ function Portuguese() {
     const paragrafo_explicacao = "O método de La Vergne (2003) para a seleção de acesso a minas subterrâneas foi apresentado pelo autor como um &rdquo;guia superfícial&ldquo; para uma análise preliminar dos possíveis acessos."
         + "&ensp;Dessa forma, o fluxograma não dispensa estudos detalhados de viabilidade, mas objetiva diminuir a quantidade de esforços nas etapas inicias do planejamento da mina.<br>"
         + "<br><strong>Observações:</strong><br>"
-        + "- <br>"
+        + "- O modelo é baseado em regras de ouro compiladas à época<br>"
         + "- Os limites propostos para profundidade e produção foram superados por avanços tecnológicos.<br>"
         + "<br><strong>Referência:</strong><br>"
         + "LA VERGNE, Jack. Hard rock miner's handbook. Tempe/North Bay: McIntosh engineering. ISBN 0-968006-1-6, 2003."
