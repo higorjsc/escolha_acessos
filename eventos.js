@@ -39,7 +39,7 @@ function Eventos(metodo) {
 
     //MOUSE OVER SWITCH
     const switch_label = document.querySelector("#switch-label")
-    switch_label.onmouseover = () => Baloes(elemento.id, "undefined")
+    switch_label.onmouseover = () => Baloes(switch_label.id)
     switch_label.onmouseout = () => Balao_sai()
 
     // DIVS DO FLUXOGRAMA
@@ -58,7 +58,7 @@ function Eventos(metodo) {
     })
 
     // MOUSE OVER DOS RADIO BUTTONS
-    const label_radio_button = document.querySelectorAll("label")
+    const label_radio_button = document.querySelectorAll(".radio-label")
     label_radio_button.forEach((elemento) => {
         elemento.onmouseover = () => Baloes(elemento.id, metodo)
         elemento.onmouseout = () => Balao_sai()

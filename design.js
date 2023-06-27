@@ -125,7 +125,7 @@ function Balao_cardozo(entry) {
             "fluxograma-rampa": "Utilizar rampa e caminhões",
             "fluxograma-shaft": "Utilizar poço",
             "label-sm-menor": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.)<br>sobre o deposótio mineral possui<br>espessura menor que 70 m?",
-            "label-sm-maior": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.)<br>sobre o deposótio mineral possui<br>espessura menor que 70 m?",
+            "label-sm-maior": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.)<br>sobre o deposótio mineral possui<br>espessura maior que 70 m?",
             "label-rock-menor": "- Classe I-IV: rocha &ldquo;Muito boa&rdquo; a &ldquo;pobre&rdquo; (RMR 21-100)<br>- Classe V: material inconsolidado (solo), classe &ldquo;muito pobre&rdquo; (RMR 1-20)",
             "label-rock-maior": "- Classe I-IV: rocha &ldquo;Muito boa&rdquo; a &ldquo;pobre&rdquo; (RMR 21-100)<br>- Classe V: material inconsolidado (solo), classe &ldquo;muito pobre&rdquo; (RMR 1-20)"
         }
@@ -141,7 +141,7 @@ function Balao_cardozo(entry) {
             "fluxograma-ramp": "Utilize ramps and trucks",
             "fluxograma-shaft": "Utilize shaft",
             "label-sm-menor": "Is the thickness of unconsolidated materials (soils, alluvial deposit, ...) over the mineral deposit greater than 70 m?",
-            "label-sm-maior": "Is the thickness of unconsolidated materials (soils, alluvial deposit, ...) over the mineral deposit greater than 70 m?",
+            "label-sm-maior": "Is the thickness of unconsolidated materials (soils, alluvial deposit, ...) over the mineral deposit lower than 70 m?",
             "label-rock-menor": "- Class I-IV: &ldquo;Very Good&rdquo; to &ldquo;Poor Rock&rdquo; rock (RMR 21-100)<br>- Class V: &ldquo;Very Poor&rdquo; unconsolidated material (RMR 1-20)",
             "label-rock-maior": "- Class I-IV: &ldquo;Very Good&rdquo; to &ldquo;Poor Rock&rdquo; rock (RMR 21-100)<br>- Class V: &ldquo;Very Poor&rdquo; unconsolidated material (RMR 1-20)"
         }
@@ -157,7 +157,6 @@ function Balao_cardozo(entry) {
 }
 
 function Balao(entry, idioma) {
-    console.log(entry)
     let messages
     if (idioma == "pt") {
         messages = {
@@ -168,7 +167,6 @@ function Balao(entry, idioma) {
             "switch-label": "Change to portuguese"
         }
     }
-
     const positions = {
         "switch-label": { x: 50, y: -40 }
     }
