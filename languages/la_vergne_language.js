@@ -16,7 +16,14 @@ function English() {
     Escrever("li-titulo", "SELECT METHOD")
 
     //SEÇÃO 1
-    const paragrafo_explicacao = ""
+    const paragrafo_explicacao = "The method developed by La Verne (2003) for selecting underground mine access was presented as a "roughly guide" to determine a  viable access in early stages of mining planning."
++" The metodogy proposed does not replace detailed feasibility studies, but aims to significantly reduce the amount of work in the early stages of mining planning."
++"<strong>Notes:</strong><br>"
++"-"
++"-The author’s proposed limits for each parameter have been surpassed by advancements in technology.<br><br>"
++"Reference:<br>"
++"LA VERGNE, Jack. Hard rock miner's handbook. Tempe/North Bay: McIntosh engineering. ISBN 0-968006-1-6, 2003."
+
 
     Escrever("paragrafo-explicacao", paragrafo_explicacao)
 
