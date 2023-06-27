@@ -34,8 +34,8 @@ function Balao_moser(entry, idioma) {
             "fluxograma-shaft": "Utiliiar poço",
             "label-logistica-sim": "Se não utilizar caminhões,<br>deverá utilizar poçoes.",
             "label-logistica-nao": "Se não utilizar caminhões,<br>deverá utilizar poçoes.",
-            "label-rock-menor": "- Classe I: rocha íntegra e resistente<br>- Classe VII: material inconsolidado (solo).",
-            "label-rock-maior": "- Classe I: rocha íntegra e resistente<br>- Classe VII: material inconsolidado (solo).",
+            "label-rock-menor": "- Classe I-V: rocha íntegra e resistente a pobre<br>- Classe VI-VII: material inconsolidado (solo).",
+            "label-rock-maior": "- Classe I-V: rocha íntegra e resistente a pobre<br>- Classe VI-VII: material inconsolidado (solo).",
             "label-sm-menor": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.)<br>sobre o deposótio mineral possui<br>espessura menor que 70 m?",
             "label-sm-maior": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.)<br>sobre o deposótio mineral possui<br>espessura menor que 70 m?",
         }
@@ -53,8 +53,8 @@ function Balao_moser(entry, idioma) {
             "fluxograma-shaft": "Utilize shaft",
             "label-logistica-sim": "If trucks are not used,<br>shaft should be utilized",
             "label-logistica-nao": "If trucks are not used,<br>shaft should be utilized",
-            "label-rock-menor": "- Class I: intact and resistant rock<br>- Class VII: unconsolidated material (soil).",
-            "label-rock-maior": "- Class I: intact and resistant rock<br>- Class VII: unconsolidated material (soil).",
+            "label-rock-menor": "- Class I-V: intact and resistant rock to poor rock<br>- Class VI-VII: unconsolidated material (soil).",
+            "label-rock-maior": "- Class I-V: intact and resistant rock to poor rock<br>- Class VI-VII: unconsolidated material (soil).",
             "label-sm-menor": "Is the thickness of unconsolidated materials (soils, alluvial deposit, ...) over the mineral deposit greater than 70 m?",
             "label-sm-maior": "Is the thickness of unconsolidated materials (soils, alluvial deposit, ...) over the mineral deposit greater than 70 m?",
         }
@@ -193,7 +193,6 @@ function Baloes(entry, metodo = "undefined") {
     } else if (metodo == "moser") {
         Balao_moser(entry, idioma)
     } else if (metodo == "undefined") {
-
         Balao(entry, idioma)
     }
 
