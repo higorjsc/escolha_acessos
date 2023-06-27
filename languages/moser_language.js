@@ -84,7 +84,7 @@ function Portuguese() {
     Escrever("li-titulo", "SELECIONE O MÉTODO")
 
     // SEÇÃO 1
-    const paragrafo_explicacao = "O método de Moser (1996) para a seleção de acesso a minas subterrâneas foi desenvolvido a partir da análise de dados de várias minas metalíferas (hard rock) em escala global."
+    const paragrafo_explicacao = "O método de Moser (1996) para a seleção de acesso a minas subterrâneas foi desenvolvido a partir da análise de dados de várias minas de "rochas duras" (hard rock) em escala global."
         + "&ensp;O método proposto não dispensa estudos detalhados de viabilidade, mas objetiva diminuir a quantidade de esforços nas etapas inicias do planejamento da mina.<br>"
         + "<br><strong>Observações:</strong><br>"
         + "- Moser não analisou minas de rochas brandas (soft rock) para a elaboração de seu modelo.<br>"
