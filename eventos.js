@@ -28,56 +28,50 @@ function Eventos(metodo) {
     //POSICIONA O BALÃO DE AJUDA NA POSIÇÃO DO CURSOR
     var balao = document.getElementById("balao")
     document.addEventListener("mousemove", function (event) {
-        //OBS: o off-set do balão é configurado na função Baloes() em design.js
         balao.style.top = event.clientY + "px"
         balao.style.left = event.clientX + "px"
     })
 
     //BOTÃO SWITCH LANGUAGE
     const switch_language = document.querySelector("#checkbox-switch")
-    //false → A página inicia em português
-    switch_language.checked = false
-    Switch_language(metodo)
-    switch_language.addEventListener("change", () => {
-        Switch_language(metodo)
-    })
+    switch_language.onchange = () => Switch_language(metodo)
+
 
     //MOUSE OVER SWITCH
-    const switch_label = document.querySelector(".switch-label")
-    switch_label.addEventListener("mouseover", () => Baloes("switch-language"))
-    switch_label.addEventListener("mouseleave", () => Balao_sai())
+    const switch_label = document.querySelector("#switch-label")
+    switch_label.onmouseover = () => Baloes(elemento.id, "undefined")
+    switch_label.onmouseout = () => Balao_sai()
 
     // DIVS DO FLUXOGRAMA
     const divs_fluxograma = document.querySelectorAll(".div-fluxograma")
     divs_fluxograma.forEach((elemento) => {
-        elemento.addEventListener("mouseover", () => Baloes(elemento.id, metodo))
-        elemento.addEventListener("mouseout", () => Balao_sai())
+        elemento.onmouseover = () => Baloes(elemento.id, metodo)
+        elemento.onmouseout = () => Balao_sai()
     })
 
     // RADIO BUTTONS
-    const input_parametros = document.querySelectorAll("input[type='radio']")
-    input_parametros.forEach((elemento) => {
-        elemento.addEventListener("change", () => Calculo(metodo))
-        elemento.addEventListener("mouseover", () => Baloes(elemento.id, metodo))
-        elemento.addEventListener("mouseout", () => Balao_sai())
+    const radios = document.querySelectorAll("input[type='radio']")
+    radios.forEach((elemento) => {
+        elemento.onchange = () => Calculo(metodo)
+        elemento.onmouseover = () => Baloes(elemento.id, metodo)
+        elemento.onmouseout = () => Balao_sai()
     })
 
     // MOUSE OVER DOS RADIO BUTTONS
     const label_radio_button = document.querySelectorAll("label")
     label_radio_button.forEach((elemento) => {
-        elemento.addEventListener("mouseover", () => Baloes(elemento.id, metodo))
-        elemento.addEventListener("mouseout", () => Balao_sai())
+        elemento.onmouseover = () => Baloes(elemento.id, metodo)
+        elemento.onmouseout = () => Balao_sai()
     })
 
     // SELECT
     const select = document.querySelectorAll("select")
     select.forEach((elemento) => {
-        elemento.addEventListener("change", () => Calculo(metodo))
-        elemento.addEventListener("mouseover", () => Baloes(elemento.id, metodo))
-        elemento.addEventListener("mouseout", () => Balao_sai())
+        elemento.onchange = () => Calculo(metodo)
+        elemento.onmouseover = () => Baloes(elemento.id, metodo)
+        elemento.onmouseout = () => Balao_sai()
     })
 
+    Switch_language(metodo)
     Calculo(metodo)
-
-
 }
