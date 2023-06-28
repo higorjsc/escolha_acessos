@@ -2,7 +2,7 @@
   --cor-1: #650505d6;
   --cor-2: #300202d6;
   --shadow-apretada: -5px 0 5px  rgb(0 0 0 / 95%);
-  --shadow-blue: 0 0 10px blue;
+  --shadow-red: 0 0 10px #650505d6;
   --borda-simples: 1pt solid black;
 }
 
@@ -103,7 +103,7 @@ input[type='radio']:checked + .radio-label::before {
 
 #botao-imprimir:hover {
   cursor: pointer;
-  box-shadow: var( --shadow-blue);
+  box-shadow: var( --shadow-red);
   transform: scale(1.01);
 }
 
