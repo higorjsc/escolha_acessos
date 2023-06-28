@@ -1,5 +1,5 @@
 //BOTÃO SWITCH DE TROCAR IDIOMAS
-function Switch_language(metodo) {
+function Switch_language() {
     const switch_botao = document.getElementById("checkbox-switch")
     const switch_texto = document.getElementById("switch-texto")
 
@@ -34,7 +34,7 @@ function Eventos(metodo) {
 
     //BOTÃO SWITCH LANGUAGE
     const switch_language = document.querySelector("#checkbox-switch")
-    switch_language.onchange = () => Switch_language(metodo)
+    switch_language.onchange = () => Switch_language()
 
 
     //MOUSE OVER SWITCH

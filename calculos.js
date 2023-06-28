@@ -63,7 +63,7 @@ function Display_img(ids = [], visibilidade) {
 }
 
 // ALTERA A ILUSTRAÇÃO DO MÉTODO CARDOZO CONFORME O RESULTADO DO FLUXOGRAMA
-function Imagem_cardozo_la_vergne(resultado, valor) {
+function Imagem_cardozo_la_vergne(resultado) {
 
     // OCULTA OU MOSTRA AS CORREIAS TRANSPORTADORAS
     let correia = (visibilidade) => {
@@ -320,7 +320,7 @@ function Calculo(metodo) {
     let resultado = ""
     if (metodo == "cardozo" || metodo == "la_vergne") {
         resultado = Cardozo_La_vergne(valor)
-        Imagem_cardozo_la_vergne(resultado, valor)
+        Imagem_cardozo_la_vergne(resultado)
 
     } else if (metodo == "moser") {
         resultado = Moser(valor)

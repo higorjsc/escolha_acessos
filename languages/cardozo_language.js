@@ -17,7 +17,11 @@ function English() {
     Escrever("li-titulo", "SELECT METHOD")
 
     //SEÇÃO 1
-    const paragrafo_explicacao = ""
+    const paragrafo_explicacao = "The Cardozo method (2023) for selecting underground mine acess is a conbination and update of the prcoedures proposed by Moser (1996) and La Vergne (2003)."
+        + "In this method, Cardozo incorporates  some of the parameters proposed by Moser into the flowchart layout presented by La Vergne, and updates the proposed values as limits for depth and production according to the reality of 2023.  "
+        + "<br><br><strong>Notes:</strong><br>"
+        + "- The proposed model does not replace detailed feasibility studies, but aims to significantly reduce the amount of work in the early stages of mining planning."
+        + "<br><br><strong>Reference:</strong><br>"
 
     Escrever("paragrafo-explicacao", paragrafo_explicacao)
 
@@ -66,12 +70,12 @@ function Portuguese() {
     Escrever("li-titulo", "SELECIONE O MÉTODO")
 
     //SEÇÃO 1
-    const paragrafo_explicacao = ""
-    + "<br><strong>Observações:</strong><br>"
-    + "- <br>"
-    + "- <br>"
-    + "<br><strong>Referência:</strong><br>"
-    + ""
+    const paragrafo_explicacao = "O método de Cardozo (2023) para seleção de acessos a minas subterrâneas é uma combinação e atualização dos procedimentos propostos por Moser (1996) e La Vergne (2003)."
+        + " Nesse método, Cardozo incorpora alguns dos parâmetros propostos por Moser ao layout do fluxograma apresentado por La Vergne, além de atualizar os valores propostos como limites para profundidade e produção de acordo com a realidade de 2023."
+        + "<br><br><strong>Observações:</strong><br>"
+        + "- O método não dispensa estudos detalhados de viabilidade, mas objetiva diminuir a quantidade de esforços nas etapas inicias do planejamento da mina."
+        + "<br><br><strong>Referência:</strong><br>"
+        + ""
 
     Escrever("paragrafo-explicacao", paragrafo_explicacao)
 

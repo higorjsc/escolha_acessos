@@ -110,8 +110,7 @@ function Balao_la_vergne(entry, idioma) {
     Positions(entry, messages, positions)
 }
 
-function Balao_cardozo(entry) {
-    let idioma = Obter_idioma()
+function Balao_cardozo(entry, idioma) {
     let messages
     if (idioma == "pt") {
         messages = {
