@@ -34,7 +34,6 @@ function Mostra_green(ids = []) {
     ids.forEach(element => {
         id = ("fluxograma-" + element)
         document.getElementById(id).style.backgroundColor = "rgb(0 128 0 / 19.5%)"
-        document.getElementById(id).style.borderColor = "rgb(0 128 0 / 19.5%)"
     })
 }
 
@@ -43,7 +42,6 @@ function Mostra_classe_red() {
     const elementos = document.querySelectorAll(".div-fluxograma")
     elementos.forEach(element => {
         element.style.backgroundColor = "rgb(249 3 3 / 30.2%)"
-        element.style.borderColor = "rgb(249 3 3 / 30.2%)"
     })
 }
 
