@@ -57,8 +57,8 @@ function English() {
     Escrever("laboratorio", "LAPROM Laboratório de Processamento Mineral")
     Escrever("localizacao", "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970")
     Escrever("contato", " Contato: email@ufrgs.com")
-    // Escrever("desenvolvedor", "Desenvolvedor: Higor Campos")
-    // Escrever("contato-desenvolvedor", " Contato: hhigor1217@gmail.com")
+    Escrever("desenvolvedor", "Desenvolvedor: Higor Campos")
+    Escrever("contato-desenvolvedor", " Contato: hhigor1217@gmail.com")
 
 }
 
@@ -115,8 +115,8 @@ function Portuguese() {
     Escrever("laboratorio", "LAPROM Laboratório de Processamento Mineral")
     Escrever("localizacao", "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970")
     Escrever("contato", " Contato: email@ufrgs.com")
-    // Escrever("desenvolvedor", "Desenvolvedor: Higor Campos")
-    // Escrever("contato-desenvolvedor", " Contato: hhigor1217@gmail.com")
+    Escrever("desenvolvedor", "Desenvolvedor: Higor Campos")
+    Escrever("contato-desenvolvedor", " Contato: hhigor1217@gmail.com")
 
 }
 
