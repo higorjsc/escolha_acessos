@@ -137,43 +137,43 @@ function Cardozo_La_vergne(valor) {
     }
 
     // ROCK MASS
-    if (valor["sm"] == "menor" && valor["rock"] == "menor") {
+    if (valor["sm"] == "menor" && valor["rock"] == "maior") {
         resultado = "shaft"
         Mostra_classe_red()
         Mostra_green(["start", "sm", "rock", "shaft"])
-    } else if (valor["sm"] == "menor" && valor["rock"] == "maior") {
+    } else if (valor["sm"] == "menor" && valor["rock"] == "menor") {
         Enable("depth")
         Mostra_green(["start", "sm", "rock"])
     }
 
     // PROFUNDIDADE
-    if (valor["sm"] == "menor" && valor["rock"] == "maior" && valor["depth"] == "maior") {
+    if (valor["sm"] == "menor" && valor["rock"] == "menor" && valor["depth"] == "maior") {
         resultado = "shaft"
         Mostra_classe_red()
         Mostra_green(["start", "sm", "rock", "depth-1", "shaft"])
 
-    } else if (valor["sm"] == "menor" && valor["rock"] == "maior" && (valor["depth"] == "entre" || valor["depth"] == "menor")) {
+    } else if (valor["sm"] == "menor" && valor["rock"] == "menor" && (valor["depth"] == "entre" || valor["depth"] == "menor")) {
         Enable("prod")
         Mostra_green(["start", "sm", "rock", "depth-1"])
     }
 
     // PRODUÇÃO
-    if (valor["sm"] == "menor" && valor["rock"] == "maior" && (valor["depth"] == "entre" || valor["depth"] == "menor") && valor["prod"] == "maior") {
+    if (valor["sm"] == "menor" && valor["rock"] == "menor" && (valor["depth"] == "entre" || valor["depth"] == "menor") && valor["prod"] == "maior") {
         resultado = "correia"
         Mostra_classe_red()
         Mostra_green(["start", "sm", "rock", "depth-1", "prod-1", "inclined-belt"])
 
-    } else if (valor["sm"] == "menor" && valor["rock"] == "maior" && (valor["depth"] == "entre" || valor["depth"] == "menor") && (valor["prod"] == "menor" || valor["prod"] == "entre") && valor["depth"] == "menor") {
+    } else if (valor["sm"] == "menor" && valor["rock"] == "menor" && (valor["depth"] == "entre" || valor["depth"] == "menor") && (valor["prod"] == "menor" || valor["prod"] == "entre") && valor["depth"] == "menor") {
         resultado = "rampa"
         Mostra_classe_red()
         Mostra_green(["start", "sm", "rock", "depth-1", "prod-1", "depth-2", "rampa"])
 
-    } else if (valor["sm"] == "menor" && valor["rock"] == "maior" && (valor["depth"] == "entre" || valor["depth"] == "menor") && valor["prod"] == "menor" && valor["depth"] == "entre") {
+    } else if (valor["sm"] == "menor" && valor["rock"] == "menor" && (valor["depth"] == "entre" || valor["depth"] == "menor") && valor["prod"] == "menor" && valor["depth"] == "entre") {
         resultado = "rampa"
         Mostra_classe_red()
         Mostra_green(["start", "sm", "rock", "depth-1", "prod-1", "depth-2", "prod-2", "rampa"])
 
-    } else if (valor["sm"] == "menor" && valor["rock"] == "maior" && (valor["depth"] == "entre" || valor["depth"] == "menor") && valor["prod"] == "entre" && valor["depth"] == "entre") {
+    } else if (valor["sm"] == "menor" && valor["rock"] == "menor" && (valor["depth"] == "entre" || valor["depth"] == "menor") && valor["prod"] == "entre" && valor["depth"] == "entre") {
         resultado = "shaft"
         Mostra_classe_red()
         Mostra_green(["start", "sm", "rock", "depth-1", "prod-1", "depth-2", "prod-2", "shaft"])
