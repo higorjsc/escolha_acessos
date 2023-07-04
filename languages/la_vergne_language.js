@@ -65,7 +65,7 @@ function English() {
 function Portuguese() {
 
     //HEADER
-    Escrever("titulo-pagina", "SELEÇÃO DE MÉTODOS DE ACESSO A MINAS SUBTERRÂNEAS: Método La Vergne (2003)")
+    Escrever("titulo-pagina", "SELEÇÃO DE ACESSOS PARA MINAS SUBTERRÂNEAS: Método La Vergne (2003)")
 
     // SEÇÃO 0
     Escrever("li-titulo", "SELECIONE O MÉTODO")

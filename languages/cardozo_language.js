@@ -64,7 +64,7 @@ function English() {
 function Portuguese() {
 
     //HEADER
-    Escrever("titulo-pagina", "SELEÇÃO DE MÉTODOS DE ACESSO A MINAS SUBTERRÂNEAS: Método Cardozo (2023)")
+    Escrever("titulo-pagina", "SELEÇÃO DE ACESSOS PARA MINAS SUBTERRÂNEAS: Método Cardozo (2023)")
 
     // SEÇÃO 0
     Escrever("li-titulo", "SELECIONE O MÉTODO")

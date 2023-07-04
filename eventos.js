@@ -35,6 +35,10 @@ function Eventos(metodo) {
     //BOTÃO SWITCH LANGUAGE
     const switch_language = document.querySelector("#checkbox-switch")
     switch_language.onchange = () => Switch_language()
+    
+    //BOTÃO IMPRIMIR
+    const botao_imprimir = document.querySelector("#botao-imprimir")
+    botao_imprimir.onclick = () => Imprimir_relatorio(metodo)
 
 
     //MOUSE OVER SWITCH
