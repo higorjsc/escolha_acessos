@@ -43,32 +43,12 @@
 }
 
 #correia-1 {
-  height: 160px;
-  transform: rotate(-70deg);
-  top: 35.5%;
-  left: 33%;
-}
-
-#correia-2 {
-  height: 100px;
+  height: 350px;
   transform: rotate(70deg);
-  top: 54%;
-  left: 40%;
+  top: 12%;
+  left: 68%;
 }
 
-#correia-3 {
-  height: 185px;
-  transform: rotate(70deg);
-  top: 17.5%;
-  left: 36%;
-}
-
-#correia-4 {
-  height: 105px;
-  transform: rotate(-70deg);
-  top: 14.8%;
-  left: 44.5%;
-}
 
 #truck {
   position: absolute;
