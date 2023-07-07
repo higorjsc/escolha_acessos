@@ -40,7 +40,6 @@ function Eventos(metodo) {
     const botao_imprimir = document.querySelector("#botao-imprimir")
     botao_imprimir.onclick = () => Imprimir_relatorio(metodo)
 
-
     //MOUSE OVER SWITCH
     const switch_label = document.querySelector("#switch-label")
     switch_label.onmouseover = () => Baloes(switch_label.id)
