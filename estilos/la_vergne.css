@@ -17,12 +17,7 @@
   left: 25%
 }
 
-#shaft-1 {
-  top: 22%;
-  left: 15%;
-}
-
-#shaft-2 {
+#shaft {
   top: 20.5%;
   left: 25%;
 }
@@ -41,7 +36,7 @@
 
 }
 
-#correia-1 {
+#correia {
   height: 350px;
   transform: rotate(70deg);
   top: 12%;

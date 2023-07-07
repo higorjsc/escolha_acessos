@@ -59,6 +59,11 @@ function Display_img(ids = [], visibilidade) {
         document.getElementById(id).style.display = visibilidade
     })
 }
+// APLICA TRANSFORMAÇÕES ÀS IMAGENS
+function Transformar(id, angulo, x, y, scale = 1) {
+    const imagem = document.getElementById(id)
+    imagem.style.transform = `rotate(${angulo}) translate(${x},${y}) scale(${scale})`
+}
 
 // ALTERA A ILUSTRAÇÃO DO MÉTODO CARDOZO CONFORME O RESULTADO DO FLUXOGRAMA
 function Imagem_cardozo_la_vergne(resultado) {
@@ -72,12 +77,12 @@ function Imagem_cardozo_la_vergne(resultado) {
     }
 
     // Oculta as imagens com cada change dos inputs
-    Display_img(["rampa", "truck", "vent", "shaft-2"], "none")
+    Display_img(["rampa", "truck", "vent", "shaft"], "none")
     correia("none")
 
     // Mostra imagens com base no resultado
     if (resultado.includes("shaft")) {
-        Display_img(["shaft-2", "vent"], "block")
+        Display_img(["shaft", "vent"], "block")
     } else if (resultado.includes("rampa")) {
         Display_img(["rampa", "vent", "truck"], "block")
     } else if (resultado.includes("correia")) {
