@@ -90,7 +90,7 @@ function Portuguese() {
 
     // SURFACE MATERIAL
     Escrever("h3-sm", "Cobertura superficial")
-    Escrever("span-sm", "Espessa camada de materiais inconsolidados?")
+    Escrever("span-sm", "Camada de materiais inconsolidados estreita?")
     Escrever("span-sm-menor", "Sim")
     Escrever("span-sm-maior", "Não")
 
