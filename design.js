@@ -71,7 +71,7 @@ function Balao_la_vergne(entry, idioma) {
     let messages
     if (idioma == "pt") {
         messages = {
-            "fluxograma-sm": "A camada de materiais<br>não consolidados (solos, depósitos aluvionares, etc.)<br>sobre o deposótio mineral é <strong>estreita</strong>?",
+            "fluxograma-sm": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.) sobre o<br> deposótio mineral é <strong>estreita</strong>?",
             "fluxograma-rock": "A rocha está integra <br>e possui boa qualidade/resistencia?",
             "fluxograma-depth-1": "O ponto mais profundo do corpo de minério<br>está a menos de 500 m da superfície?",
             "fluxograma-prod-1": "A produção da mina será menor<br>que 5 mil toneladas por dia?",
