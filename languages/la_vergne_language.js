@@ -32,7 +32,7 @@ function English() {
 
     // SURFACE MATERIAL
     Escrever("h3-sm", "Surface material")
-    Escrever("span-sm", "Is there a thick layer of unconsolidated materials?")
+    Escrever("span-sm", "Is the layer of unconsolidated materials narrow?")
     Escrever("span-sm-menor", "Yes")
     Escrever("span-sm-maior", "No")
 
