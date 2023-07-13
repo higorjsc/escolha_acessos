@@ -22,7 +22,7 @@ function English() {
         + "- The author’s proposed limits for each parameter have been surpassed by advancements in technology.<br>"
         + "- The proposed model does not replace detailed feasibility studies, but aims to significantly reduce the amount of work in the early stages of mining planning."
         + "<br><br><strong>Reference:</strong><br>"
-        + "LA VERGNE, Jack. Hard rock miner's handbook. Tempe/North Bay: McIntosh engineering. ISBN 0-968006-1-6, 2003."
+        + "- LA VERGNE, Jack. Hard rock miner's handbook. Tempe/North Bay: McIntosh engineering. ISBN 0-968006-1-6, 2003."
 
 
     Escrever("paragrafo-explicacao", paragrafo_explicacao)
@@ -81,7 +81,7 @@ function Portuguese() {
         + "- Os limites propostos para profundidade e produção foram superados por avanços tecnológicos.<br>"
         + "- O método não dispensa estudos detalhados de viabilidade, mas objetiva diminuir a quantidade de esforços nas etapas inicias do planejamento da mina."
         + "<br><br><strong>Referência:</strong><br>"
-        + "LA VERGNE, Jack. Hard rock miner's handbook. Tempe/North Bay: McIntosh engineering. ISBN 0-968006-1-6, 2003."
+        + "- LA VERGNE, Jack. Hard rock miner's handbook. Tempe/North Bay: McIntosh engineering. ISBN 0-968006-1-6, 2003."
 
     Escrever("paragrafo-explicacao", paragrafo_explicacao)
 

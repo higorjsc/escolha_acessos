@@ -21,7 +21,9 @@ function English() {
         + "In this method, Cardozo incorporates  some of the parameters proposed by Moser into the flowchart layout presented by La Vergne, and updates the proposed values as limits for depth and production according to the reality of 2023.  "
         + "<br><br><strong>Notes:</strong><br>"
         + "- The proposed model does not replace detailed feasibility studies, but aims to significantly reduce the amount of work in the early stages of mining planning."
-        + "<br><br><strong>Reference:</strong><br>"
+        + "<br><br><strong>Referênces:</strong><br>"
+        + "- CARDOZO, F. A. C. et al. Choice of access for underground mining for feasibility studies. REM-International Engineering Journal, v. 76, p. 187-193, 2023.<br/>"
+        + "- CARDOZO, F. A. C. Modelagem de Escavações Subterrâneas: Contribuições para Escolha de Acessos de Mina. Doutorado—Porto Alegre: Universidade Federal do Rio Grande do Sul, 3 mar. 2023."
 
     Escrever("paragrafo-explicacao", paragrafo_explicacao)
 
@@ -74,8 +76,9 @@ function Portuguese() {
         + " Nesse método, Cardozo incorpora alguns dos parâmetros propostos por Moser ao layout do fluxograma apresentado por La Vergne, além de atualizar os valores propostos como limites para profundidade e produção de acordo com a realidade de 2023."
         + "<br><br><strong>Observações:</strong><br>"
         + "- O método não dispensa estudos detalhados de viabilidade, mas objetiva diminuir a quantidade de esforços nas etapas inicias do planejamento da mina."
-        + "<br><br><strong>Referência:</strong><br>"
-        + ""
+        + "<br><br><strong>Referências:</strong><br>"
+        + "- CARDOZO, F. A. C. et al. Choice of access for underground mining for feasibility studies. REM-International Engineering Journal, v. 76, p. 187-193, 2023.<br/>"
+        + "- CARDOZO, F. A. C. Modelagem de Escavações Subterrâneas: Contribuições para Escolha de Acessos de Mina. Doutorado—Porto Alegre: Universidade Federal do Rio Grande do Sul, 3 mar. 2023."
 
     Escrever("paragrafo-explicacao", paragrafo_explicacao)
 

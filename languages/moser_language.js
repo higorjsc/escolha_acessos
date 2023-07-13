@@ -24,7 +24,7 @@ function English() {
         + "- The model does not consider the use of inclined belt conveyors as a viable option for transporting ore.<br>"
         + "- The proposed model does not replace detailed feasibility studies, but aims to significantly reduce the amount of work in the early stages of mining planning."
         + "<br><br><strong>References:</strong><br>"
-        + "MOSER, P. Primary development of underground hard rock mines. In: SYMPOSIUM ON MINE PLANNING AND EQUIPMENT SELECTION. 1996. São Paulo. Proceedings […]. São Paulo, 1996. p. 31-3."
+        + "- MOSER, P. Primary development of underground hard rock mines. In: Symposium On Mine Planning And Equipment Selection. 1996. São Paulo. Proceedings […]. São Paulo, 1996. p. 31-3."
 
     Escrever("paragrafo-explicacao", paragrafo_explicacao)
 
@@ -91,7 +91,7 @@ function Portuguese() {
         + "- Os limites propostos para profundidade e produção foram superados por avanços tecnológicos.<br>"
         + "- O método não dispensa estudos detalhados de viabilidade, mas objetiva diminuir a quantidade de esforços nas etapas inicias do planejamento da mina."
         + "<br><br><strong>Referência:</strong><br>"
-        + "MOSER, P. Primary development of underground hard rock mines. In: SYMPOSIUM ON MINE PLANNING AND EQUIPMENT SELECTION. 1996. São Paulo. Proceedings […]. São Paulo, 1996. p. 31-3."
+        + "- MOSER, P. Primary development of underground hard rock mines. In: Symposium On Mine Planning And Equipment Selection. 1996. São Paulo. Proceedings […]. São Paulo, 1996. p. 31-3."
 
     Escrever("paragrafo-explicacao", paragrafo_explicacao)
 
