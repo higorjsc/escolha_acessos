@@ -24,7 +24,7 @@ function Balao_moser(entry, idioma) {
         messages = {
             "fluxograma-logistica": "A mina utilizará caminhões?",
             "fluxograma-rock": "A classe do maciço é menor do que 5 (I-V)?",
-            "fluxograma-sm": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.)<br>sobre o deposótio mineral possui<br>espessura menor que 70 m?",
+            "fluxograma-sm": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.)<br>sobre o depósito mineral possui<br>espessura menor que 70 m?",
             "fluxograma-depth-1": "O ponto mais profundo do corpo de minério<br>está a menos de 500 m da superfície?",
             "fluxograma-prod-1": "A produção da mina será menor ou maior<br>que 400 mil toneladas por ano?",
             "fluxograma-open-pit": "O depósito será acessado a partir da<br>cava de uma mina a céu aberto?",
@@ -36,8 +36,8 @@ function Balao_moser(entry, idioma) {
             "label-logistica-nao": "Se não utilizar caminhões,<br>deverá utilizar poços.",
             "label-rock-menor": "- Classe I-V: rocha íntegra e resistente a pobre<br>- Classe VI-VII: material inconsolidado (solo).",
             "label-rock-maior": "- Classe I-V: rocha íntegra e resistente a pobre<br>- Classe VI-VII: material inconsolidado (solo).",
-            "label-sm-menor": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.)<br>sobre o deposótio mineral possui<br>espessura menor que 70 m?",
-            "label-sm-maior": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.)<br>sobre o deposótio mineral possui<br>espessura menor que 70 m?",
+            "label-sm-menor": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.)<br>sobre o depósito mineral possui<br>espessura menor que 70 m?",
+            "label-sm-maior": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.)<br>sobre o depósito mineral possui<br>espessura menor que 70 m?",
         }
     } else {
         messages = {
@@ -71,7 +71,7 @@ function Balao_la_vergne(entry, idioma) {
     let messages
     if (idioma == "pt") {
         messages = {
-            "fluxograma-sm": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.) sobre o<br> deposótio mineral é <strong>estreita</strong>?",
+            "fluxograma-sm": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.) sobre o<br> depósito mineral é <strong>estreita</strong>?",
             "fluxograma-rock": "A rocha está integra <br>e possui boa qualidade/resistencia?",
             "fluxograma-depth-1": "O ponto mais profundo do corpo de minério<br>está a menos de 500 m da superfície?",
             "fluxograma-prod-1": "A produção da mina será menor<br>que 5 mil toneladas por dia?",
@@ -80,8 +80,8 @@ function Balao_la_vergne(entry, idioma) {
             "fluxograma-prod-2": "A produção da mina será menor<br>que 2,5 mil toneladas por dia?",
             "fluxograma-rampa": "Utilizar rampa e caminhões",
             "fluxograma-shaft": "Utilizar poço",
-            "label-sm-menor": "Existe uma camada espessa de materiais<br>não consolidados (solos, depósitos aluvionares, etc.)<br>sobre o deposótio mineral?",
-            "label-sm-maior": "Existe uma camada espessa de materiais<br>não consolidados (solos, depósitos aluvionares, etc.)<br>sobre o deposótio mineral?",
+            "label-sm-menor": "Existe uma camada espessa de materiais<br>não consolidados (solos, depósitos aluvionares, etc.)<br>sobre o depósito mineral?",
+            "label-sm-maior": "Existe uma camada espessa de materiais<br>não consolidados (solos, depósitos aluvionares, etc.)<br>sobre o depósito mineral?",
             "label-rock-menor": "A rocha está integra <br>e possui boa qualidade/resistencia?",
             "label-rock-maior": "A rocha está integra <br>e possui boa qualidade/resistencia?",
         }
@@ -114,7 +114,7 @@ function Balao_cardozo(entry, idioma) {
     let messages
     if (idioma == "pt") {
         messages = {
-            "fluxograma-sm": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.)<br>sobre o deposótio mineral possui<br>espessura menor que 70 m?",
+            "fluxograma-sm": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.)<br>sobre o depósito mineral possui<br>espessura menor que 70 m?",
             "fluxograma-rock": "A classe do maciço, segundo a classificação RMR<br>de Bienawski (1989), é menor do que 4 (IV)?",
             "fluxograma-depth-1": "O ponto mais profundo do corpo de minério<br>está a menos de 1700 m da superfície?",
             "fluxograma-prod-1": "A produção da mina será menor<br>que 7.5 mil toneladas por dia?",
@@ -123,8 +123,8 @@ function Balao_cardozo(entry, idioma) {
             "fluxograma-prod-2": "A produção da mina será menor<br>que 1,5 mil toneladas por dia?",
             "fluxograma-rampa": "Utilizar rampa e caminhões",
             "fluxograma-shaft": "Utilizar poço",
-            "label-sm-menor": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.)<br>sobre o deposótio mineral possui<br>espessura menor que 70 m?",
-            "label-sm-maior": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.)<br>sobre o deposótio mineral possui<br>espessura maior que 70 m?",
+            "label-sm-menor": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.)<br>sobre o depósito mineral possui<br>espessura menor que 70 m?",
+            "label-sm-maior": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.)<br>sobre o depósito mineral possui<br>espessura maior que 70 m?",
             "label-rock-menor": "- Classe I-IV: rocha &ldquo;Muito boa&rdquo; a &ldquo;pobre&rdquo; (RMR 21-100)<br>- Classe V: material inconsolidado (solo), classe &ldquo;muito pobre&rdquo; (RMR 1-20)",
             "label-rock-maior": "- Classe I-IV: rocha &ldquo;Muito boa&rdquo; a &ldquo;pobre&rdquo; (RMR 21-100)<br>- Classe V: material inconsolidado (solo), classe &ldquo;muito pobre&rdquo; (RMR 1-20)"
         }
