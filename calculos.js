@@ -53,70 +53,7 @@ function Oculta_classe(classe) {
     })
 }
 
-// OCULTA OU MOSTRA CADA IMAGEM
-function Display_img(ids = [], visibilidade) {
-    ids.forEach(id => {
-        document.getElementById(id).style.display = visibilidade
-    })
-}
-// APLICA TRANSFORMAÇÕES ÀS IMAGENS
-function Transformar(id, angulo, x, y, scale = 1) {
-    const imagem = document.getElementById(id)
-    imagem.style.transform = `rotate(${angulo}) translate(${x},${y}) scale(${scale})`
-}
 
-// ALTERA A ILUSTRAÇÃO DO MÉTODO CARDOZO CONFORME O RESULTADO DO FLUXOGRAMA
-function Imagem_cardozo_la_vergne(resultado) {
-
-    // OCULTA OU MOSTRA AS CORREIAS TRANSPORTADORAS
-    let correia = (visibilidade) => {
-        classe = document.querySelectorAll(".div-img-correia")
-        classe.forEach(element => {
-            element.style.display = visibilidade
-        })
-    }
-
-    // Oculta as imagens com cada change dos inputs
-    Display_img(["rampa", "truck", "vent", "shaft"], "none")
-    correia("none")
-
-    // Mostra imagens com base no resultado
-    if (resultado.includes("shaft")) {
-        Display_img(["shaft", "vent"], "block")
-    } else if (resultado.includes("rampa")) {
-        Display_img(["rampa", "vent", "truck"], "block")
-    } else if (resultado.includes("correia")) {
-        Display_img(["vent"], "block")
-        correia("block")
-    }
-}
-
-// ALTERA A ILUSTRAÇÃO DO MÉTODO CARDOZO CONFORME O RESULTADO DO FLUXOGRAMA
-function Imagem_moser(resultado, valor) {
-
-    // Oculta as imagens com cada change dos inputs
-    Display_img(["rampa", "rampa-pit", "truck", "vent", "vent-pit", "shaft", "shaft-pit"], "none")
-
-    // VERIFICA SE OPEN PIT ESTÁ MARCADO SIM OU NÃO
-    if (valor["logistica"] == "sim" && valor["rock"] == "menor" && valor["sm"] == "menor" && valor["op"] == "sim") {
-        Display_img(["superficie", "usina"], "none")
-        Display_img(["superficie-pit", "usina-pit"], "block")
-        if (resultado.includes("shaft")) {
-            Display_img(["shaft-pit", "vent-pit"], "block")
-        } else if (resultado.includes("rampa")) {
-            Display_img(["rampa-pit", "vent-pit", "truck"], "block")
-        }
-    } else {
-        Display_img(["superficie", "usina"], "block")
-        Display_img(["superficie-pit", "usina-pit"], "none")
-
-        if (resultado.includes("shaft")) {
-            Display_img(["shaft", "vent"], "block")
-        } else if (resultado.includes("rampa")) {
-            Display_img(["rampa", "truck"], "block")
-        }
-    }
-}
 
 // LOGICA DO FLUXOGRAMA, ILUSTRAÇÕES E INPUTS DO MÉTODO CARDOZO E LA VERGNE
 function Cardozo_La_vergne(valor) {

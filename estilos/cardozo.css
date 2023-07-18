@@ -10,14 +10,13 @@
 .img-acesso {
   position: absolute;
   display: none;
-  z-index: 2;
+
 }
 
 #rampa {
   top: 18.5%;
-  left: 25%
+  left: 25%;
 }
-
 
 #shaft {
   top: 20.5%;
@@ -59,7 +58,7 @@
   position: absolute;
   top: 64%;
   left: 15%;
-  z-index: 3;
+  z-index: 1;
 }
 
 #usina {
