@@ -1,3 +1,4 @@
+
 //TROCA O IDIOMA DA PÁGINA
 function Switch_language() {
     const switch_botao = document.getElementById("checkbox-switch")
@@ -19,8 +20,8 @@ function Switch_language() {
     const frame = Iframe_ativo()
     // Envia uma mensagem para o Iframe ativo para trocar de idioma também
     if (frame) frame.contentWindow.postMessage("CallLanguage", "*")
-}
 
+}
 
 // OBTÉM O ID DO IFRAME ATIVO NO POP UP
 function Iframe_ativo() {
@@ -46,7 +47,31 @@ function Configurar_pop_up(id) {
 
     // Define as dimensões de cada pop-up
     const pop_up = document.getElementById("main-pop-up")
-    if (id.includes("creditos")) {
+    const litologia = id.split("-")[2]
+    if (id.includes("gsi")) {
+        pop_up.style.width = "750px"
+        pop_up.style.height = "740px"
+        pop_up.style.left = "35%"
+        pop_up.style.top = "20%"
+        Modificar_id("gsi-" + litologia)
+    } if (id.includes("rmr")) {
+        pop_up.style.width = "520px"
+        pop_up.style.height = "650px"
+        pop_up.style.top = "20%"
+        Modificar_id("rmr-" + litologia)
+    } else if (id.includes("densidade")) {
+        pop_up.style.width = "420px"
+        pop_up.style.height = "650px"
+        Modificar_id("densidade-" + litologia)
+    } else if (id.includes("ucs")) {
+        pop_up.style.width = "420px"
+        pop_up.style.height = "650px"
+        Modificar_id("ucs-" + litologia)
+    } else if (id.includes("ahp")) {
+        pop_up.style.width = "680px"
+        pop_up.style.height = "670px"
+        Modificar_id("ahp")
+    } else if (id.includes("creditos")) {
         pop_up.style.width = "550px"
         pop_up.style.height = "500px"
         pop_up.style.left = "45%"
@@ -79,14 +104,22 @@ function Open_iframe(id_trigger) {
         })
     }
 
+    // Cria a url do pop up que será aberto
+    let Obter_endereco = (calculadora) => {
+        calculadora.split("-")[1]
+        const endereco = calculadora.split("-")[1] + "_" + "calculadora/" + calculadora.split("-")[1] + ".html"
+        const argumento = "?" + calculadora.split("-")[2]
+        return (endereco + argumento)
+    }
+
     Desabilitar_iframe()
     let frame = document.getElementById(("iframe-" + id_trigger))
 
     // Chama a função que configura largura, altura e titulo da janela pop up
     Configurar_pop_up(id_trigger)
 
-    // Cria uma URL
-    const endereco =  (id_trigger + ".html")
+    // Verifica se o pop up é uma calculadora e cria uma URL
+    const endereco = id_trigger.includes("calculadora") ? Obter_endereco(id_trigger) : (id_trigger + ".html")
     frame.src = endereco
     frame.style.display = "block"
 
@@ -96,9 +129,10 @@ function Open_iframe(id_trigger) {
 
 // CONFIGURA O MOVIMENTO DOS POP UPS. OBS: ESSA FUNÇÃO DEVE SER APRIMORADA.
 function Mover_pop_up() {
-
+    
     const main_pop_up = document.getElementById("main-pop-up")
     const barra_pop_up = document.getElementById("barra-pop-up")
+    const overlay = document.getElementById("overlay")
     const overlay_div = document.getElementById("overlay-div")
 
     let position = { x: 0, y: 0 }
@@ -112,9 +146,10 @@ function Mover_pop_up() {
     // Interrompe o movimento do pop up
     let Interromper = () => {
         document.removeEventListener("mousemove", Move_element)
+        overlay.style.display = "none"
         overlay_div.style.display = "none"
     }
-
+    
     // Eventos que interromperão o movimento do pop up 
     document.onmouseup = () => Interromper()
     document.onscroll = () => Interromper()
@@ -124,6 +159,7 @@ function Mover_pop_up() {
     barra_pop_up.addEventListener("mousedown", (event) => {
 
         // Coloca uma div invisível sobre toda a página e todo o pop up, para evitar interações durante o arraste
+        overlay.style.display = "block"
         overlay_div.style.display = "block"
 
         // Impede o usuário de selecionar textos enquanto arrasta o pop up
@@ -135,7 +171,7 @@ function Mover_pop_up() {
 
         // Define a posição do mouse em relação ao pop up
         position.x = event.clientX - main_pop_up.offsetLeft
-        position.y = event.clientY - main_pop_up.offsetTop
+        position.y = event.clientY - main_pop_up.offsetTop 
 
         // Define os limites de movimento do pop up
         limite.right = body_width - main_pop_up.clientWidth
@@ -163,17 +199,40 @@ function Mover_pop_up() {
 
 }
 
+// MOSTRA A PLANILHA COM OS PESOS DE CADA MÉTODO 
+function Open_pop_up_pesos() {
+    let metodo = Obter_metodo()
+    const tabela_nome = metodo + "_" + Obter_idioma() + ".html"
+    window.open("tabelas\\" + tabela_nome, "_blank")
+}
 
+// OBTÉM O MÉTODO DE ESCOLHA DE MÉTODOS DE LAVRA
+function Obter_metodo() {
+    let titulo = document.getElementById("titulo-pagina").innerText
+    if (titulo.includes("1995")) {
+        return "ubc"
+    } else if (titulo.includes("2007")) {
+        return "shb"
+    } else if (titulo.includes("1981")) {
+        return "nicholas_81"
+    } else if (titulo.includes("1992")) {
+        return "nicholas_92"
+    }
+
+}
+
+// OBTÉM O IDIOMA DA JANELA PRINCIPAL A PARTIR DO TÍTULO DA SEÇÃO 1
 function Obter_idioma() {
     let idioma = document.getElementById("titulo-section-1").innerText
-    idioma = idioma.includes("PARÂMETROS") ? "pt" : "en"
+    idioma = idioma.includes("CHARACTERISTICS") ? "en" : "pt"
     return idioma
 }
 
+// DEFINE TODOS OS EVENTOS DO PROGRAMA COM BASE NO MÉTODO DE SELEÇÃO DE MÉTODOS DE LAVRA
 function Eventos(metodo) {
 
     //POSICIONA O BALÃO DE AJUDA NA POSIÇÃO DO CURSOR
-    var balao = document.getElementById("balao")
+    const balao = document.getElementById("balao")
     document.addEventListener("mousemove", function (event) {
         balao.style.top = event.clientY + "px"
         balao.style.left = event.clientX + "px"
@@ -181,45 +240,103 @@ function Eventos(metodo) {
 
     //BOTÃO SWITCH LANGUAGE
     const switch_language = document.querySelector("#checkbox-switch")
-    switch_language.onchange = () => Switch_language()
+    switch_language.onchange = () => {
+        Switch_language(metodo)
+        Calculo() // Calculo é chamada para alterar o valor do resultado do RSS
+    }
 
-    //BOTÃO IMPRIMIR
-    const botao_imprimir = document.querySelector("#botao-imprimir")
-    botao_imprimir.onclick = () => Imprimir_relatorio(metodo)
-
-    //MOUSE OVER SWITCH
-    const switch_label = document.querySelector("#switch-label")
-    switch_label.onmouseover = () => Baloes(switch_label.id)
+    //label do switch
+    const switch_label = document.querySelector(".switch-label") //mouseover no label, não na checkbox invisível
+    switch_label.onmouseover = () => Balao_entra("switch-language")
     switch_label.onmouseout = () => Balao_sai()
 
-    // DIVS DO FLUXOGRAMA
-    const divs_fluxograma = document.querySelectorAll(".div-fluxograma")
-    divs_fluxograma.forEach((elemento) => {
-        elemento.onmouseover = () => Baloes(elemento.id, metodo)
-        elemento.onmouseout = () => Balao_sai()
+
+    //BOTAO RMR_Q_GSI
+    if (metodo == "ubc" || metodo == "shb") {
+        const radios = document.querySelectorAll(".radio-rmr-q-gsi")
+        radios.forEach((element) => {
+            element.onchange = () => Rock_mass()
+        })
+        Rock_mass()
+    }
+
+    // BOTÕES CALCULADORA 
+    const calculadoras = document.querySelectorAll(".botao-calculadora")
+    calculadoras.forEach((elemento) => {
+        elemento.onclick = () => Open_iframe(elemento.id)
     })
 
-    // RADIO BUTTONS
-    const radios = document.querySelectorAll("input[type='radio']")
-    radios.forEach((elemento) => {
-        elemento.onchange = () => Calculo(metodo)
-        elemento.onmouseover = () => Baloes(elemento.id, metodo)
-        elemento.onmouseout = () => Balao_sai()
+    //INPUT DOS FATORES DE PESOS E AHP NO MÉTODO DE NICHOLAS 1992
+    if (metodo == "nicholas_92") {
+        const menu_pesos = document.querySelector("#menu-pesos")
+        menu_pesos.addEventListener("change", Mostrar_input_pesos)
+        const calculadora_ahp_nicholas = document.querySelector("#calculadora-ahp-nicholas")
+        calculadora_ahp_nicholas.onclick = () => Open_iframe(calculadora_ahp_nicholas.id)
+    }
+
+    //BOTÃO MOSTRA TABELA COM OS PESOS
+    const botao_pesos = document.querySelector("#botao-pesos")
+    botao_pesos.onclick = () => Open_pop_up_pesos()
+
+    //BOTÃO IMPRIMIR RELATÓRIO
+    const botao_imprimir = document.querySelector("#botao-imprimir")
+    botao_imprimir.onclick = () => Imprimir_relatorio()
+
+    // EVENTOS BUTTONS
+    const button = document.querySelectorAll("button")
+    button.forEach((element) => {
+        element.onmouseover = () => Baloes(element.id)
+        element.onmouseout = () => Balao_sai()
     })
 
-    // MOUSE OVER DOS RADIO BUTTONS
-    const label_radio_button = document.querySelectorAll(".radio-label")
-    label_radio_button.forEach((elemento) => {
-        elemento.onmouseover = () => Baloes(elemento.id, metodo)
-        elemento.onmouseout = () => Balao_sai()
+    // EVENTOS SELECTS
+    const selects = document.querySelectorAll("select")
+    selects.forEach((seletor) => {
+        // Evento onchange para o select
+        seletor.onchange = () => {
+            Calculo()
+            seletor.blur()
+        }
+
+        // Evento mouseover e mouseout para o select
+        seletor.onmouseover = () => Baloes(seletor.id, metodo)
+        seletor.onmouseout = () => Balao_sai()
+
+        // Eventos mouseover e mouseout para as opções do select
+        const opcoes = seletor.getElementsByTagName("option")
+        for (const option of opcoes) {
+            option.onmouseover = (e) => {
+                e.stopPropagation()
+                Baloes(seletor.id, metodo)
+            }
+            option.onmouseout = () => Balao_sai()
+        }
     })
 
-    // SELECT
-    const select = document.querySelectorAll("select")
-    select.forEach((elemento) => {
-        elemento.onchange = () => Calculo(metodo)
-        elemento.onmouseover = () => Baloes(elemento.id, metodo)
-        elemento.onmouseout = () => Balao_sai()
+
+    // SPAN RESULTADO RSS
+    const span_resultado_rss = document.querySelectorAll(".resultado-rss")
+    span_resultado_rss.forEach((element) => {
+        element.onmouseover = () => Baloes(element.id, metodo)
+        element.onmouseout = () => Balao_sai()
+    })
+
+    // EVENTOS INPUTS
+    const input = document.querySelectorAll("input")
+    input.forEach((element, index) => {
+        element.oninput = () => Calculo()
+        element.onblur = () => Formatar_entry(element.id)
+        element.onmouseover = () => Baloes(element.id, metodo)
+        element.onmouseout = () => Balao_sai()
+        element.onkeydown = (event) => {
+            if (event.key === "Enter") {
+                event.preventDefault() // Impede o comportamento padrão de enviar o formulário
+
+                // Move o foco para o próximo input
+                const nextIndex = (index + 1) % input.length
+                input[nextIndex].focus()
+            }
+        }
     })
 
     // FECHAR POP UP
@@ -231,19 +348,18 @@ function Eventos(metodo) {
         }
     })
 
-    // NENHUMA IMAGEM É ARRASTÁVEL
     const imagens = document.querySelectorAll("img")
     imagens.forEach((element) => {
         element.draggable = false
     })
 
-    // ABRIR POP UPS DO FOOTER DA JANELA PRINCIPAL
     const spans_footer = document.querySelectorAll(".span-footer-2")
     spans_footer.forEach((element) => {
         element.onclick = () => Open_iframe(element.id)
     })
 
+
     Switch_language()
     Mover_pop_up()
-    Calculo(metodo)
+    Calculo()
 }

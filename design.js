@@ -1,4 +1,111 @@
 
+
+
+
+
+// OCULTA OU MOSTRA CADA IMAGEM
+function Display_img(ids = [], visibilidade) {
+    ids.forEach(id => {
+        document.getElementById(id).style.display = visibilidade
+    })
+}
+
+
+function Transformacoes(id) {
+
+    let depth = document.getElementById("select-depth").value
+    let orebody = document.getElementById("orebody")
+    let acesso = document.getElementById(id)
+    let vent = document.getElementById("vent")
+
+    const transformations = {
+        "shaft_menor": "Translate(0, 0) Rotate(0deg) Scale(1)",
+        "shaft_maior": "Translate(0, 0) Rotate(0deg) Scale(1)",
+        "rampa_menor": "Translate(0, 4.5px) Rotate(0deg) Scale(1)",
+        "rampa_entre": "Translate(0, 3px) Rotate(0deg) Scale(1)",
+        "correia_menor": "Translate(1px, -85px) Rotate(70deg) Scale(1)",
+        "correia_entre": "Translate(1px, -55px) Rotate(70deg) Scale(1)"
+    }
+
+    const alturas = {
+        shaft_entre: "200px",
+        shaft_maior: "250px",
+        rampa_menor: "180px",
+        rampa_entre: "220px",
+        rampa_maior: "180px",
+        correia_menor: "400px",
+        correia_entre: "400px",
+        vent_menor: "180px",
+        vent_entre: "220px",
+        vent_maior: "250px",
+    }
+
+    if (depth == "menor") {
+        orebody.style.transform = "Translate(0, -50%)"
+        acesso.style.transform = transformations[`${acesso.id}_${depth}`]
+        acesso.style.height = alturas[`${acesso.id}_${depth}`]
+        vent.style.height = alturas[`${vent.id}_${depth}`]
+    } else if (depth == "entre") {
+        orebody.style.transform = "Translate(0, -25%)"
+        acesso.style.transform = transformations[`${acesso.id}_${depth}`]
+        acesso.style.height = alturas[`${acesso.id}_${depth}`]
+        vent.style.height = alturas[`${vent.id}_${depth}`]
+    } else if (depth == "maior") {
+        orebody.style.transform = "Translate(0, 0)"
+        acesso.style.transform = transformations[`${acesso.id}_${depth}`]
+        acesso.style.height = alturas[`${acesso.id}_${depth}`]
+        vent.style.height = alturas[`${vent.id}_${depth}`]
+    }
+
+}
+
+// ALTERA A ILUSTRAÇÃO DO MÉTODO CARDOZO CONFORME O RESULTADO DO FLUXOGRAMA
+function Imagem_cardozo_la_vergne(resultado) {
+
+    // Oculta as imagens com cada change dos inputs
+    Display_img(["rampa", "truck", "vent", "shaft", "correia"], "none")
+
+    // Mostra imagens com base no resultado
+    if (resultado.includes("shaft")) {
+        Display_img(["shaft", "vent"], "block")
+        Transformacoes("shaft")
+    } else if (resultado.includes("rampa")) {
+        Display_img(["rampa", "vent", "truck"], "block")
+        Transformacoes("rampa")
+    } else if (resultado.includes("correia")) {
+        Display_img(["correia", "vent"], "block")
+        Transformacoes("correia")
+    }
+
+}
+
+// ALTERA A ILUSTRAÇÃO DO MÉTODO CARDOZO CONFORME O RESULTADO DO FLUXOGRAMA
+function Imagem_moser(resultado, valor) {
+
+    // Oculta as imagens com cada change dos inputs
+    Display_img(["rampa", "rampa-pit", "truck", "vent", "vent-pit", "shaft", "shaft-pit"], "none")
+
+    // VERIFICA SE OPEN PIT ESTÁ MARCADO SIM OU NÃO
+    if (valor["logistica"] == "sim" && valor["rock"] == "menor" && valor["sm"] == "menor" && valor["op"] == "sim") {
+        Display_img(["superficie", "usina"], "none")
+        Display_img(["superficie-pit", "usina-pit"], "block")
+        if (resultado.includes("shaft")) {
+            Display_img(["shaft-pit", "vent-pit"], "block")
+        } else if (resultado.includes("rampa")) {
+            Display_img(["rampa-pit", "vent-pit", "truck"], "block")
+        }
+    } else {
+        Display_img(["superficie", "usina"], "block")
+        Display_img(["superficie-pit", "usina-pit"], "none")
+
+        if (resultado.includes("shaft")) {
+            Display_img(["shaft", "vent"], "block")
+        } else if (resultado.includes("rampa")) {
+            Display_img(["rampa", "truck"], "block")
+        }
+    }
+}
+
 function Positions(entry, messages, positions) {
 
     //Mostra o balão de texto
