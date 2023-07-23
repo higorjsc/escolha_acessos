@@ -2,18 +2,20 @@
 function Switch_language() {
     const switch_botao = document.getElementById("checkbox-switch")
     const switch_texto = document.getElementById("switch-texto")
-
+    let idioma
     if (switch_botao.checked) {
         //Configura a posição to texto PT se switch on (página em ingles)
         switch_texto.innerHTML = "PT"
         switch_texto.style.transform = "translate(5px, -6px)"
-        English()
+        idioma = "en"
     } else {
         //Configura a posição to texto EN se switch on (página em portugues)
         switch_texto.innerHTML = "EN"
         switch_texto.style.transform = "translate(21px, -6px)"
-        Portuguese()
+        idioma = "pt"
     }
+
+    Language(idioma)
 
 }
 
@@ -35,7 +37,7 @@ function Eventos(metodo) {
     //BOTÃO SWITCH LANGUAGE
     const switch_language = document.querySelector("#checkbox-switch")
     switch_language.onchange = () => Switch_language()
-    
+
     //BOTÃO IMPRIMIR
     const botao_imprimir = document.querySelector("#botao-imprimir")
     botao_imprimir.onclick = () => Imprimir_relatorio(metodo)
@@ -75,6 +77,6 @@ function Eventos(metodo) {
         elemento.onmouseout = () => Balao_sai()
     })
 
-    Switch_language(metodo)
+    Switch_language()
     Calculo(metodo)
 }
