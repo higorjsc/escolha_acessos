@@ -163,6 +163,11 @@ p {
   color: black;
 }
 
+p a {
+  color: var(--cor-1);
+  text-decoration: none;
+}
+
 #menu-metodos {
   list-style-type: none;
   margin: 0;
@@ -211,7 +216,7 @@ p {
   display: block;
 }
 
-a {
+ul li a {
   display: block;
   width: 100%;
   color: white;
