@@ -166,6 +166,7 @@ p {
 p a {
   color: var(--cor-1);
   text-decoration: none;
+  font-size: 10pt;
 }
 
 #menu-metodos {
