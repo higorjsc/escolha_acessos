@@ -183,6 +183,7 @@ p a {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   background-color: white;
+  color: black;
   text-align: center;
   font-weight: bold;
 }
