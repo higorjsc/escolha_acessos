@@ -14,17 +14,17 @@ function Display_img(ids = [], visibilidade) {
 function Transformacoes(id) {
 
     let depth = document.getElementById("select-depth").value
-    const orebody = document.getElementById("orebody")
-    const acesso = document.getElementById(id)
-    const vent = document.getElementById('vent')
+    let orebody = document.getElementById("orebody")
+    let acesso = document.getElementById(id)
+    let vent = document.getElementById("vent")
 
     const transformations = {
         "shaft_menor": "Translate(0, 0) Rotate(0deg) Scale(1)",
         "shaft_maior": "Translate(0, 0) Rotate(0deg) Scale(1)",
-        "rampa_menor": "Translate(0, 6px) Rotate(0deg) Scale(1)",
-        "rampa_entre": "Translate(0,-6px) Rotate(0deg) Scale(1)",
-        "correia_menor": "Translate(15px, -65px) Rotate(70deg) Scale(1)",
-        "correia_entre": "Translate(15px, -50px) Rotate(70deg) Scale(1)"
+        "rampa_menor": "Translate(0, 4.5px) Rotate(0deg) Scale(1)",
+        "rampa_entre": "Translate(0, 3px) Rotate(0deg) Scale(1)",
+        "correia_menor": "Translate(1px, -85px) Rotate(70deg) Scale(1)",
+        "correia_entre": "Translate(1px, -55px) Rotate(70deg) Scale(1)"
     }
 
     const alturas = {
@@ -33,34 +33,32 @@ function Transformacoes(id) {
         rampa_menor: "180px",
         rampa_entre: "220px",
         rampa_maior: "180px",
-        correia_menor: "-100px",
+        correia_menor: "400px",
         correia_entre: "400px",
         vent_menor: "180px",
         vent_entre: "220px",
         vent_maior: "250px",
     }
 
-    if (depth == 'menor') {
+    if (depth == "menor") {
         orebody.style.transform = "Translate(0, -50%)"
-        acesso.style.transform = transformations[(acesso.id) + `_${depth}`]
-        acesso.style.height = alturas[(acesso.id) + `_${depth}`]
-        vent.style.height = alturas[(vent.id) + `_${depth}`]
+        acesso.style.transform = transformations[`${acesso.id}_${depth}`]
+        acesso.style.height = alturas[`${acesso.id}_${depth}`]
+        vent.style.height = alturas[`${vent.id}_${depth}`]
     } else if (depth == "entre") {
         orebody.style.transform = "Translate(0, -25%)"
-        acesso.style.transform = transformations[acesso.id]
-        acesso.style.height = alturas[(acesso.id) + `_${depth}`]
-        console.log((acesso.id) + `_${depth}`)
-        vent.style.height = alturas[(vent.id) + `_${depth}`]
+        acesso.style.transform = transformations[`${acesso.id}_${depth}`]
+        acesso.style.height = alturas[`${acesso.id}_${depth}`]
+        vent.style.height = alturas[`${vent.id}_${depth}`]
     } else if (depth == "maior") {
         orebody.style.transform = "Translate(0, 0)"
-        acesso.style.transform = transformations[acesso.id]
-        acesso.style.height = alturas[(acesso.id) + `_${depth}`]
-        vent.style.height = alturas[(vent.id) + `_${depth}`]
+        acesso.style.transform = transformations[`${acesso.id}_${depth}`]
+        acesso.style.height = alturas[`${acesso.id}_${depth}`]
+        vent.style.height = alturas[`${vent.id}_${depth}`]
     }
 
-
-
 }
+
 // ALTERA A ILUSTRAÇÃO DO MÉTODO CARDOZO CONFORME O RESULTADO DO FLUXOGRAMA
 function Imagem_cardozo_la_vergne(resultado) {
 

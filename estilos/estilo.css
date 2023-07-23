@@ -4,7 +4,6 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 11pt;
   line-height: 1.5;
-  color: black;
   padding: 0;
 
   --cor-1: #650505d6;
@@ -161,6 +160,7 @@ p {
   box-sizing: border-box;
   padding: 5px;
   font-size: 10pt;
+  color: black;
 }
 
 #menu-metodos {
@@ -361,10 +361,10 @@ select:hover {
   min-width: 100%;
   width: 100%;
   max-width: 100%;
-  grid-template-columns: var(--min-max-columns);
+  grid-template-columns: var(--main-columns);
   height: auto;
   position: relative;
-  margin: auto;
+  margin-bottom: 5px;
 }
 
 .rodape .div-footer {
@@ -372,7 +372,7 @@ select:hover {
   border: var(--borda-simples);
   display: grid;
   grid-template-columns: minmax(150px, 1fr) minmax(600px, 5fr) minmax(150px, 1fr) minmax(200px, 3fr);
-  position: absolute;
+  position: relative;
   grid-column: 1/5;
   min-width: 100%;
   width: 100%;
@@ -381,29 +381,23 @@ select:hover {
   border-radius: 20px;
   align-items: center;
   align-content: center;
-}
-
-.span-footer {
-  color: white;
-  font-size: 10pt;
-  opacity: 0.8;
+  overflow: hidden;
 }
 
 .div-span-footer {
   display: flex;
   flex-direction: column;
-  color: white;
   font-size: 10pt;
   opacity: 0.8;
-
+  color: white;
 }
 
 #img-ufrgs {
   position: absolute;
   grid-column: 1/2;
   transform: scale(0.6);
-  bottom: -70%;
-  left: -30%;
+  bottom: -16%;
+  left: -10%;
 }
 
 #div-span-footer-1 {
@@ -413,10 +407,30 @@ select:hover {
 }
 
 #div-span-footer-2 {
+  display: block;
   position: absolute;
   grid-column: 4/5;
   left: 5%;
-  display: none;
+}
+
+#div-span-footer-2 h4,  #div-span-footer-2 span {
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 10pt;
+}
+
+#div-span-footer-2 span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#img-mafmine {
+  position: absolute;
+  grid-column: 4/5;
+  right: 2%;
+  top: 2%;
 }
 
 #img-laprom {
@@ -426,6 +440,79 @@ select:hover {
   left: -10%;
 }
 
+/* -------------------------IFRAMES------------------------------------ */
+
+#main-pop-up {
+  display: none;
+  height: auto;
+  width: 500px;
+  position: absolute;
+  top: 2.5%;
+  left: 45%;
+  box-shadow: 0 0 10px var(--cor-1);
+  border: 1px solid black;
+  z-index: 100;
+  overflow: hidden;
+}
+
+#barra-pop-up {
+  width: 100%;
+  background-color: var(--cor-1);
+  height: 25px;
+  z-index: 100;
+  position: relative;
+}
+
+#barra-pop-up:hover {
+  cursor: move;
+}
+
+.titulo-pop-up {
+  color: white;
+  padding-left: 2%;
+}
+
+#titulo-pop-up:hover {
+  cursor: move;
+}
+
+#fechar-pop-up {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  box-sizing: border-box;
+  width: 20px;
+  right: 0%;
+  top: 0%;
+  color: white;
+  font-size: 15pt;
+}
+
+#fechar-pop-up:hover {
+  color: red;
+  cursor: default;
+}
+
+iframe {
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: white;
+}
+
+.overlay {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 90;
+}
 
 
 
