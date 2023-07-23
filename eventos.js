@@ -1,26 +1,73 @@
-//TROCA O IDIOMA DA PÁGINA
 function Switch_language() {
     const switch_botao = document.getElementById("checkbox-switch")
     const switch_texto = document.getElementById("switch-texto")
+
+    // Armazena o valor da checkbox de troca de idioma
     let idioma
     if (switch_botao.checked) {
-        //Configura a posição to texto PT se switch on (página em ingles)
+        // Configura a posição do texto PT se switch on (página em inglês)
         switch_texto.innerHTML = "PT"
         switch_texto.style.transform = "translate(5px, -6px)"
         idioma = "en"
     } else {
-        //Configura a posição to texto EN se switch on (página em portugues)
+        // Configura a posição do texto EN se switch off (página em português)
         switch_texto.innerHTML = "EN"
         switch_texto.style.transform = "translate(21px, -6px)"
         idioma = "pt"
     }
+
+    // Chame as funções para alterar o idioma da página conforme a preferência do usuário
     Language(idioma)
     Language_page(idioma)
+
     const frame = Iframe_ativo()
     // Envia uma mensagem para o Iframe ativo para trocar de idioma também
     if (frame) frame.contentWindow.postMessage("CallLanguage", "*")
 }
 
+function Armazenar_valor(objeto) {
+    // Verifica se o armazenamento local é suportado
+    if (typeof (Storage) !== "undefined") {
+
+        // Obtém o valor atual do input
+        let type = objeto.type
+        let valor
+        if (type == "checkbox") {
+            valor = objeto.checked ? true : false
+        } else {
+            valor = objeto.value
+        }
+
+        // Armazena o valor do input no armazenamento local
+        localStorage.setItem(objeto.id, valor)
+    } 
+}
+
+function Verificar_memoria(id) {
+    // Verifica se o armazenamento local é suportado
+    if (typeof (Storage) !== "undefined") {
+
+        // Tenta recuperar o valor armazenado para o input especificado pelo id
+        let valor = localStorage.getItem(id)
+
+        // Se houver um valor armazenado, verifica se é uma string representando um booleano
+        if (valor !== null) {
+            if (valor === "true") {
+                return true
+            } else if (valor === "false") {
+                return false
+            } else {
+                return valor
+            }
+        } else {
+            // Caso não haja valor armazenado, retorna false
+            return null
+        }
+
+    } else {
+        return null
+    }
+}
 
 // OBTÉM O ID DO IFRAME ATIVO NO POP UP
 function Iframe_ativo() {
@@ -86,7 +133,7 @@ function Open_iframe(id_trigger) {
     Configurar_pop_up(id_trigger)
 
     // Cria uma URL
-    const endereco =  (id_trigger + ".html")
+    const endereco = (id_trigger + ".html")
     frame.src = endereco
     frame.style.display = "block"
 
@@ -163,7 +210,6 @@ function Mover_pop_up() {
 
 }
 
-
 function Obter_idioma() {
     let idioma = document.getElementById("titulo-section-1").innerText
     idioma = idioma.includes("PARÂMETROS") ? "pt" : "en"
@@ -179,9 +225,14 @@ function Eventos(metodo) {
         balao.style.left = event.clientX + "px"
     })
 
+
     //BOTÃO SWITCH LANGUAGE
-    const switch_language = document.querySelector("#checkbox-switch")
-    switch_language.onchange = () => Switch_language()
+    let switch_language = document.querySelector("#checkbox-switch")
+    switch_language.onchange = () => {
+        Switch_language()
+        Armazenar_valor(switch_language)
+    }
+    switch_language.checked = Verificar_memoria(switch_language.id) != null ? Verificar_memoria(switch_language.id) : false
 
     //BOTÃO IMPRIMIR
     const botao_imprimir = document.querySelector("#botao-imprimir")
