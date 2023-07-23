@@ -124,7 +124,7 @@ function Language_page(idioma_child = "none") {
     // OBJETOS DO POP UP "CREDITOS"
     Escrever("universidade", "universidade")
     Escrever("laboratorio", "laboratorio")
-    Escrever("titulo_ferramenta", "titulo_ferramenta")
+    Escrever("titulo-ferramenta", "titulo_ferramenta")
     Escrever("inspiracao", "inspiracao")
     Escrever("titulo-autores", "titulo_autores")
     Escrever("autores", "autores")
