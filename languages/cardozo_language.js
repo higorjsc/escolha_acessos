@@ -20,7 +20,7 @@ function Language(idioma_janela) {
             h3_depth: "Depth",
             span_depth: "Orebody deepest point:",
             h3_prod: "Production",
-            span_prod: "Projected production for the mine in kt per year:",
+            span_prod: "Projected production for the mine in kt per day:",
             titulo_section_2: "FLOWCHART",
             titulo_section_3: "ILUSTRATION",
         },
