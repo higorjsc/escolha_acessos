@@ -108,8 +108,8 @@ function Language(idioma_janela) {
     // OPEN-PIT
     Escrever("h3-open-pit", "h3_open_pit")
     Escrever("span-open-pit", "span_open_pit")
-    Escrever("span-open-pit-nao", "span_open_pit_sim")
-    Escrever("span-open-pit-sim", "span_open_pit_nao")
+    Escrever("span-open-pit-sim", "span_open_pit_sim")
+    Escrever("span-open-pit-nao", "span_open_pit_nao")
 
     // PROFUNDIDADE
     Escrever("h3-depth", "h3_depth")
