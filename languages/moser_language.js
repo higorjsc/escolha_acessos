@@ -94,8 +94,8 @@ function Language(idioma_janela) {
     // LOGISTICA
     Escrever("h3-logistica", "h3_logistica")
     Escrever("span-logistica", "span_logistica")
-    Escrever("span-logistica-nao", "span_logistica_sim")
-    Escrever("span-logistica-sim", "span_logistica_nao")
+    Escrever("span-logistica-sim", "span_logistica_sim")
+    Escrever("span-logistica-nao", "span_logistica_nao")
 
     // SURFACE MATERIAL
     Escrever("h3-sm", "h3_sm")
