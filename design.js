@@ -187,8 +187,8 @@ function Balao_la_vergne(entry, idioma) {
             "fluxograma-prod-2": "A produção da mina será menor<br>que 2,5 mil toneladas por dia?",
             "fluxograma-rampa": "Utilizar rampa e caminhões",
             "fluxograma-shaft": "Utilizar poço",
-            "label-sm-menor": "Existe uma camada espessa de materiais<br>não consolidados (solos, depósitos aluvionares, etc.)<br>sobre o depósito mineral?",
-            "label-sm-maior": "Existe uma camada espessa de materiais<br>não consolidados (solos, depósitos aluvionares, etc.)<br>sobre o depósito mineral?",
+            "label-sm-menor": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.) sobre o<br> depósito mineral é <strong>estreita</strong>?",
+            "label-sm-maior": "A camada de materiais não consolidados<br>(solos, depósitos aluvionares, etc.) sobre o<br> depósito mineral é <strong>estreita</strong>?",
             "label-rock-menor": "A rocha está integra <br>e possui boa qualidade/resistencia?",
             "label-rock-maior": "A rocha está integra <br>e possui boa qualidade/resistencia?",
         }
@@ -203,8 +203,8 @@ function Balao_la_vergne(entry, idioma) {
             "fluxograma-prod-2": "Will the mine production be less<br>than 2.5 thousand tons per day?",
             "fluxograma-ramp": "Utilize ramps and trucks",
             "fluxograma-shaft": "Utilize shaft",
-            "label-sm-menor": "Is there a thick layer of unconsolidated<br>materials (soils, alluvial deposit, ...) over the mineral deposit?",
-            "label-sm-maior": "Is there a thick layer of unconsolidated<br>materials (soils, alluvial deposit, ...) over the mineral deposit?",
+            "label-sm-menor": "Is the layer of unconsolidated<br>materials (soils, alluvial deposit, ...) over the mineral deposit <strong>narrow</strong>?",
+            "label-sm-maior": "Is the layer of unconsolidated<br>materials (soils, alluvial deposit, ...) over the mineral deposit <strong>narrow</strong>?",
             "label-rock-menor": "Is the rock intact <br> and of good quality/strength?",
             "label-rock-maior": "Is the rock intact <br> and of good quality/strength?"
         }
