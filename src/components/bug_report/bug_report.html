@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src=".././../assets/languages/page_languages.js"></script>
+    <script src="bug_report.js"></script>
+    <link rel="stylesheet" href="bug_report.css">
+</head>
+<body>
+    <main>
+
+        <form id='formulario' action="https://formspree.io/f/xoqovpge" method="POST">
+            <div id="dados">
+                <span id="span-name"></span>
+                <input type="text" name="name" id="name">
+
+                <span id="span-email"></span>
+                <input type="email" name="email">
+            </div>
+            <div id="message">
+                <span id="span-message"></span>
+                <textarea id='area-message' name="message"></textarea>
+            </div>
+            <button type="submit" onclick="Enviar_formulario(event)" id="botao-enviar"></button>
+        </form>
+
+    </main>
+</body>
+<script>
+    Language_page()
+</script>
+</html>

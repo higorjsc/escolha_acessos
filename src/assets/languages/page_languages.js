@@ -19,11 +19,9 @@ function Language_page(idioma_child = "none") {
             versao: "VERSÃO 1.0.0, dd/mm/2023",
             titulo_ferramenta: "SELEÇÃO DE ACESSOS PARA MINAS SUBTERRÂNEAS<br>",
             titulo_autores: "<br>AUTORES<br>",
-            autores: "SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.<br>",
-            autores_2: "SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.<br><br>",
+            autores: "CAMPOS, H. CARDOZO, F. PETTER, C.",
             titulo_apoio: "APOIO<br>",
-            apoio_1: "apoio-1<br>",
-            apoio_2: "apoio-2<br><br><br>",
+            apoio_1: "EQUIPE MAFMINE<br>",
             localizacao: "Porto Alegre, Rio Grande do Sul, Brasil,<br>",
             data: "2023.<br>",
 
@@ -55,39 +53,37 @@ function Language_page(idioma_child = "none") {
             bug_report: "Reportar erro"
         },
         en: {
-            // CREDITOS
+            // CREDITOS ENGLISH
             universidade: "UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL<br>",
             laboratorio: "LABORATÓRIO DE PROCESSAMENTO MINERAL<br><br><br>",
-            versao: "VERSÃO 1.0.0, dd/mm/2023",
-            titulo_ferramenta: "SELEÇÃO DE MÉTODOS DE LAVRA<br>",
-            titulo_autores: "<br>AUTORES<br>",
-            autores: "SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.<br>",
-            autores_2: "SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.&ensp;&ensp;&ensp;SOBRENOME, N.<br><br>",
-            titulo_apoio: "APOIO<br>",
-            apoio_1: "apoio-1<br>",
-            apoio_2: "apoio-2<br><br><br>",
+            versao: "VERSION 1.0.0, dd/mm/2023",
+            titulo_ferramenta: "SELECTION OF ACESS FOR UNDERGROUND MINING<br>",
+            titulo_autores: "<br>AUTHORS<br>",
+            autores: "CAMPOS, H. CARDOZO, F. PETTER, C.",
+            titulo_apoio: "SUPPORTERS<br>",
+            apoio_1: "EQUIPE MAFMINE<br>",
             localizacao: "Porto Alegre, Rio Grande do Sul, Brasil,<br>",
             data: "2023.<br>",
 
-            // REFERENCIAS
-            titulo_referencias: "<br>REFERENCIAS",
+            // REFERENCIAS ENGLISH
+            titulo_referencias: "<br>REFERENCES",
             ref_1: "CARDOZO, F. A. C. et al. Choice of access for underground mining for feasibility studies. REM-International Engineering Journal, v. 76, p. 187-193, 2023.<br/>",
             ref_2: "CARDOZO, F. A. C. Modelagem de Escavações Subterrâneas: Contribuições para Escolha de Acessos de Mina. Doutorado—Porto Alegre: Universidade Federal do Rio Grande do Sul, 3 mar. 2023.",
             ref_3: "LA VERGNE, Jack. Hard rock miner's handbook. Tempe/North Bay: McIntosh engineering. ISBN 0-968006-1-6, 2003.",
             ref_4: "MOSER, P. Primary development of underground hard rock mines. In: Symposium On Mine Planning And Equipment Selection. 1996. São Paulo. Proceedings […]. São Paulo, 1996. p. 31-3.",
 
-            // REPORTAR BUG
+            // REPORTAR BUG ENGLISH
             span_name: "Your name: ",
             span_email: "Your e-mail: ",
             span_message: "<br><br>Your message:<br>",
             botao_enviar: "SEND ",
 
-            // TITULOS DOS POP UPS
+            // TITULOS DOS POP UPS ENGLISH
             titulo_pop_up_creditos: "CREDITS",
             titulo_pop_up_referencias: "REFERENCES",
             titulo_pop_up_report_bug: "REPORT ISSUE",
 
-            // FOOTER DAS PÁGINAS PRINCIPAIS
+            // FOOTER DAS PÁGINAS PRINCIPAIS ENGLISH
             footer_universidade: "Universidade Federal do Rio Grande do Sul",
             footer_laboratorio: "Laboratório de Processamento Mineral",
             footer_localizacao: "Avenida Bento Gonçalves, 9500, Setor 6, Centro de Tecnologia, LAPROM - Porto Alegre, RS, 91501-970",
@@ -128,12 +124,10 @@ function Language_page(idioma_child = "none") {
     Escrever("inspiracao", "inspiracao")
     Escrever("titulo-autores", "titulo_autores")
     Escrever("autores", "autores")
-    Escrever("autores-2", "autores_2")
     Escrever("localizacao", "localizacao")
     Escrever("data", "data")
     Escrever("titulo-apoio", "titulo_apoio")
     Escrever("apoio-1", "apoio_1")
-    Escrever("apoio-2", "apoio_2")
     Escrever("versao", "versao")
 
     // OBJETOS DO POP UP "REFERENCIAS"

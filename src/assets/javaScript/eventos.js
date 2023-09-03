@@ -133,7 +133,7 @@ function Open_iframe(id_trigger) {
     Configurar_pop_up(id_trigger)
 
     // Cria uma URL
-    const endereco = (id_trigger + ".html")
+    const endereco = ("components/" + id_trigger +"/" + id_trigger + ".html")
     frame.src = endereco
     frame.style.display = "block"
 

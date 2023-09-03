@@ -1,0 +1,71 @@
+* {
+    --cor-1: #650505d6;
+    --cor-2: #300202d6;
+    --shadow-apretada: -5px 0 5px  rgb(0 0 0 / 95%);
+    --shadow-red: 0 0 10px #650505d6;
+    --borda-simples: 1pt solid black;
+}
+  
+
+main {
+    width: 99%;
+    height: 360px;
+    border: var(--borda-simples);
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+form {
+    display: block;
+}
+
+#dados,
+#message {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2px;
+    line-height: 1.2;
+}
+
+#dados span {
+    display: block;
+    grid-column: 1/2;
+}
+
+#dados input {
+    display: block;
+    grid-column: 2/3;
+    border: var(--borda-simples);
+}
+
+#area-message {
+    display: block;
+    grid-column: 1/3;
+    width: 98%;
+    height: 200px;
+}
+
+button {
+    width: 100px;
+    height: 20px;
+    border: var(--borda-simples);
+    background-color: var(--cor-1);
+    color: white;
+    border-radius: 20px;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    display: block;
+    text-align: center;
+}
+
+button:hover {
+    box-shadow: var(--shadow-blue);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.campo-invalido {
+    border: 1px solid red;
+}

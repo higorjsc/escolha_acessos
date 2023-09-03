@@ -7,7 +7,7 @@ function Language(idioma_janela) {
             paragrafo_explicacao: ""
                 + "O método de La Vergne (2003) para a seleção de acesso a minas subterrâneas foi apresentado pelo autor como um &rdquo;guia superfícial&ldquo; para uma análise preliminar dos possíveis acessos."
                 + "<br><br><strong>Observações:</strong><br>"
-                + "- O modelo é baseado em regras de ouro compiladas à época<br>"
+                + "- O modelo é baseado em regras de ouro< compiladas à época<br>"
                 + "- Os limites propostos para profundidade e produção foram superados por avanços tecnológicos.<br>"
                 + "- O método não dispensa estudos detalhados de viabilidade, mas objetiva diminuir a quantidade de esforços nas etapas inicias do planejamento da mina."
                 + "<br><br><strong>Referência:</strong><br>"
@@ -25,7 +25,7 @@ function Language(idioma_janela) {
             h3_depth: "Profundidade",
             span_depth: "Ponto mais profundo do corpo de minério:",
             h3_prod: "Produção",
-            span_prod: "Produção prevista para a mina em kt por dia:",
+            span_prod: "Produção prevista para a >mina em kt por dia:",
             titulo_section_2: "FLUXOGRAMA",
             titulo_section_3: "ILUSTRAÇÃO",
         },

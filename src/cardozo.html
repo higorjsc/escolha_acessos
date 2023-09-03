@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Select mine acess with Moser, La Vergne and Cardozo methodologies">
+    <meta name="keywords" content="moser, 1996, cardozo, 2023, vergne, 2003, hardrock, mining, mine, engineering, fluxogram, select, acess, shaft, ramp, belt conveyor">
+    <meta name="author" content="Higor José Silva Campos">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Seleção de Acessos - Cardozo (2023)</title>
+
+    <link rel="icon" type="image/x-icon" href="assets\Imagens\mafmine.png">
+    <link rel="stylesheet" href="assets\css\estilo.css">
+    <link rel="stylesheet" href="assets\css\cardozo.css">
+    <link rel="stylesheet" href="assets\css\buttons.css">
+    <script src="assets\javaScript\eventos.js"></script>
+    <script src="assets\javaScript\calculos.js"></script>
+    <script src="assets\javaScript\design.js"></script>
+    <script src="assets\javaScript\imprimir_relatorio.js"></script>
+    <script src="assets\languages\page_languages.js"></script>
+
+    <script src="assets\languages\cardozo_language.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+
+</head>
+
+<body>
+
+    <header class="head">
+        <img class='img-simbolo-mineracao' id='img-simbolo-mineracao-direita' src="assets\Imagens\mining1.png"
+            alt="Simbolo_mineração">
+        <img class='img-simbolo-mineracao' id='img-simbolo-mineracao-esquerda' src="assets\Imagens\mining1.png"
+            alt="Simbolo_mineração">
+        <div id="div-header">
+            <h1 id="titulo-pagina"></h1>
+        </div>
+    </header>
+
+    <main class="wrapper" id="wrapper">
+
+        <section id="section-0">
+            <ul id="menu-metodos">
+                <li id="li-titulo">SELECIONE O MÉTODO</li>
+                <li class='options'>
+                    <a>CARDOZO (2023)&ensp;&ensp;&darr;</a>
+                    <ul>
+                        <li class='options'><a href="moser.html">MOSER (1996)</a></li>
+                        <li class='options'><a href="la_vergne.html">LA VERGNE (2003)</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <p id="paragrafo-explicacao"> </p>
+        </section>
+
+
+
+        <section id="section-1">
+            <!-- --------------BOTÃO SWITCH IDIOMAS-------------------------- -->
+            <input type="checkbox" id="checkbox-switch" />
+            <label for="checkbox-switch" class="switch-label" id="switch-label">
+                <span id="switch-texto"> </span>
+            </label>
+
+
+            <h2  id="titulo-section-1" >PARÂMETROS DE ESCOLHA</h2>
+            <div class="container-div-parametros">
+                
+                <!-- SURFACE MATERIAL CARDOZO-->
+                <div class='div-parametros' id="div-sm">
+                    <h3 class="h3-parametros" id="h3-sm">Cobertura superfícial</h3><br>
+                    <span class="span-parametros" id="span-sm">Espesura da camada de material inconsolidado: &ensp;</span>
+
+                    <div class='container-label' id="container-label-sm">
+
+                        <input type="radio" class='input-sm' name="radio-sm" value="menor" id="radio-sm-menor">
+                        <label for="radio-sm-menor" id="label-sm-menor" class="radio-label radio-1"></label>
+                        <span class="radio-span radio-span-1">< 70 m</span>
+                
+                        <input type="radio" class='input-sm' name="radio-sm" value="maior" id="radio-sm-maior">
+                        <label for="radio-sm-maior" id="label-sm-maior" class="radio-label radio-2"></label>
+                        <span class="radio-span radio-span-2" >> 70 m</span>
+
+                    </div>
+
+                </div>
+
+                <!-- ROCK MASS CARDOZO-->
+                <div class='div-parametros' id="div-rock">
+                    <h3 class="h3-parametros" id="h3-rock">Condições do maciço</h3><br>
+                    <span class="span-parametros" id="span-rock">Classe do maciço no sistema RMR: &ensp;</span>
+
+                    <div class='container-label' id="container-label-rock">
+                        <input type="radio" class='input-rock' name="radio-rock" value="menor" id="radio-rock-menor">
+                        <label for="radio-rock-menor" id="label-rock-menor" class="radio-label radio-1"></label>
+                        <span class="radio-span radio-span-1">I-IV</span>
+
+                        <input type="radio" class='input-rock' class="radio-2" name="radio-rock" value="maior" id="radio-rock-maior">
+                        <label for="radio-rock-maior" id="label-rock-maior" class="radio-label radio-2"></label>
+                        <span class="radio-span radio-span-2">V</span>
+                    </div>
+
+                </div>
+
+                <!-- PROFUNDIDADE CARDOZO-->
+                <div class='div-parametros' id="div-depth">
+                    <h3 class="h3-depth" id="h3-depth">Profundidade</h3><br>
+                    <span class="span-parametros" id="span-depth">Ponto mais profundo do corpo de minério: &ensp;</span>
+
+                    <select class='input-depth' id="select-depth">
+                        <option value=""></option>
+                        <option value="menor">< 700 m</option>
+                        <option value="entre">700-1700 m</option>
+                        <option value="maior">> 1700 m</option>
+                    </select>
+
+                </div>
+
+                <!-- PRODUÇÃO CARDOZO-->
+                <div class='div-parametros' id="div-prod">
+                    <h3 class="h3-parametros" id="h3-prod">Produção</h3><br>
+                    <span class="span-parametros" id="span-prod">Produção prevista para a mina em kt por dia:&ensp;</span>
+
+                    <select class='input-prod' id="select-prod">
+                        <option value=""></option>
+                        <option value="menor">< 1.5 kt/d</option>
+                        <option value="entre">1.5-7.5 kt/d</option>
+                        <option value="maior">> 7.5 kt/d</option>
+                    </select>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <section id="section-2">
+            <h2 id="titulo-section-2">FLUXOGRAMA</h2>
+            <div id="div-main-fluxograma">
+                <img class='img-fluxograma' id='fluxograma' src="assets\Imagens\cardozo.jpg"
+                alt="fluxograma de escolha de acessos Cardozo (2023)">
+
+                <div class="div-fluxograma" id="fluxograma-start"></div>
+                <div class="div-fluxograma" id="fluxograma-sm"></div>
+                <div class="div-fluxograma" id="fluxograma-rock"></div>
+                <div class="div-fluxograma" id="fluxograma-depth-1"></div>
+                <div class="div-fluxograma" id="fluxograma-prod-1"></div>
+                <div class="div-fluxograma" id="fluxograma-inclined-belt"></div>
+                <div class="div-fluxograma" id="fluxograma-depth-2"></div>
+                <div class="div-fluxograma" id="fluxograma-rampa"></div>
+                <div class="div-fluxograma" id="fluxograma-prod-2"></div>
+                <div class="div-fluxograma" id="fluxograma-shaft"></div>
+
+            </div>
+            <span id="span-rights"> &copyUFRGS, 2023.</span>
+
+        </section>
+
+        <section id="section-3">
+            <h2 id="titulo-section-3">ILUSTRAÇÃO</h2>
+            <div id="div-imgs">
+
+                <img class= 'ilustracao img-usina' id='usina' src="assets\Imagens\usina.png" alt="Ilustração de usina">
+                <img class= 'ilustracao img-superficie' id='superficie' src="assets\Imagens\superficie.png" alt="Ilustração da superfície">
+                <img class= 'ilustracao img-acesso' id='rampa' src="assets\Imagens\rampa.png" alt="Ilustração da rampa">
+                <img class= 'ilustracao img-vent' id='vent' src="assets\Imagens\vent.png" alt="Ilustração poço ventilação">
+                <img class= 'ilustracao img-truck' id='truck' src="assets\Imagens\truck.png" alt="Ilustração do caminhão">
+                <div class= 'ilustracao div-img-correia' id="correia"></div>
+                <img class= 'ilustracao img-acesso' id='shaft' src="assets\Imagens\shaft.png" alt="Ilustração da shaft">
+                
+                <img id="orebody" src="assets\Imagens\orebody.png" alt="Ilustração do corpo de minério">
+            </div>
+
+            
+            <span id='span-resultado-final'></span>
+            <button class="butoes" id="botao-imprimir"><img src="assets\Imagens\\impressora.png"></button>
+        </section>
+
+    </main>
+
+
+    <!-- ----------------------------------------IFRAMES---------------------------------------- -->
+    <div class=div-pop-up id="main-pop-up" display="none">
+
+        <div class='div-pop-up' id="barra-pop-up">
+            <span class="titulo-pop-up" id="titulo-pop-up"></span>
+            <div class="div-pop-up" id="fechar-pop-up">&times;</div>
+        </div>
+        <div class="overlay" id="overlay-div"></div>
+
+        <iframe class="iframe-creditos" id='iframe-creditos' frameborder="0" display="none"></iframe>
+        <iframe class="iframe-referencias" id='iframe-referencias' frameborder="0" display="none"></iframe>
+        <iframe class="iframe-bug_report" id='iframe-bug_report' frameborder="0" display="none"></iframe>
+
+    </div>
+
+
+    <footer class="rodape">
+
+        <div class="div-footer">
+            <div class="div-span-footer" id="div-span-footer-1">
+                <span class='span-footer' id="footer-universidade"></span>
+                <span class='span-footer' id="footer-laboratorio"></span>
+                <span class='span-footer' id="footer-localizacao"></span>
+                <span class='span-footer' id="footer-contato"></span>
+            </div>
+
+            <img id="img-laprom" src="assets\Imagens\laprom.png" alt="logo_laprom_png">
+
+            <img id="img-ufrgs" src="assets\Imagens\ufrgs.png" alt="logo_ufrgs_img">
+
+            <div class="div-span-footer" id="div-span-footer-2">
+                <h4>Links</h4>
+                <span class='span-footer-2' id="creditos">Créditos</span>
+                <span class='span-footer-2' id="referencias">Referencias</span>
+                <span class='span-footer-2' id="bug_report">Reportar Bug</span>
+            </div>
+
+            <!-- <img id="img-mafmine" src="assets\Imagens\mafmine_logao.png" alt="logo_mafmie_img"> -->
+
+        </div>
+
+    </footer>
+
+
+    <span class='balao' id='balao'> </span> <!-- Balão de ajuda -->
+
+
+
+
+</body>
+
+<script>
+    Eventos("cardozo")
+</script>
+
+
+</html>
