@@ -16,6 +16,7 @@
 body{
   display: flex;
   flex-direction: column;
+  min-width: 1470px;
 }
 
 /* ----------------------HEADER------------------------------ */
@@ -375,7 +376,6 @@ select:hover {
 /* -----------------------FOOTER----------------------------- */
 .rodape {
   display: flex;
-  min-width: 1470px;
   width: 100%;
   height: auto;
   position: relative;
