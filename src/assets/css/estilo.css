@@ -17,6 +17,7 @@ body{
   display: flex;
   flex-direction: column;
   min-width: 1470px;
+
 }
 
 /* ----------------------HEADER------------------------------ */
@@ -91,8 +92,7 @@ main {
   min-width: 100%;
   width: 100%;
   max-width: 100%;
-  /* grid-template-columns: var(--min-max-columns); */
-  min-height: 660px;
+  min-height: 800px;
   height: 100%;
   position: relative;
   margin: auto;
@@ -310,9 +310,8 @@ select:hover {
 /* -------------------SEÇÃO 2 CENTRO---------------------------- */
 
 #section-2 {
-  /* grid-column: 3/4; */
   border: var(--borda-simples);
-  min-width: 300px;
+  min-width: 596px;
   width: 35%;
   display: flex;
   flex-direction: column;
@@ -323,15 +322,15 @@ select:hover {
 .img-fluxograma {
   width: 100%;
   height: 100%;
+
 }
 
 #div-main-fluxograma {
   position: relative;
   display: flex;
   justify-content: center;
-  /* height: 460px;
-  width: 490px; */
   height: 70%;
+  max-height: 559px;
   margin: auto;
 }
 
