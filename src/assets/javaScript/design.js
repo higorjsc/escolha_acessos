@@ -61,10 +61,8 @@ function Transformacoes(id) {
 
 // ALTERA A ILUSTRAÇÃO DO MÉTODO CARDOZO CONFORME O RESULTADO DO FLUXOGRAMA
 function Imagem_cardozo_la_vergne(resultado) {
-
     // Oculta as imagens com cada change dos inputs
     Display_img(["rampa", "truck", "vent", "shaft", "correia"], "none")
-
     // Mostra imagens com base no resultado
     if (resultado.includes("shaft")) {
         Display_img(["shaft", "vent"], "block")
@@ -76,7 +74,6 @@ function Imagem_cardozo_la_vergne(resultado) {
         Display_img(["correia", "vent"], "block")
         Transformacoes("correia")
     }
-
 }
 
 // ALTERA A ILUSTRAÇÃO DO MÉTODO CARDOZO CONFORME O RESULTADO DO FLUXOGRAMA
@@ -107,14 +104,12 @@ function Imagem_moser(resultado, valor) {
 }
 
 function Positions(entry, messages, positions) {
-
     //Mostra o balão de texto
     const balao = document.getElementById("balao")
     if (messages[entry]) {
         balao.innerHTML = messages[entry]
         balao.style.display = "block"
     }
-
     //Posiciona o balão conforme o dicionário de posições
     if (positions[entry]) {
         const { x, y } = positions[entry]
@@ -122,7 +117,6 @@ function Positions(entry, messages, positions) {
     } else {
         balao.style.transform = "translate(80px,-50px)"
     }
-
 }
 
 function Balao_moser(entry, idioma) {

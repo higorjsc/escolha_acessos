@@ -13,13 +13,17 @@
   --borda-simples: 1pt solid black;
   --min-max-columns: minmax(250px, 5fr) minmax(300px, 5fr) minmax(500px, 9fr) minmax(420px, 7fr);
 }
+body{
+  display: flex;
+  flex-direction: column;
+}
 
 /* ----------------------HEADER------------------------------ */
 .head {
   min-width: 100%;
   width: 100%;
   max-width: 100%;
-  display: grid;
+  display: flex;
   grid-template-columns: var(--min-max-columns);
   align-items: center;
   position: relative;
@@ -30,7 +34,7 @@
 .head #div-header {
   grid-column: 1/5;
   display: grid;
-  position: absolute;
+  position: relative;
   width: 100%;
   max-width: 100%;
   height: 100%;
@@ -80,18 +84,15 @@
 }
 
 /* ----------------------MAIN------------------------------ */
-body {
-  align-items: center;
-  position: relative;
-}
 
 main {
-  display: grid;
+  display: flex;
   min-width: 100%;
   width: 100%;
   max-width: 100%;
-  grid-template-columns: var(--min-max-columns);
-  height: 660px;
+  /* grid-template-columns: var(--min-max-columns); */
+  min-height: 660px;
+  height: 100%;
   position: relative;
   margin: auto;
   padding-bottom: 0.2%;
@@ -101,14 +102,11 @@ main {
 section {
   position: relative;
   font: 11pt normal;
-  height: 100%;
-  padding: 0;
   box-sizing: border-box;
 }
 
 .container-div-parametros {
-  position: absolute;
-  left: 0;
+  position: relative;
   width: 100%;
   height: 100%;
 
@@ -138,19 +136,16 @@ h2 {
 
 /* ---------------------------------------SECTION 0------------------------------------------------ */
 #section-0 {
-  grid-column: 1/2;
-  gap: 0;
-  display: block;
+  /* grid-column: 1/2; */
   color: white;
   margin: 0;
   border: var(--borda-simples);
-  height: 100%;
-  width: 99%;
-  padding: 0%;
+  width: 20%;
   border-radius: 20px;
   overflow: hidden;
   font-size: 10pt;
   padding-top: 1%;
+  padding-bottom: 200px;
 }
 
 p {
@@ -229,13 +224,16 @@ ul li a {
 /* -------------------SEÇÃO 1 LATERAL ESQUERDA---------------------------- */
 
 #section-1 {
-  grid-column: 2/3;
+  /* grid-column: 2/3; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   border-left: var(--borda-simples);
   border-top: var(--borda-simples);
   border-bottom: var(--borda-simples);
-  height: 100%;
 }
 
 
@@ -252,39 +250,46 @@ ul li a {
 
 .div-parametros {
   width: 100%;
+  position: relative;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   padding-left: 3%;
   box-sizing: border-box;
   text-align: left;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 #div-logistica {
+  position: relative;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
 
 #div-sm {
+  position: relative;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
 
 #div-rock {
+  position: relative;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
 
 #div-open-pit {
+  position: relative;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
 
 .span-parametros {
+  position: relative;
   grid-column: 1/2;
   left: 0%;
 }
@@ -304,31 +309,36 @@ select:hover {
 /* -------------------SEÇÃO 2 CENTRO---------------------------- */
 
 #section-2 {
-  grid-column: 3/4;
+  /* grid-column: 3/4; */
   border: var(--borda-simples);
   min-width: 300px;
-  position: relative;
-  display: block;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   justify-content: center;
 }
 
 .img-fluxograma {
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #div-main-fluxograma {
   position: relative;
-  height: 460px;
-  width: 490px;
+  display: flex;
+  justify-content: center;
+  /* height: 460px;
+  width: 490px; */
+  height: 70%;
   margin: auto;
 }
 
 /* -------------------SEÇÃO 3 LATERAL DIREITA---------------------------- */
 
 #section-3 {
-  grid-column: 4/5;
+  /* grid-column: 4/5; */
+  width: 25%;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   border-right: var(--borda-simples);
@@ -364,11 +374,9 @@ select:hover {
 
 /* -----------------------FOOTER----------------------------- */
 .rodape {
-  display: grid;
-  min-width: 100%;
+  display: flex;
+  min-width: 1470px;
   width: 100%;
-  max-width: 100%;
-  grid-template-columns: var(--main-columns);
   height: auto;
   position: relative;
   margin-bottom: 5px;
@@ -383,7 +391,6 @@ select:hover {
   grid-column: 1/5;
   min-width: 100%;
   width: 100%;
-  max-width: 100%;
   height: 100px;
   border-radius: 20px;
   align-items: center;
